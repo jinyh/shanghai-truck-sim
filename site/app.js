@@ -7,7 +7,7 @@ const options=()=>({year:Number($('#year').value),growth:$('#growth').value,stre
 function status(text,error=false){$('#status').textContent=text;$('#status').classList.toggle('error',error);}
 const post=(path,body)=>window.truckStatic.post(path,body);
 const wait=job=>window.truckStatic.wait(job);
-async function action(button,fn){if(button)button.disabled=true;pending++;try{await fn();}catch(e){status(e.message,true);}finally{pending--;if(button)button.disabled=false;}}
+async function action(button,fn){if(pending)return;pending++;const controls=[...document.querySelectorAll('#scenario-form select,#run-button,#flex-button,#ac-button,#planning-button,#research-button,#import-file')];if(button&&!controls.includes(button))controls.push(button);const previous=new Map(controls.map(el=>[el,el.disabled]));controls.forEach(el=>el.disabled=true);try{await fn();}catch(e){status(e.message,true);}finally{pending--;controls.forEach(el=>el.disabled=previous.get(el));if(result){$('#flex-button').disabled=!result.metrics.feasible;window.truckStatic?.configure(result);}}}
 function table(headers,rows){return `<thead><tr>${headers.map(x=>`<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(v=>`<td>${v}</td>`).join('')}</tr>`).join('')}</tbody>`;}
 function pill(ok,yes='合格',no='受限'){return `<span class="pill ${ok?'':'fail'}">${ok?yes:no}</span>`;}
 function setResult(r,jid){result=r;jobId=jid;step=Math.min(step,r.task.periods-1);if(!r.metrics.stations.some(s=>s.id===selectedStation))selectedStation=r.metrics.stations[0].id;
