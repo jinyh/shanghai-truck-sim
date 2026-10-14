@@ -1,0 +1,2502 @@
+{
+  "version": "pages-v1",
+  "evidence": "synthetic",
+  "execution": "registered_offline_results",
+  "scenarios": {
+    "2026-low-existing-normal": {
+      "result": "./data/scenarios/2026-low-existing-normal.json.gz",
+      "input_hash": "2a7ad291fe85baab8f3f279f7c704422ebb58e910300c873386bcc97ecf8238b",
+      "export": "./downloads/scenarios/2026-low-existing-normal.zip",
+      "flex": {}
+    },
+    "2026-low-existing-bunched": {
+      "result": "./data/scenarios/2026-low-existing-bunched.json.gz",
+      "input_hash": "a02070077b06914498364e23ca634b663bf3dc1aa0c8f35b7d3deccf6fe58c0b",
+      "export": "./downloads/scenarios/2026-low-existing-bunched.zip",
+      "flex": {}
+    },
+    "2026-low-existing-early": {
+      "result": "./data/scenarios/2026-low-existing-early.json.gz",
+      "input_hash": "6e7cf1318d9051538562338fb10022e67a7eab16b94cb83bae954475ae71a2eb",
+      "export": "./downloads/scenarios/2026-low-existing-early.zip",
+      "flex": {}
+    },
+    "2026-low-existing-derated": {
+      "result": "./data/scenarios/2026-low-existing-derated.json.gz",
+      "input_hash": "23701c46f7d9ee8ce24874fc0cec672126316730f81e505f355b49fe5f123a86",
+      "export": "./downloads/scenarios/2026-low-existing-derated.zip",
+      "flex": {}
+    },
+    "2026-low-existing-control_loss": {
+      "result": "./data/scenarios/2026-low-existing-control_loss.json.gz",
+      "input_hash": "1dc0d8712af29e1249896021b21d17b03b5dd06f05ecbe6a9e0f18e6e0ed8fe8",
+      "export": "./downloads/scenarios/2026-low-existing-control_loss.zip",
+      "flex": {}
+    },
+    "2026-low-ordered-normal": {
+      "result": "./data/scenarios/2026-low-ordered-normal.json.gz",
+      "input_hash": "5016fcc77c181939f521b021fdef1afc5de111575a7273c18e3c3ce4164fcfbb",
+      "export": "./downloads/scenarios/2026-low-ordered-normal.zip",
+      "flex": {}
+    },
+    "2026-low-ordered-bunched": {
+      "result": "./data/scenarios/2026-low-ordered-bunched.json.gz",
+      "input_hash": "a214b23485be4d53d41a4c44cdb077d9d8a1caf31cd52575509568614a461ee3",
+      "export": "./downloads/scenarios/2026-low-ordered-bunched.zip",
+      "flex": {}
+    },
+    "2026-low-ordered-early": {
+      "result": "./data/scenarios/2026-low-ordered-early.json.gz",
+      "input_hash": "26b94b5ec2b4cea60b2f80e382a6428046c4032afed267ce9a150cdf1666554c",
+      "export": "./downloads/scenarios/2026-low-ordered-early.zip",
+      "flex": {}
+    },
+    "2026-low-ordered-derated": {
+      "result": "./data/scenarios/2026-low-ordered-derated.json.gz",
+      "input_hash": "fcbc6973a6478f192f3f19cbb5507000549331df8884261137425434994470cf",
+      "export": "./downloads/scenarios/2026-low-ordered-derated.zip",
+      "flex": {}
+    },
+    "2026-low-ordered-control_loss": {
+      "result": "./data/scenarios/2026-low-ordered-control_loss.json.gz",
+      "input_hash": "2b93413149c18c7c591a8a92e75b198b82ebbcf582ef2a088fda235498ec3893",
+      "export": "./downloads/scenarios/2026-low-ordered-control_loss.zip",
+      "flex": {}
+    },
+    "2026-low-phased-normal": {
+      "result": "./data/scenarios/2026-low-phased-normal.json.gz",
+      "input_hash": "efac437b101aee01138ef383548026eeb29893bc10bbd8d9bbd74f403d972a03",
+      "export": "./downloads/scenarios/2026-low-phased-normal.zip",
+      "flex": {}
+    },
+    "2026-low-phased-bunched": {
+      "result": "./data/scenarios/2026-low-phased-bunched.json.gz",
+      "input_hash": "7e9ac8f6181a152dbd5ab2de9d733f03808cf65a4c50226d07a2a4252fb620d2",
+      "export": "./downloads/scenarios/2026-low-phased-bunched.zip",
+      "flex": {}
+    },
+    "2026-low-phased-early": {
+      "result": "./data/scenarios/2026-low-phased-early.json.gz",
+      "input_hash": "ca03e2d4cfc30e9cdea96032f3935f71097b4a92a2185cf48103ecc31d704301",
+      "export": "./downloads/scenarios/2026-low-phased-early.zip",
+      "flex": {}
+    },
+    "2026-low-phased-derated": {
+      "result": "./data/scenarios/2026-low-phased-derated.json.gz",
+      "input_hash": "24ede0f809772f7c23fc38cef28cd1a5ea7f103eb035163dd6b80d44e8bc6200",
+      "export": "./downloads/scenarios/2026-low-phased-derated.zip",
+      "flex": {}
+    },
+    "2026-low-phased-control_loss": {
+      "result": "./data/scenarios/2026-low-phased-control_loss.json.gz",
+      "input_hash": "e8c11e07ad511b4bbe08ff1651be2125213b5ddf195abac7ef915d813821d3d6",
+      "export": "./downloads/scenarios/2026-low-phased-control_loss.zip",
+      "flex": {}
+    },
+    "2026-low-expanded-normal": {
+      "result": "./data/scenarios/2026-low-expanded-normal.json.gz",
+      "input_hash": "bab75ffd0b981c3f55ba95e61a03a8fd336401b68f2668a6bbbb1d7b935b92a1",
+      "export": "./downloads/scenarios/2026-low-expanded-normal.zip",
+      "flex": {}
+    },
+    "2026-low-expanded-bunched": {
+      "result": "./data/scenarios/2026-low-expanded-bunched.json.gz",
+      "input_hash": "911ec7845cb76bb744460a46adde097f0af4d5c17ba95c1b70c93cd326a1ba19",
+      "export": "./downloads/scenarios/2026-low-expanded-bunched.zip",
+      "flex": {}
+    },
+    "2026-low-expanded-early": {
+      "result": "./data/scenarios/2026-low-expanded-early.json.gz",
+      "input_hash": "02974e5f87266a286ac06745c87c116433b270e12b7e759999663ef519d894ee",
+      "export": "./downloads/scenarios/2026-low-expanded-early.zip",
+      "flex": {}
+    },
+    "2026-low-expanded-derated": {
+      "result": "./data/scenarios/2026-low-expanded-derated.json.gz",
+      "input_hash": "7c509107ffce73020d5d06c6eceb32a13784253031b6ba31d581eefc9f952b13",
+      "export": "./downloads/scenarios/2026-low-expanded-derated.zip",
+      "flex": {}
+    },
+    "2026-low-expanded-control_loss": {
+      "result": "./data/scenarios/2026-low-expanded-control_loss.json.gz",
+      "input_hash": "82218745d36033340e8a319c63270dd389d3f5094057dd602a2d548b0bd502e7",
+      "export": "./downloads/scenarios/2026-low-expanded-control_loss.zip",
+      "flex": {}
+    },
+    "2026-low-alternate-normal": {
+      "result": "./data/scenarios/2026-low-alternate-normal.json.gz",
+      "input_hash": "87265fc7d04a6218147073d99e4a5b0a02fcf68726f55847b8157cff6f8364e3",
+      "export": "./downloads/scenarios/2026-low-alternate-normal.zip",
+      "flex": {}
+    },
+    "2026-low-alternate-bunched": {
+      "result": "./data/scenarios/2026-low-alternate-bunched.json.gz",
+      "input_hash": "19af242298b290c5ef9f7e016198748b607fb9cc69a073fee17bed97671ef739",
+      "export": "./downloads/scenarios/2026-low-alternate-bunched.zip",
+      "flex": {}
+    },
+    "2026-low-alternate-early": {
+      "result": "./data/scenarios/2026-low-alternate-early.json.gz",
+      "input_hash": "f8f39ff2010bdd7a705f8963b39299c36e39504f66e99f05c8c94ecce5c836a9",
+      "export": "./downloads/scenarios/2026-low-alternate-early.zip",
+      "flex": {}
+    },
+    "2026-low-alternate-derated": {
+      "result": "./data/scenarios/2026-low-alternate-derated.json.gz",
+      "input_hash": "f45afc596f59402b44b7d2ea7f8e404a82e0eff21b4e4966b4628d7f1d098181",
+      "export": "./downloads/scenarios/2026-low-alternate-derated.zip",
+      "flex": {}
+    },
+    "2026-low-alternate-control_loss": {
+      "result": "./data/scenarios/2026-low-alternate-control_loss.json.gz",
+      "input_hash": "b0b0db527bb9964b7899aa7d468a72b184e7abda0fc11347e1bcd07cd1ce37fc",
+      "export": "./downloads/scenarios/2026-low-alternate-control_loss.zip",
+      "flex": {}
+    },
+    "2026-medium-existing-normal": {
+      "result": "./data/scenarios/2026-medium-existing-normal.json.gz",
+      "input_hash": "ee7260b772db1494e715f5b2e1d4966ff99dfff615a96c72a26fc5508f52b1d8",
+      "export": "./downloads/scenarios/2026-medium-existing-normal.zip",
+      "flex": {}
+    },
+    "2026-medium-existing-bunched": {
+      "result": "./data/scenarios/2026-medium-existing-bunched.json.gz",
+      "input_hash": "9207e661f46dcb1c53a86b0f5e158473d5c6dd5800a8b98d0fb7c9468e4ea56a",
+      "export": "./downloads/scenarios/2026-medium-existing-bunched.zip",
+      "flex": {}
+    },
+    "2026-medium-existing-early": {
+      "result": "./data/scenarios/2026-medium-existing-early.json.gz",
+      "input_hash": "6b4633c1d9d5f7825d4e4b0ac4dc3ca2615ccec299f7fdc7d926ecc22a960d44",
+      "export": "./downloads/scenarios/2026-medium-existing-early.zip",
+      "flex": {}
+    },
+    "2026-medium-existing-derated": {
+      "result": "./data/scenarios/2026-medium-existing-derated.json.gz",
+      "input_hash": "1b2179dae3444f57c2d2c60d788a8821ec581079b95109adf5b81262c88f1171",
+      "export": "./downloads/scenarios/2026-medium-existing-derated.zip",
+      "flex": {}
+    },
+    "2026-medium-existing-control_loss": {
+      "result": "./data/scenarios/2026-medium-existing-control_loss.json.gz",
+      "input_hash": "46fc44a6a4648fa2059a307be2bdb5c49ccac0e0e1ce04b6946e5d22139f8a59",
+      "export": "./downloads/scenarios/2026-medium-existing-control_loss.zip",
+      "flex": {}
+    },
+    "2026-medium-ordered-normal": {
+      "result": "./data/scenarios/2026-medium-ordered-normal.json.gz",
+      "input_hash": "a15352e3ff64350f64ea20fd27a494338e8bcc36de8b691c888411716114a3f8",
+      "export": "./downloads/scenarios/2026-medium-ordered-normal.zip",
+      "flex": {}
+    },
+    "2026-medium-ordered-bunched": {
+      "result": "./data/scenarios/2026-medium-ordered-bunched.json.gz",
+      "input_hash": "ce310c7a8d7a47f89dc0795347a77b43d8f131760f6749cfbb57c80c46e446c6",
+      "export": "./downloads/scenarios/2026-medium-ordered-bunched.zip",
+      "flex": {}
+    },
+    "2026-medium-ordered-early": {
+      "result": "./data/scenarios/2026-medium-ordered-early.json.gz",
+      "input_hash": "8fa78ff6b8bec51f775ed23e8366f438dbc962e3dd0302d845349017a46effed",
+      "export": "./downloads/scenarios/2026-medium-ordered-early.zip",
+      "flex": {}
+    },
+    "2026-medium-ordered-derated": {
+      "result": "./data/scenarios/2026-medium-ordered-derated.json.gz",
+      "input_hash": "348d8c11097f0c16f6c68c0fa575e85c6408ecc7c55ea531d742c10b4db607a7",
+      "export": "./downloads/scenarios/2026-medium-ordered-derated.zip",
+      "flex": {}
+    },
+    "2026-medium-ordered-control_loss": {
+      "result": "./data/scenarios/2026-medium-ordered-control_loss.json.gz",
+      "input_hash": "806d891fe4ac7f327235641c9d40aece26b897043d5cf52fd35da3877bfc785c",
+      "export": "./downloads/scenarios/2026-medium-ordered-control_loss.zip",
+      "flex": {}
+    },
+    "2026-medium-phased-normal": {
+      "result": "./data/scenarios/2026-medium-phased-normal.json.gz",
+      "input_hash": "50f8e510dbaffeedbc18fa690b63d2bc305d5ba5f0b86f8c83df5759d92a02cf",
+      "export": "./downloads/scenarios/2026-medium-phased-normal.zip",
+      "flex": {}
+    },
+    "2026-medium-phased-bunched": {
+      "result": "./data/scenarios/2026-medium-phased-bunched.json.gz",
+      "input_hash": "f7350ce01c64fa26ee936ea45b1f2c7756e5d27d292c1c3fb61a5750091647e6",
+      "export": "./downloads/scenarios/2026-medium-phased-bunched.zip",
+      "flex": {}
+    },
+    "2026-medium-phased-early": {
+      "result": "./data/scenarios/2026-medium-phased-early.json.gz",
+      "input_hash": "46aabd25c89154f520e2887df387359a1f79a5998e9039c878de0912706ad753",
+      "export": "./downloads/scenarios/2026-medium-phased-early.zip",
+      "flex": {}
+    },
+    "2026-medium-phased-derated": {
+      "result": "./data/scenarios/2026-medium-phased-derated.json.gz",
+      "input_hash": "efc5a671b430176f6d739dde9d96ad5ab3e9748cd8294e2f1a64a97b82b49d88",
+      "export": "./downloads/scenarios/2026-medium-phased-derated.zip",
+      "flex": {}
+    },
+    "2026-medium-phased-control_loss": {
+      "result": "./data/scenarios/2026-medium-phased-control_loss.json.gz",
+      "input_hash": "db4c2ffae8e2bd86a2e9792bebb19c2c37ca73ba2b7e445e17c2065095c586f8",
+      "export": "./downloads/scenarios/2026-medium-phased-control_loss.zip",
+      "flex": {}
+    },
+    "2026-medium-expanded-normal": {
+      "result": "./data/scenarios/2026-medium-expanded-normal.json.gz",
+      "input_hash": "c536aa700b72a18d089df845c55b24995ac4f7e8b17a85daad4641aad1152529",
+      "export": "./downloads/scenarios/2026-medium-expanded-normal.zip",
+      "flex": {}
+    },
+    "2026-medium-expanded-bunched": {
+      "result": "./data/scenarios/2026-medium-expanded-bunched.json.gz",
+      "input_hash": "3e5f87d1c6ccb19109d08f21b9660dd2f656b4ac6191b92451f76cc58f295d80",
+      "export": "./downloads/scenarios/2026-medium-expanded-bunched.zip",
+      "flex": {}
+    },
+    "2026-medium-expanded-early": {
+      "result": "./data/scenarios/2026-medium-expanded-early.json.gz",
+      "input_hash": "d534f5cf0daec2c7a83ccbb6f76b5a9f271393d2df6118bfb0f5406cada4d4a8",
+      "export": "./downloads/scenarios/2026-medium-expanded-early.zip",
+      "flex": {}
+    },
+    "2026-medium-expanded-derated": {
+      "result": "./data/scenarios/2026-medium-expanded-derated.json.gz",
+      "input_hash": "8d1a4212705d48d1c8813be1e3f4b26368bd032d59625ab5c4000d710d443e79",
+      "export": "./downloads/scenarios/2026-medium-expanded-derated.zip",
+      "flex": {}
+    },
+    "2026-medium-expanded-control_loss": {
+      "result": "./data/scenarios/2026-medium-expanded-control_loss.json.gz",
+      "input_hash": "dac3a4a9d41c41f775781236ec5fe71516e195ebf00ede4cde2fc6406e2553ee",
+      "export": "./downloads/scenarios/2026-medium-expanded-control_loss.zip",
+      "flex": {}
+    },
+    "2026-medium-alternate-normal": {
+      "result": "./data/scenarios/2026-medium-alternate-normal.json.gz",
+      "input_hash": "c1d78e77d6fa495fb53c8ecae148eb0b928f30135c2cea68d06296172dfe38fd",
+      "export": "./downloads/scenarios/2026-medium-alternate-normal.zip",
+      "flex": {}
+    },
+    "2026-medium-alternate-bunched": {
+      "result": "./data/scenarios/2026-medium-alternate-bunched.json.gz",
+      "input_hash": "024194136bd6745c9058396387b03a305664b1a79a03bfa60afbd6d9315f8d67",
+      "export": "./downloads/scenarios/2026-medium-alternate-bunched.zip",
+      "flex": {}
+    },
+    "2026-medium-alternate-early": {
+      "result": "./data/scenarios/2026-medium-alternate-early.json.gz",
+      "input_hash": "9d22b361b4b349bbcbe6ba6995a700274450e0d602cfde0d84e85ea12380e08e",
+      "export": "./downloads/scenarios/2026-medium-alternate-early.zip",
+      "flex": {}
+    },
+    "2026-medium-alternate-derated": {
+      "result": "./data/scenarios/2026-medium-alternate-derated.json.gz",
+      "input_hash": "b7a3201fafda9f9a7878c51885a1eb18d24fb8d94c0ccc8306cabaa7dc2c0337",
+      "export": "./downloads/scenarios/2026-medium-alternate-derated.zip",
+      "flex": {}
+    },
+    "2026-medium-alternate-control_loss": {
+      "result": "./data/scenarios/2026-medium-alternate-control_loss.json.gz",
+      "input_hash": "1851a2f32d54c3bf83e306fff590f8a97977c13b8844d2a799eafb5fe97417d1",
+      "export": "./downloads/scenarios/2026-medium-alternate-control_loss.zip",
+      "flex": {}
+    },
+    "2026-high-existing-normal": {
+      "result": "./data/scenarios/2026-high-existing-normal.json.gz",
+      "input_hash": "d938b3c13249a447a8ced08bf123309dcd250c67956fa5cdb58afde9480b993c",
+      "export": "./downloads/scenarios/2026-high-existing-normal.zip",
+      "flex": {}
+    },
+    "2026-high-existing-bunched": {
+      "result": "./data/scenarios/2026-high-existing-bunched.json.gz",
+      "input_hash": "0fd395d8e66fb0dad62b60c31cede0f4752d491a8bba6442e8c6ea081e8d237c",
+      "export": "./downloads/scenarios/2026-high-existing-bunched.zip",
+      "flex": {}
+    },
+    "2026-high-existing-early": {
+      "result": "./data/scenarios/2026-high-existing-early.json.gz",
+      "input_hash": "f2a2bf3fafeefdf24b4e1f6cf74e8bebc228f4c0b453df926ecd6208ba12ef02",
+      "export": "./downloads/scenarios/2026-high-existing-early.zip",
+      "flex": {}
+    },
+    "2026-high-existing-derated": {
+      "result": "./data/scenarios/2026-high-existing-derated.json.gz",
+      "input_hash": "e1f8150f707c10b6fa864e0a14a55dd86bf4e2d430478a5ebd59d6c0878f1114",
+      "export": "./downloads/scenarios/2026-high-existing-derated.zip",
+      "flex": {}
+    },
+    "2026-high-existing-control_loss": {
+      "result": "./data/scenarios/2026-high-existing-control_loss.json.gz",
+      "input_hash": "c687ce13de752be368ae2d4fc148df18dd6e2c5f6fa42044150b3b0d06ecca27",
+      "export": "./downloads/scenarios/2026-high-existing-control_loss.zip",
+      "flex": {}
+    },
+    "2026-high-ordered-normal": {
+      "result": "./data/scenarios/2026-high-ordered-normal.json.gz",
+      "input_hash": "25cef20b9906a2ac5dc528742e73cb82e5b7b9c4c3c82b1a262d236d98101920",
+      "export": "./downloads/scenarios/2026-high-ordered-normal.zip",
+      "flex": {}
+    },
+    "2026-high-ordered-bunched": {
+      "result": "./data/scenarios/2026-high-ordered-bunched.json.gz",
+      "input_hash": "921f41dd0d0ac02da77fe9c655267c315b649409cd979e37e6dae917647beb26",
+      "export": "./downloads/scenarios/2026-high-ordered-bunched.zip",
+      "flex": {}
+    },
+    "2026-high-ordered-early": {
+      "result": "./data/scenarios/2026-high-ordered-early.json.gz",
+      "input_hash": "39acc6f81da0474c9e6aae7d5508a7091c66e3653f101ad56b7ab4865a25e95a",
+      "export": "./downloads/scenarios/2026-high-ordered-early.zip",
+      "flex": {}
+    },
+    "2026-high-ordered-derated": {
+      "result": "./data/scenarios/2026-high-ordered-derated.json.gz",
+      "input_hash": "6f9e041faf8d101589c16bc6461df577248b79c356f157855f67e2cbfe787d35",
+      "export": "./downloads/scenarios/2026-high-ordered-derated.zip",
+      "flex": {}
+    },
+    "2026-high-ordered-control_loss": {
+      "result": "./data/scenarios/2026-high-ordered-control_loss.json.gz",
+      "input_hash": "f8decfffc3470d5016aab5d3bf7977ede50dea29a99310629c060eb0a93a9ebf",
+      "export": "./downloads/scenarios/2026-high-ordered-control_loss.zip",
+      "flex": {}
+    },
+    "2026-high-phased-normal": {
+      "result": "./data/scenarios/2026-high-phased-normal.json.gz",
+      "input_hash": "7ebd440ff6eca52b3da6cfab2f94cd3b0fab44a084d31e0b84be9c97b4c2aab6",
+      "export": "./downloads/scenarios/2026-high-phased-normal.zip",
+      "flex": {}
+    },
+    "2026-high-phased-bunched": {
+      "result": "./data/scenarios/2026-high-phased-bunched.json.gz",
+      "input_hash": "887dbba0417da25a30c9aa36111cb1fc531dd9ba145a053d3a94137381f2cbba",
+      "export": "./downloads/scenarios/2026-high-phased-bunched.zip",
+      "flex": {}
+    },
+    "2026-high-phased-early": {
+      "result": "./data/scenarios/2026-high-phased-early.json.gz",
+      "input_hash": "e9a4c4c5b1889171b85a3e06f8db5fe131091727fc5e2c3c3dfeac6aa9cc480f",
+      "export": "./downloads/scenarios/2026-high-phased-early.zip",
+      "flex": {}
+    },
+    "2026-high-phased-derated": {
+      "result": "./data/scenarios/2026-high-phased-derated.json.gz",
+      "input_hash": "2bde36de04790fcda475120c8df47b001cd9815f21b9ed47355f51cc98e7c3a7",
+      "export": "./downloads/scenarios/2026-high-phased-derated.zip",
+      "flex": {}
+    },
+    "2026-high-phased-control_loss": {
+      "result": "./data/scenarios/2026-high-phased-control_loss.json.gz",
+      "input_hash": "1bae99520cddee36d8189d9a5175768c4d84d116344cf2e260b1d3413dc945ae",
+      "export": "./downloads/scenarios/2026-high-phased-control_loss.zip",
+      "flex": {}
+    },
+    "2026-high-expanded-normal": {
+      "result": "./data/scenarios/2026-high-expanded-normal.json.gz",
+      "input_hash": "2d4e59f1269db6ce19769ab17c147681d5c9f6657b1c2c3ea03eb1bb4129d2b2",
+      "export": "./downloads/scenarios/2026-high-expanded-normal.zip",
+      "flex": {}
+    },
+    "2026-high-expanded-bunched": {
+      "result": "./data/scenarios/2026-high-expanded-bunched.json.gz",
+      "input_hash": "35d2be34ae232ddc85ca81382aaae1287664e91e6b17dcaa98d2a41487c10931",
+      "export": "./downloads/scenarios/2026-high-expanded-bunched.zip",
+      "flex": {}
+    },
+    "2026-high-expanded-early": {
+      "result": "./data/scenarios/2026-high-expanded-early.json.gz",
+      "input_hash": "2217a00a3e01cbf87de2b2e044c4b4e7761b5f387fdb0bcd5f6fe4f32e3e6bea",
+      "export": "./downloads/scenarios/2026-high-expanded-early.zip",
+      "flex": {}
+    },
+    "2026-high-expanded-derated": {
+      "result": "./data/scenarios/2026-high-expanded-derated.json.gz",
+      "input_hash": "5b7035048cfefc17067b7b9a28aa467d04b7d7b3d79f77f26b9dae7d86d28559",
+      "export": "./downloads/scenarios/2026-high-expanded-derated.zip",
+      "flex": {}
+    },
+    "2026-high-expanded-control_loss": {
+      "result": "./data/scenarios/2026-high-expanded-control_loss.json.gz",
+      "input_hash": "c3f15ad1c9bad63a5360c1a324436abc5cc30ec7dd7b25beb71bd9782c1929e2",
+      "export": "./downloads/scenarios/2026-high-expanded-control_loss.zip",
+      "flex": {}
+    },
+    "2026-high-alternate-normal": {
+      "result": "./data/scenarios/2026-high-alternate-normal.json.gz",
+      "input_hash": "7247d0d65c782b00590a24b39665401c657db2c99e97064795d943ba58a00bdf",
+      "export": "./downloads/scenarios/2026-high-alternate-normal.zip",
+      "flex": {}
+    },
+    "2026-high-alternate-bunched": {
+      "result": "./data/scenarios/2026-high-alternate-bunched.json.gz",
+      "input_hash": "1ee11ee0a1a228dfeeb06e3b7a8d16d906a1dd4b440c0c7098f53e309b03762d",
+      "export": "./downloads/scenarios/2026-high-alternate-bunched.zip",
+      "flex": {}
+    },
+    "2026-high-alternate-early": {
+      "result": "./data/scenarios/2026-high-alternate-early.json.gz",
+      "input_hash": "fbe76f43dd67479bd48f4adbcf09701bbcc5f1f9b998b1ad99591f6a07c03751",
+      "export": "./downloads/scenarios/2026-high-alternate-early.zip",
+      "flex": {}
+    },
+    "2026-high-alternate-derated": {
+      "result": "./data/scenarios/2026-high-alternate-derated.json.gz",
+      "input_hash": "4bdb6a6c794bc0092b831102e929156a75de29200b4621c7c055e0ccc112189d",
+      "export": "./downloads/scenarios/2026-high-alternate-derated.zip",
+      "flex": {}
+    },
+    "2026-high-alternate-control_loss": {
+      "result": "./data/scenarios/2026-high-alternate-control_loss.json.gz",
+      "input_hash": "4a20450b5ac342fc1ad6ddd527de1cb045d0ddd5050fc3ddbbb69309f20f319a",
+      "export": "./downloads/scenarios/2026-high-alternate-control_loss.zip",
+      "flex": {}
+    },
+    "2027-low-existing-normal": {
+      "result": "./data/scenarios/2027-low-existing-normal.json.gz",
+      "input_hash": "1fc151d9237272dffe6f6a4d0f1cad6ff762ddc2e0ad6a4a81299e7dd4ad85b0",
+      "export": "./downloads/scenarios/2027-low-existing-normal.zip",
+      "flex": {}
+    },
+    "2027-low-existing-bunched": {
+      "result": "./data/scenarios/2027-low-existing-bunched.json.gz",
+      "input_hash": "f7eed0410e5ab9d59d7732dee16d8b77d4a62b54bd171b00e60c59f81407cf2a",
+      "export": "./downloads/scenarios/2027-low-existing-bunched.zip",
+      "flex": {}
+    },
+    "2027-low-existing-early": {
+      "result": "./data/scenarios/2027-low-existing-early.json.gz",
+      "input_hash": "c02e077f70fe3ebaf1f1bf1e743dd2b7d69580e7ba162ef1dee9ec7eb5d3d73a",
+      "export": "./downloads/scenarios/2027-low-existing-early.zip",
+      "flex": {}
+    },
+    "2027-low-existing-derated": {
+      "result": "./data/scenarios/2027-low-existing-derated.json.gz",
+      "input_hash": "c112989b1a8f09b61509fd316470b4f1b49fe5e00c9c533005da86d44b97f0a8",
+      "export": "./downloads/scenarios/2027-low-existing-derated.zip",
+      "flex": {}
+    },
+    "2027-low-existing-control_loss": {
+      "result": "./data/scenarios/2027-low-existing-control_loss.json.gz",
+      "input_hash": "d298c9ba6eeb3122e9bce8b49a946c8bc4cc280be0a880ab76cab105f9653e1c",
+      "export": "./downloads/scenarios/2027-low-existing-control_loss.zip",
+      "flex": {}
+    },
+    "2027-low-ordered-normal": {
+      "result": "./data/scenarios/2027-low-ordered-normal.json.gz",
+      "input_hash": "6db03627c437b269cac411df46d5bdbe720513462af24baacca68e3701d71d0c",
+      "export": "./downloads/scenarios/2027-low-ordered-normal.zip",
+      "flex": {}
+    },
+    "2027-low-ordered-bunched": {
+      "result": "./data/scenarios/2027-low-ordered-bunched.json.gz",
+      "input_hash": "bf28ed2a188326589e64e494bb8a47e72ecff67ceb81d006a2676fdc4bfde410",
+      "export": "./downloads/scenarios/2027-low-ordered-bunched.zip",
+      "flex": {}
+    },
+    "2027-low-ordered-early": {
+      "result": "./data/scenarios/2027-low-ordered-early.json.gz",
+      "input_hash": "c69acd482f2a4330f6180d9e9e545074aa2736f311861fb2a2925c4eb26f0b48",
+      "export": "./downloads/scenarios/2027-low-ordered-early.zip",
+      "flex": {}
+    },
+    "2027-low-ordered-derated": {
+      "result": "./data/scenarios/2027-low-ordered-derated.json.gz",
+      "input_hash": "5f2a4ec5e0352cf84d10103169a3f4f90d4c31f96047e22a507c05b7d3f1ff47",
+      "export": "./downloads/scenarios/2027-low-ordered-derated.zip",
+      "flex": {}
+    },
+    "2027-low-ordered-control_loss": {
+      "result": "./data/scenarios/2027-low-ordered-control_loss.json.gz",
+      "input_hash": "5c3b58721fa9503cb32114e7210b08164594286fafd7ddf335ca596b6c9cf2ea",
+      "export": "./downloads/scenarios/2027-low-ordered-control_loss.zip",
+      "flex": {}
+    },
+    "2027-low-phased-normal": {
+      "result": "./data/scenarios/2027-low-phased-normal.json.gz",
+      "input_hash": "0b36058cbb8c6dc492142499967eca6d3ec308374874a997098ba0097ef74d81",
+      "export": "./downloads/scenarios/2027-low-phased-normal.zip",
+      "flex": {}
+    },
+    "2027-low-phased-bunched": {
+      "result": "./data/scenarios/2027-low-phased-bunched.json.gz",
+      "input_hash": "e47c5b1438f730c027a8d230737903dfcee951630f5f9154ad8753c0fb51126b",
+      "export": "./downloads/scenarios/2027-low-phased-bunched.zip",
+      "flex": {}
+    },
+    "2027-low-phased-early": {
+      "result": "./data/scenarios/2027-low-phased-early.json.gz",
+      "input_hash": "2635c90a3614227353efe97cf1cf04636ac38d9d8b6867d0537e699116438ac5",
+      "export": "./downloads/scenarios/2027-low-phased-early.zip",
+      "flex": {}
+    },
+    "2027-low-phased-derated": {
+      "result": "./data/scenarios/2027-low-phased-derated.json.gz",
+      "input_hash": "7dbd51245fcda1489cca4851d933c0e611eee62f5fc86aadffc3b2cf918fe74b",
+      "export": "./downloads/scenarios/2027-low-phased-derated.zip",
+      "flex": {}
+    },
+    "2027-low-phased-control_loss": {
+      "result": "./data/scenarios/2027-low-phased-control_loss.json.gz",
+      "input_hash": "14cb96f6dab0a0b8dc7d7b0a52a90026fcdf39903c0b1f3529e352b27792db4d",
+      "export": "./downloads/scenarios/2027-low-phased-control_loss.zip",
+      "flex": {}
+    },
+    "2027-low-expanded-normal": {
+      "result": "./data/scenarios/2027-low-expanded-normal.json.gz",
+      "input_hash": "93a97b9fdb1b61f7cfc9f2cafe364e28304d3856db23eac81eecc97653118a5e",
+      "export": "./downloads/scenarios/2027-low-expanded-normal.zip",
+      "flex": {
+        "F1": "./data/flex/2027-low-expanded-normal-F1.json.gz",
+        "F2": "./data/flex/2027-low-expanded-normal-F2.json.gz",
+        "F3": "./data/flex/2027-low-expanded-normal-F3.json.gz"
+      }
+    },
+    "2027-low-expanded-bunched": {
+      "result": "./data/scenarios/2027-low-expanded-bunched.json.gz",
+      "input_hash": "a3c330d81899d908e10e0af680112f2098f42e1e14bbedfad6c0b171eec46804",
+      "export": "./downloads/scenarios/2027-low-expanded-bunched.zip",
+      "flex": {
+        "F1": "./data/flex/2027-low-expanded-bunched-F1.json.gz",
+        "F2": "./data/flex/2027-low-expanded-bunched-F2.json.gz",
+        "F3": "./data/flex/2027-low-expanded-bunched-F3.json.gz"
+      }
+    },
+    "2027-low-expanded-early": {
+      "result": "./data/scenarios/2027-low-expanded-early.json.gz",
+      "input_hash": "03ee8cc6b4ff29cfd8d1933d669e244370cae878e8651fff35be71fd20542026",
+      "export": "./downloads/scenarios/2027-low-expanded-early.zip",
+      "flex": {
+        "F1": "./data/flex/2027-low-expanded-early-F1.json.gz",
+        "F2": "./data/flex/2027-low-expanded-early-F2.json.gz",
+        "F3": "./data/flex/2027-low-expanded-early-F3.json.gz"
+      }
+    },
+    "2027-low-expanded-derated": {
+      "result": "./data/scenarios/2027-low-expanded-derated.json.gz",
+      "input_hash": "6cc2fb9352010b0522aee6aad0233a5262e907b90a1a6ca3fab135a2d2db9af6",
+      "export": "./downloads/scenarios/2027-low-expanded-derated.zip",
+      "flex": {
+        "F1": "./data/flex/2027-low-expanded-derated-F1.json.gz",
+        "F2": "./data/flex/2027-low-expanded-derated-F2.json.gz",
+        "F3": "./data/flex/2027-low-expanded-derated-F3.json.gz"
+      }
+    },
+    "2027-low-expanded-control_loss": {
+      "result": "./data/scenarios/2027-low-expanded-control_loss.json.gz",
+      "input_hash": "1e6036db0a84636e4aa173eddfffdbd67af961b1e751a0686c7cd5bd9d08e49e",
+      "export": "./downloads/scenarios/2027-low-expanded-control_loss.zip",
+      "flex": {}
+    },
+    "2027-low-alternate-normal": {
+      "result": "./data/scenarios/2027-low-alternate-normal.json.gz",
+      "input_hash": "66e0797a2343071488fabfd6f268635bd6abbf5176d055ae76c7560c504d3906",
+      "export": "./downloads/scenarios/2027-low-alternate-normal.zip",
+      "flex": {}
+    },
+    "2027-low-alternate-bunched": {
+      "result": "./data/scenarios/2027-low-alternate-bunched.json.gz",
+      "input_hash": "5d1d84078941888cd4fd8c9018b9b67e6a0c26782e47d0872dd7b7cd9f816f0e",
+      "export": "./downloads/scenarios/2027-low-alternate-bunched.zip",
+      "flex": {}
+    },
+    "2027-low-alternate-early": {
+      "result": "./data/scenarios/2027-low-alternate-early.json.gz",
+      "input_hash": "b963a71b8dc86cacea812d7a5a4ef9f46fde4772e4e539f6569fd6f8f0980f58",
+      "export": "./downloads/scenarios/2027-low-alternate-early.zip",
+      "flex": {}
+    },
+    "2027-low-alternate-derated": {
+      "result": "./data/scenarios/2027-low-alternate-derated.json.gz",
+      "input_hash": "82855e7b764a04be32dac4fdc2eb3dceceb239d7c633874a47ab91e89dc9c0fd",
+      "export": "./downloads/scenarios/2027-low-alternate-derated.zip",
+      "flex": {}
+    },
+    "2027-low-alternate-control_loss": {
+      "result": "./data/scenarios/2027-low-alternate-control_loss.json.gz",
+      "input_hash": "48dc725c1dbabbedffcb2b061968dec1549a120ecad775b7076d30cde79ac707",
+      "export": "./downloads/scenarios/2027-low-alternate-control_loss.zip",
+      "flex": {}
+    },
+    "2027-medium-existing-normal": {
+      "result": "./data/scenarios/2027-medium-existing-normal.json.gz",
+      "input_hash": "b646013941a1bab49ced91c549ea366c838a4adbed137ddab3bf8f811b733b7a",
+      "export": "./downloads/scenarios/2027-medium-existing-normal.zip",
+      "flex": {},
+      "ac": "./data/ac/2027-medium-existing-normal.json.gz",
+      "ac_export": "./downloads/scenarios/2027-medium-existing-normal-ac.zip"
+    },
+    "2027-medium-existing-bunched": {
+      "result": "./data/scenarios/2027-medium-existing-bunched.json.gz",
+      "input_hash": "ece56a409981fe32b6d753402e41023e246cf73325aeebf2ecfdd325c9a156a7",
+      "export": "./downloads/scenarios/2027-medium-existing-bunched.zip",
+      "flex": {}
+    },
+    "2027-medium-existing-early": {
+      "result": "./data/scenarios/2027-medium-existing-early.json.gz",
+      "input_hash": "7f98cc554a6d48d4ba3c1a682ec488cf0f8f0abd414661b6cc8ecdcf10eb69f6",
+      "export": "./downloads/scenarios/2027-medium-existing-early.zip",
+      "flex": {}
+    },
+    "2027-medium-existing-derated": {
+      "result": "./data/scenarios/2027-medium-existing-derated.json.gz",
+      "input_hash": "e8be14b390dffc764d873f68fa6493561b7704e7ab4da1e643da491d7b1cb3c3",
+      "export": "./downloads/scenarios/2027-medium-existing-derated.zip",
+      "flex": {}
+    },
+    "2027-medium-existing-control_loss": {
+      "result": "./data/scenarios/2027-medium-existing-control_loss.json.gz",
+      "input_hash": "205fe541c98b343318a448a2a6d0ddd7035703e492930f1437e5a259124314df",
+      "export": "./downloads/scenarios/2027-medium-existing-control_loss.zip",
+      "flex": {}
+    },
+    "2027-medium-ordered-normal": {
+      "result": "./data/scenarios/2027-medium-ordered-normal.json.gz",
+      "input_hash": "41baf42f47b0a3b59cd8b2034ece445cd2cc6f45d10929362bb7372ae9802867",
+      "export": "./downloads/scenarios/2027-medium-ordered-normal.zip",
+      "flex": {},
+      "ac": "./data/ac/2027-medium-ordered-normal.json.gz",
+      "ac_export": "./downloads/scenarios/2027-medium-ordered-normal-ac.zip"
+    },
+    "2027-medium-ordered-bunched": {
+      "result": "./data/scenarios/2027-medium-ordered-bunched.json.gz",
+      "input_hash": "82b15325065d9f5a41765541e9a91dae5a839782ee578ea388747b214e594de8",
+      "export": "./downloads/scenarios/2027-medium-ordered-bunched.zip",
+      "flex": {}
+    },
+    "2027-medium-ordered-early": {
+      "result": "./data/scenarios/2027-medium-ordered-early.json.gz",
+      "input_hash": "98aa376b96c4739041dd4c2fbd7f7ced2f1604af1b2097cd990a6444f966c3b6",
+      "export": "./downloads/scenarios/2027-medium-ordered-early.zip",
+      "flex": {}
+    },
+    "2027-medium-ordered-derated": {
+      "result": "./data/scenarios/2027-medium-ordered-derated.json.gz",
+      "input_hash": "e9ecc288842c92db6e27da1d0a7041ce1486d12c4b4547b9b5633d85a10954ac",
+      "export": "./downloads/scenarios/2027-medium-ordered-derated.zip",
+      "flex": {}
+    },
+    "2027-medium-ordered-control_loss": {
+      "result": "./data/scenarios/2027-medium-ordered-control_loss.json.gz",
+      "input_hash": "87c9e37210582d03a154afcda015f329ddf54758d3900a05d8b06eb87bfaf205",
+      "export": "./downloads/scenarios/2027-medium-ordered-control_loss.zip",
+      "flex": {}
+    },
+    "2027-medium-phased-normal": {
+      "result": "./data/scenarios/2027-medium-phased-normal.json.gz",
+      "input_hash": "bfc302007fe17f70fd139f8e61f36fcf4d8907b94f2516a0bb79067112e1a5e1",
+      "export": "./downloads/scenarios/2027-medium-phased-normal.zip",
+      "flex": {}
+    },
+    "2027-medium-phased-bunched": {
+      "result": "./data/scenarios/2027-medium-phased-bunched.json.gz",
+      "input_hash": "f4b83a4c16c39b36de0d202e2c36432ffdf162a4861371b25f2c3b17f5543422",
+      "export": "./downloads/scenarios/2027-medium-phased-bunched.zip",
+      "flex": {}
+    },
+    "2027-medium-phased-early": {
+      "result": "./data/scenarios/2027-medium-phased-early.json.gz",
+      "input_hash": "65867b59be855a07a94cc67c8d8eeb0051441d24be72e69a35621c9a8417642c",
+      "export": "./downloads/scenarios/2027-medium-phased-early.zip",
+      "flex": {}
+    },
+    "2027-medium-phased-derated": {
+      "result": "./data/scenarios/2027-medium-phased-derated.json.gz",
+      "input_hash": "966a8f8ff743c6c71c2d6c4acb452d5abfebfb565c78772db664558a5b5a8287",
+      "export": "./downloads/scenarios/2027-medium-phased-derated.zip",
+      "flex": {}
+    },
+    "2027-medium-phased-control_loss": {
+      "result": "./data/scenarios/2027-medium-phased-control_loss.json.gz",
+      "input_hash": "a02cf4814d210ad53d352c912362cfad5b22f2678c4aaaf6c0bc5e6386059357",
+      "export": "./downloads/scenarios/2027-medium-phased-control_loss.zip",
+      "flex": {}
+    },
+    "2027-medium-expanded-normal": {
+      "result": "./data/scenarios/2027-medium-expanded-normal.json.gz",
+      "input_hash": "4f6447cb5274f9017df9c0deeb02093ded2dbbf14eba4b15a6a283203ac67b94",
+      "export": "./downloads/scenarios/2027-medium-expanded-normal.zip",
+      "flex": {
+        "F1": "./data/flex/2027-medium-expanded-normal-F1.json.gz",
+        "F2": "./data/flex/2027-medium-expanded-normal-F2.json.gz",
+        "F3": "./data/flex/2027-medium-expanded-normal-F3.json.gz"
+      },
+      "ac": "./data/ac/2027-medium-expanded-normal.json.gz",
+      "ac_export": "./downloads/scenarios/2027-medium-expanded-normal-ac.zip"
+    },
+    "2027-medium-expanded-bunched": {
+      "result": "./data/scenarios/2027-medium-expanded-bunched.json.gz",
+      "input_hash": "7ebc688c13e6abf0e3de4de58b66d1ba08d07dc5519cda307ce8dbf243953ea3",
+      "export": "./downloads/scenarios/2027-medium-expanded-bunched.zip",
+      "flex": {
+        "F1": "./data/flex/2027-medium-expanded-bunched-F1.json.gz",
+        "F2": "./data/flex/2027-medium-expanded-bunched-F2.json.gz",
+        "F3": "./data/flex/2027-medium-expanded-bunched-F3.json.gz"
+      }
+    },
+    "2027-medium-expanded-early": {
+      "result": "./data/scenarios/2027-medium-expanded-early.json.gz",
+      "input_hash": "0c852b456844ed2c4a970e218413ea1740ea58dbaaa24f1a6afede84a0bd39ba",
+      "export": "./downloads/scenarios/2027-medium-expanded-early.zip",
+      "flex": {
+        "F1": "./data/flex/2027-medium-expanded-early-F1.json.gz",
+        "F2": "./data/flex/2027-medium-expanded-early-F2.json.gz",
+        "F3": "./data/flex/2027-medium-expanded-early-F3.json.gz"
+      }
+    },
+    "2027-medium-expanded-derated": {
+      "result": "./data/scenarios/2027-medium-expanded-derated.json.gz",
+      "input_hash": "512d6fed47cf9375b5bc6401670d1cdc5d9d019811952b78b6f1c6a97aa9bafa",
+      "export": "./downloads/scenarios/2027-medium-expanded-derated.zip",
+      "flex": {
+        "F1": "./data/flex/2027-medium-expanded-derated-F1.json.gz",
+        "F2": "./data/flex/2027-medium-expanded-derated-F2.json.gz",
+        "F3": "./data/flex/2027-medium-expanded-derated-F3.json.gz"
+      }
+    },
+    "2027-medium-expanded-control_loss": {
+      "result": "./data/scenarios/2027-medium-expanded-control_loss.json.gz",
+      "input_hash": "78573a8cfcfbac017ad0fd3a92fc51453f5c58ee130fb3739db1b6a821769178",
+      "export": "./downloads/scenarios/2027-medium-expanded-control_loss.zip",
+      "flex": {}
+    },
+    "2027-medium-alternate-normal": {
+      "result": "./data/scenarios/2027-medium-alternate-normal.json.gz",
+      "input_hash": "848bbf5d4484bfe0c7de29bdd303053e2f436c464cb13a7ee33930cc4f2f1372",
+      "export": "./downloads/scenarios/2027-medium-alternate-normal.zip",
+      "flex": {}
+    },
+    "2027-medium-alternate-bunched": {
+      "result": "./data/scenarios/2027-medium-alternate-bunched.json.gz",
+      "input_hash": "2afcaa7f7322207d4f87ed74feafaaf08ca99aa1f302dc280b9395258c0b9d67",
+      "export": "./downloads/scenarios/2027-medium-alternate-bunched.zip",
+      "flex": {}
+    },
+    "2027-medium-alternate-early": {
+      "result": "./data/scenarios/2027-medium-alternate-early.json.gz",
+      "input_hash": "806f097c5ad43b008e415484142872117db709471b5cb3d72ee8b7dc91b74fea",
+      "export": "./downloads/scenarios/2027-medium-alternate-early.zip",
+      "flex": {}
+    },
+    "2027-medium-alternate-derated": {
+      "result": "./data/scenarios/2027-medium-alternate-derated.json.gz",
+      "input_hash": "4a01e84207f054f258a593f97c03c7ffeafd015c18c5b05df84c3557352c817a",
+      "export": "./downloads/scenarios/2027-medium-alternate-derated.zip",
+      "flex": {}
+    },
+    "2027-medium-alternate-control_loss": {
+      "result": "./data/scenarios/2027-medium-alternate-control_loss.json.gz",
+      "input_hash": "03a38ca12b714ad9e3c4092b9148564df34d61c5effe36b04d0a899781ee4fdb",
+      "export": "./downloads/scenarios/2027-medium-alternate-control_loss.zip",
+      "flex": {}
+    },
+    "2027-high-existing-normal": {
+      "result": "./data/scenarios/2027-high-existing-normal.json.gz",
+      "input_hash": "7cbb9f4355b5f55311acf217f72b82512219041b7ca7345c55696e35f0d574bf",
+      "export": "./downloads/scenarios/2027-high-existing-normal.zip",
+      "flex": {}
+    },
+    "2027-high-existing-bunched": {
+      "result": "./data/scenarios/2027-high-existing-bunched.json.gz",
+      "input_hash": "98fb764cc1a8a77248f2c7205d5dc8bfa00253976f94a42f782fd75b31124622",
+      "export": "./downloads/scenarios/2027-high-existing-bunched.zip",
+      "flex": {}
+    },
+    "2027-high-existing-early": {
+      "result": "./data/scenarios/2027-high-existing-early.json.gz",
+      "input_hash": "e65f8103373a9ca66b5ccdd7a3fd6a3b07a4383a16d9fb2cd790b2a9c7ebb7a5",
+      "export": "./downloads/scenarios/2027-high-existing-early.zip",
+      "flex": {}
+    },
+    "2027-high-existing-derated": {
+      "result": "./data/scenarios/2027-high-existing-derated.json.gz",
+      "input_hash": "957b27434a48e9af735f9e83d710919f3cb70eb8e3101f695ffefaff11ff1bcc",
+      "export": "./downloads/scenarios/2027-high-existing-derated.zip",
+      "flex": {}
+    },
+    "2027-high-existing-control_loss": {
+      "result": "./data/scenarios/2027-high-existing-control_loss.json.gz",
+      "input_hash": "e56f6108c16796d026c3d427594901040e5720974b369729f0cc44e59480019b",
+      "export": "./downloads/scenarios/2027-high-existing-control_loss.zip",
+      "flex": {}
+    },
+    "2027-high-ordered-normal": {
+      "result": "./data/scenarios/2027-high-ordered-normal.json.gz",
+      "input_hash": "cc97bb435595d1e3bf16e055e3d2b106860042085e4c7a443be5b52f1a7ae8ee",
+      "export": "./downloads/scenarios/2027-high-ordered-normal.zip",
+      "flex": {}
+    },
+    "2027-high-ordered-bunched": {
+      "result": "./data/scenarios/2027-high-ordered-bunched.json.gz",
+      "input_hash": "65ec72ce5ec612972e9e3e6f2e8bc513e1432939fe30c68d7cbc69b5aa225364",
+      "export": "./downloads/scenarios/2027-high-ordered-bunched.zip",
+      "flex": {}
+    },
+    "2027-high-ordered-early": {
+      "result": "./data/scenarios/2027-high-ordered-early.json.gz",
+      "input_hash": "9ccfe38107c2cabd40759e451a4f34a42d9a8e5d4a820d16b3c85aad5898580e",
+      "export": "./downloads/scenarios/2027-high-ordered-early.zip",
+      "flex": {}
+    },
+    "2027-high-ordered-derated": {
+      "result": "./data/scenarios/2027-high-ordered-derated.json.gz",
+      "input_hash": "671c2e6f89b2e78e71a045f72d68c4a1962d868cf0ee4d084b7083f3a19ccde1",
+      "export": "./downloads/scenarios/2027-high-ordered-derated.zip",
+      "flex": {}
+    },
+    "2027-high-ordered-control_loss": {
+      "result": "./data/scenarios/2027-high-ordered-control_loss.json.gz",
+      "input_hash": "e184dedcda0a091881b6d5a8012b76d5cc8aae9e0a5f93ba4070b50d4fb9dfb8",
+      "export": "./downloads/scenarios/2027-high-ordered-control_loss.zip",
+      "flex": {}
+    },
+    "2027-high-phased-normal": {
+      "result": "./data/scenarios/2027-high-phased-normal.json.gz",
+      "input_hash": "85e098824e0bcf74ae576c522acf37684a2ac607dc64230b379387c9322b669d",
+      "export": "./downloads/scenarios/2027-high-phased-normal.zip",
+      "flex": {}
+    },
+    "2027-high-phased-bunched": {
+      "result": "./data/scenarios/2027-high-phased-bunched.json.gz",
+      "input_hash": "cdf1e50a90ba1d1623e8e94a37712633993814c6afa7788fe520795f53865cb5",
+      "export": "./downloads/scenarios/2027-high-phased-bunched.zip",
+      "flex": {}
+    },
+    "2027-high-phased-early": {
+      "result": "./data/scenarios/2027-high-phased-early.json.gz",
+      "input_hash": "7250172db5c8c36b716bf3eae75dd6d7124ebbbd6e8ba8b0433818e1338e13d7",
+      "export": "./downloads/scenarios/2027-high-phased-early.zip",
+      "flex": {}
+    },
+    "2027-high-phased-derated": {
+      "result": "./data/scenarios/2027-high-phased-derated.json.gz",
+      "input_hash": "4d8b2ab1c684de00bd3f3119d632ccdb04873a7a9b3ad947c03b881eab5638ff",
+      "export": "./downloads/scenarios/2027-high-phased-derated.zip",
+      "flex": {}
+    },
+    "2027-high-phased-control_loss": {
+      "result": "./data/scenarios/2027-high-phased-control_loss.json.gz",
+      "input_hash": "ae08f8b4ffdbde2d810d1a9eeecc9cc2be3741e9b63b910f535ee5eec72ed3ab",
+      "export": "./downloads/scenarios/2027-high-phased-control_loss.zip",
+      "flex": {}
+    },
+    "2027-high-expanded-normal": {
+      "result": "./data/scenarios/2027-high-expanded-normal.json.gz",
+      "input_hash": "07fe1953ea0e01a8cdbd2f351aeecb0aadcfdf7bfe68580c7fccfcc43dbe28d9",
+      "export": "./downloads/scenarios/2027-high-expanded-normal.zip",
+      "flex": {
+        "F1": "./data/flex/2027-high-expanded-normal-F1.json.gz",
+        "F2": "./data/flex/2027-high-expanded-normal-F2.json.gz",
+        "F3": "./data/flex/2027-high-expanded-normal-F3.json.gz"
+      }
+    },
+    "2027-high-expanded-bunched": {
+      "result": "./data/scenarios/2027-high-expanded-bunched.json.gz",
+      "input_hash": "a68f09a45a8509600630ef9e59b1219b55c15d648cff2023caf3fab97c34cc1b",
+      "export": "./downloads/scenarios/2027-high-expanded-bunched.zip",
+      "flex": {
+        "F1": "./data/flex/2027-high-expanded-bunched-F1.json.gz",
+        "F2": "./data/flex/2027-high-expanded-bunched-F2.json.gz",
+        "F3": "./data/flex/2027-high-expanded-bunched-F3.json.gz"
+      }
+    },
+    "2027-high-expanded-early": {
+      "result": "./data/scenarios/2027-high-expanded-early.json.gz",
+      "input_hash": "504a617192f4a06f21a373dd4ae0ddd6714eb0dc9edcb2747cc9ef47af5ddc34",
+      "export": "./downloads/scenarios/2027-high-expanded-early.zip",
+      "flex": {
+        "F1": "./data/flex/2027-high-expanded-early-F1.json.gz",
+        "F2": "./data/flex/2027-high-expanded-early-F2.json.gz",
+        "F3": "./data/flex/2027-high-expanded-early-F3.json.gz"
+      }
+    },
+    "2027-high-expanded-derated": {
+      "result": "./data/scenarios/2027-high-expanded-derated.json.gz",
+      "input_hash": "4a3dd3f6dd1b0d87726adaf20137c6d8c418c3a11b1bb523027e5b2cc98d70f5",
+      "export": "./downloads/scenarios/2027-high-expanded-derated.zip",
+      "flex": {
+        "F1": "./data/flex/2027-high-expanded-derated-F1.json.gz",
+        "F2": "./data/flex/2027-high-expanded-derated-F2.json.gz",
+        "F3": "./data/flex/2027-high-expanded-derated-F3.json.gz"
+      }
+    },
+    "2027-high-expanded-control_loss": {
+      "result": "./data/scenarios/2027-high-expanded-control_loss.json.gz",
+      "input_hash": "5c6c4eef52451a0d8d9d5b424623442777687e471ae5403521468331722c9ecf",
+      "export": "./downloads/scenarios/2027-high-expanded-control_loss.zip",
+      "flex": {}
+    },
+    "2027-high-alternate-normal": {
+      "result": "./data/scenarios/2027-high-alternate-normal.json.gz",
+      "input_hash": "498e233d01106b91c0dcfadd481f8c662bb244c67cf3b6206feba03e6303bd41",
+      "export": "./downloads/scenarios/2027-high-alternate-normal.zip",
+      "flex": {}
+    },
+    "2027-high-alternate-bunched": {
+      "result": "./data/scenarios/2027-high-alternate-bunched.json.gz",
+      "input_hash": "9d68e0b84ff66c596390de0ff0e4d57b0de9641b97b8297b59b7a577fbe83762",
+      "export": "./downloads/scenarios/2027-high-alternate-bunched.zip",
+      "flex": {}
+    },
+    "2027-high-alternate-early": {
+      "result": "./data/scenarios/2027-high-alternate-early.json.gz",
+      "input_hash": "87e58b4c3d99aaffb1d03878bd0d55c9e560f0ffd2c77f66b18d2674379bd955",
+      "export": "./downloads/scenarios/2027-high-alternate-early.zip",
+      "flex": {}
+    },
+    "2027-high-alternate-derated": {
+      "result": "./data/scenarios/2027-high-alternate-derated.json.gz",
+      "input_hash": "b06a8d5963765e3b544637c7af163a813b00e0dae53427ac8bd462cb57015c5d",
+      "export": "./downloads/scenarios/2027-high-alternate-derated.zip",
+      "flex": {}
+    },
+    "2027-high-alternate-control_loss": {
+      "result": "./data/scenarios/2027-high-alternate-control_loss.json.gz",
+      "input_hash": "14434e967348a0c7a94d8e863a1dcdfc392321b6aaf293fd19eb953590ce69a3",
+      "export": "./downloads/scenarios/2027-high-alternate-control_loss.zip",
+      "flex": {}
+    },
+    "2028-low-existing-normal": {
+      "result": "./data/scenarios/2028-low-existing-normal.json.gz",
+      "input_hash": "939e1732daa8219b9a3fdad4c4051c460677f4882914924fa45db3047faa6efe",
+      "export": "./downloads/scenarios/2028-low-existing-normal.zip",
+      "flex": {}
+    },
+    "2028-low-existing-bunched": {
+      "result": "./data/scenarios/2028-low-existing-bunched.json.gz",
+      "input_hash": "d5b77c4a1a7a5aa152a39b7ec9c3013dc74a7621459222b9f7edd91a37310438",
+      "export": "./downloads/scenarios/2028-low-existing-bunched.zip",
+      "flex": {}
+    },
+    "2028-low-existing-early": {
+      "result": "./data/scenarios/2028-low-existing-early.json.gz",
+      "input_hash": "d96e08a6c60db031cd3cd76d7b0797cd4f80aa6e3ec6e1b0186b219560ac9bca",
+      "export": "./downloads/scenarios/2028-low-existing-early.zip",
+      "flex": {}
+    },
+    "2028-low-existing-derated": {
+      "result": "./data/scenarios/2028-low-existing-derated.json.gz",
+      "input_hash": "abfe8b98242de3f25d1c04840a7e2929143d809869e19c513bf7927c25d79ade",
+      "export": "./downloads/scenarios/2028-low-existing-derated.zip",
+      "flex": {}
+    },
+    "2028-low-existing-control_loss": {
+      "result": "./data/scenarios/2028-low-existing-control_loss.json.gz",
+      "input_hash": "3f8c8ffdfa808deb774648a5ca7e78fd4a75e14b37f61a56dd39f59b5f5913ba",
+      "export": "./downloads/scenarios/2028-low-existing-control_loss.zip",
+      "flex": {}
+    },
+    "2028-low-ordered-normal": {
+      "result": "./data/scenarios/2028-low-ordered-normal.json.gz",
+      "input_hash": "4af09a418e9e4ca905844cd01a58682f75c05f763329ce1201a8cf137cdbc400",
+      "export": "./downloads/scenarios/2028-low-ordered-normal.zip",
+      "flex": {}
+    },
+    "2028-low-ordered-bunched": {
+      "result": "./data/scenarios/2028-low-ordered-bunched.json.gz",
+      "input_hash": "10801ba4c6eeb89fba333117106ce9d013314fb9e2c67ee9f757d391642c59d2",
+      "export": "./downloads/scenarios/2028-low-ordered-bunched.zip",
+      "flex": {}
+    },
+    "2028-low-ordered-early": {
+      "result": "./data/scenarios/2028-low-ordered-early.json.gz",
+      "input_hash": "650996dc99eb7afbe57d9250c8f4332c683e97bc3c47ae0a6de55e2e22bb463b",
+      "export": "./downloads/scenarios/2028-low-ordered-early.zip",
+      "flex": {}
+    },
+    "2028-low-ordered-derated": {
+      "result": "./data/scenarios/2028-low-ordered-derated.json.gz",
+      "input_hash": "00a1d3ed29df005b57e899aae37c71a9cee2ed161e4194bd74af5543170be826",
+      "export": "./downloads/scenarios/2028-low-ordered-derated.zip",
+      "flex": {}
+    },
+    "2028-low-ordered-control_loss": {
+      "result": "./data/scenarios/2028-low-ordered-control_loss.json.gz",
+      "input_hash": "6e2ecb7665aab391dbcdb6fbff13d197b53359ac7f23e30577513070997e9d77",
+      "export": "./downloads/scenarios/2028-low-ordered-control_loss.zip",
+      "flex": {}
+    },
+    "2028-low-phased-normal": {
+      "result": "./data/scenarios/2028-low-phased-normal.json.gz",
+      "input_hash": "afcaa7fda46b2562993032c32caac83bd2903b0947566035c8d18a1c397ebc53",
+      "export": "./downloads/scenarios/2028-low-phased-normal.zip",
+      "flex": {}
+    },
+    "2028-low-phased-bunched": {
+      "result": "./data/scenarios/2028-low-phased-bunched.json.gz",
+      "input_hash": "80969d320fd77a7fea8ec00af091d13919feb63917d2191c8589009eac5cecb4",
+      "export": "./downloads/scenarios/2028-low-phased-bunched.zip",
+      "flex": {}
+    },
+    "2028-low-phased-early": {
+      "result": "./data/scenarios/2028-low-phased-early.json.gz",
+      "input_hash": "d66e09f971b5db3be544143dbdbd0ebe53a3e184a84b3b8782a6babac7198200",
+      "export": "./downloads/scenarios/2028-low-phased-early.zip",
+      "flex": {}
+    },
+    "2028-low-phased-derated": {
+      "result": "./data/scenarios/2028-low-phased-derated.json.gz",
+      "input_hash": "7866e50a62e0fa465c27dca8c1f877dbbb8e7fe2a3d65a732cf2f5311f9e5360",
+      "export": "./downloads/scenarios/2028-low-phased-derated.zip",
+      "flex": {}
+    },
+    "2028-low-phased-control_loss": {
+      "result": "./data/scenarios/2028-low-phased-control_loss.json.gz",
+      "input_hash": "25b0a76c80bdb764f8cd1c18b9b225a817ab6476d91f4660ca6d73fe55488b98",
+      "export": "./downloads/scenarios/2028-low-phased-control_loss.zip",
+      "flex": {}
+    },
+    "2028-low-expanded-normal": {
+      "result": "./data/scenarios/2028-low-expanded-normal.json.gz",
+      "input_hash": "9c20e8a6fc6b9b79a41570c4666b8231c1a8e08f8422bb5bc0bce228bef4728a",
+      "export": "./downloads/scenarios/2028-low-expanded-normal.zip",
+      "flex": {
+        "F1": "./data/flex/2028-low-expanded-normal-F1.json.gz",
+        "F2": "./data/flex/2028-low-expanded-normal-F2.json.gz",
+        "F3": "./data/flex/2028-low-expanded-normal-F3.json.gz"
+      }
+    },
+    "2028-low-expanded-bunched": {
+      "result": "./data/scenarios/2028-low-expanded-bunched.json.gz",
+      "input_hash": "a8518261efa77b264754d8fdafc277750dfd2d1931e77ed8a75aa52ebdf67f0b",
+      "export": "./downloads/scenarios/2028-low-expanded-bunched.zip",
+      "flex": {
+        "F1": "./data/flex/2028-low-expanded-bunched-F1.json.gz",
+        "F2": "./data/flex/2028-low-expanded-bunched-F2.json.gz",
+        "F3": "./data/flex/2028-low-expanded-bunched-F3.json.gz"
+      }
+    },
+    "2028-low-expanded-early": {
+      "result": "./data/scenarios/2028-low-expanded-early.json.gz",
+      "input_hash": "b53cf380c455b802aa118130362212bef997223333a7b70d432777ae033a2be2",
+      "export": "./downloads/scenarios/2028-low-expanded-early.zip",
+      "flex": {
+        "F1": "./data/flex/2028-low-expanded-early-F1.json.gz",
+        "F2": "./data/flex/2028-low-expanded-early-F2.json.gz",
+        "F3": "./data/flex/2028-low-expanded-early-F3.json.gz"
+      }
+    },
+    "2028-low-expanded-derated": {
+      "result": "./data/scenarios/2028-low-expanded-derated.json.gz",
+      "input_hash": "cc52e567c6ee7094001a015d57860905566ff0c9176a1eb1a426c208129c8e43",
+      "export": "./downloads/scenarios/2028-low-expanded-derated.zip",
+      "flex": {
+        "F1": "./data/flex/2028-low-expanded-derated-F1.json.gz",
+        "F2": "./data/flex/2028-low-expanded-derated-F2.json.gz",
+        "F3": "./data/flex/2028-low-expanded-derated-F3.json.gz"
+      }
+    },
+    "2028-low-expanded-control_loss": {
+      "result": "./data/scenarios/2028-low-expanded-control_loss.json.gz",
+      "input_hash": "8dee210eb695678140023271a1cab6bcca010004849b378780d3aa2a28324ebe",
+      "export": "./downloads/scenarios/2028-low-expanded-control_loss.zip",
+      "flex": {}
+    },
+    "2028-low-alternate-normal": {
+      "result": "./data/scenarios/2028-low-alternate-normal.json.gz",
+      "input_hash": "9d6ef868b8497a71daceaa097a912d33668964da6ac8cbb0bc22811760045af1",
+      "export": "./downloads/scenarios/2028-low-alternate-normal.zip",
+      "flex": {}
+    },
+    "2028-low-alternate-bunched": {
+      "result": "./data/scenarios/2028-low-alternate-bunched.json.gz",
+      "input_hash": "3a6f4f7b0b58a3ab39455a2433242963053045a1ce0fd7be07355b8793992bf2",
+      "export": "./downloads/scenarios/2028-low-alternate-bunched.zip",
+      "flex": {}
+    },
+    "2028-low-alternate-early": {
+      "result": "./data/scenarios/2028-low-alternate-early.json.gz",
+      "input_hash": "b5608b3538002fc4ac0ce9e81fc68240f4c1544d7fc99eb617baeb8ba3f7c2bd",
+      "export": "./downloads/scenarios/2028-low-alternate-early.zip",
+      "flex": {}
+    },
+    "2028-low-alternate-derated": {
+      "result": "./data/scenarios/2028-low-alternate-derated.json.gz",
+      "input_hash": "3ff286d7ac2c475264f2ba1114a6d5ae35d49d8d789cfaf7eaa89813f340ec5e",
+      "export": "./downloads/scenarios/2028-low-alternate-derated.zip",
+      "flex": {}
+    },
+    "2028-low-alternate-control_loss": {
+      "result": "./data/scenarios/2028-low-alternate-control_loss.json.gz",
+      "input_hash": "aa90aaf3e87e6d3945b137c3a0754fab2e3e54636876cdea02297e85172a4715",
+      "export": "./downloads/scenarios/2028-low-alternate-control_loss.zip",
+      "flex": {}
+    },
+    "2028-medium-existing-normal": {
+      "result": "./data/scenarios/2028-medium-existing-normal.json.gz",
+      "input_hash": "c6738364b8b93bedb7adcda2df9b008380d131181628f0cbf5ba235fbb4c1b5f",
+      "export": "./downloads/scenarios/2028-medium-existing-normal.zip",
+      "flex": {}
+    },
+    "2028-medium-existing-bunched": {
+      "result": "./data/scenarios/2028-medium-existing-bunched.json.gz",
+      "input_hash": "44b5181e22501d98bda5399917e3edc85299616de1dade7466c2ded5f404195c",
+      "export": "./downloads/scenarios/2028-medium-existing-bunched.zip",
+      "flex": {}
+    },
+    "2028-medium-existing-early": {
+      "result": "./data/scenarios/2028-medium-existing-early.json.gz",
+      "input_hash": "d8fef43e77306e58b9568c0bb3fc0e62114beef6374382838492aa51521c3b2f",
+      "export": "./downloads/scenarios/2028-medium-existing-early.zip",
+      "flex": {}
+    },
+    "2028-medium-existing-derated": {
+      "result": "./data/scenarios/2028-medium-existing-derated.json.gz",
+      "input_hash": "a71459f222fdd9416c02e10ca6c6eac4c2a926959c59bbcfb70cf132868a4ad6",
+      "export": "./downloads/scenarios/2028-medium-existing-derated.zip",
+      "flex": {}
+    },
+    "2028-medium-existing-control_loss": {
+      "result": "./data/scenarios/2028-medium-existing-control_loss.json.gz",
+      "input_hash": "ef0a5bbed6d311925c862a4190a0120adec77be05badd5128858dacfd9b83f28",
+      "export": "./downloads/scenarios/2028-medium-existing-control_loss.zip",
+      "flex": {}
+    },
+    "2028-medium-ordered-normal": {
+      "result": "./data/scenarios/2028-medium-ordered-normal.json.gz",
+      "input_hash": "2a7ed9f302465fca0c9dbec40581049f3de29055cd9688273b917317434c9a58",
+      "export": "./downloads/scenarios/2028-medium-ordered-normal.zip",
+      "flex": {}
+    },
+    "2028-medium-ordered-bunched": {
+      "result": "./data/scenarios/2028-medium-ordered-bunched.json.gz",
+      "input_hash": "bc6be5d32ab0e7ab3e183a530637efa5890e8fdd0a94afe98589b733022e2016",
+      "export": "./downloads/scenarios/2028-medium-ordered-bunched.zip",
+      "flex": {}
+    },
+    "2028-medium-ordered-early": {
+      "result": "./data/scenarios/2028-medium-ordered-early.json.gz",
+      "input_hash": "166c08c0ea3cdb5b9031ce8a70070ef8cda370bbce9302a1507577183a0c1bd5",
+      "export": "./downloads/scenarios/2028-medium-ordered-early.zip",
+      "flex": {}
+    },
+    "2028-medium-ordered-derated": {
+      "result": "./data/scenarios/2028-medium-ordered-derated.json.gz",
+      "input_hash": "b109c06109ff4d1e0b8841981db5bfec56ad11a57516ed14927dc072c4e2a888",
+      "export": "./downloads/scenarios/2028-medium-ordered-derated.zip",
+      "flex": {}
+    },
+    "2028-medium-ordered-control_loss": {
+      "result": "./data/scenarios/2028-medium-ordered-control_loss.json.gz",
+      "input_hash": "452670f442d54cab23e3dee43876b301253913ee196f99fc6955ff88d26bf0f1",
+      "export": "./downloads/scenarios/2028-medium-ordered-control_loss.zip",
+      "flex": {}
+    },
+    "2028-medium-phased-normal": {
+      "result": "./data/scenarios/2028-medium-phased-normal.json.gz",
+      "input_hash": "e6e7a83ec00d88b1f3f21f6f35f7c36cb34851568aac550a388f002e6bd41e34",
+      "export": "./downloads/scenarios/2028-medium-phased-normal.zip",
+      "flex": {}
+    },
+    "2028-medium-phased-bunched": {
+      "result": "./data/scenarios/2028-medium-phased-bunched.json.gz",
+      "input_hash": "45a860b0c97bd05bdef07ea297f7925eaf3b1654ec2721936388d2bbed2656be",
+      "export": "./downloads/scenarios/2028-medium-phased-bunched.zip",
+      "flex": {}
+    },
+    "2028-medium-phased-early": {
+      "result": "./data/scenarios/2028-medium-phased-early.json.gz",
+      "input_hash": "9e2e3ba1f49baee5e19e49b5fdfd58aecfe8302b6c149b21e8be405b0668c8a8",
+      "export": "./downloads/scenarios/2028-medium-phased-early.zip",
+      "flex": {}
+    },
+    "2028-medium-phased-derated": {
+      "result": "./data/scenarios/2028-medium-phased-derated.json.gz",
+      "input_hash": "a908f7f14f9821d3a22e70e74f7156a2975e3f4dd906d7456096f7da76577458",
+      "export": "./downloads/scenarios/2028-medium-phased-derated.zip",
+      "flex": {}
+    },
+    "2028-medium-phased-control_loss": {
+      "result": "./data/scenarios/2028-medium-phased-control_loss.json.gz",
+      "input_hash": "37fa93a7ab3c22307add52932e4b1bd3c4f8db451d5f9adf986e17bdd5eb3519",
+      "export": "./downloads/scenarios/2028-medium-phased-control_loss.zip",
+      "flex": {}
+    },
+    "2028-medium-expanded-normal": {
+      "result": "./data/scenarios/2028-medium-expanded-normal.json.gz",
+      "input_hash": "987caced98ace59d07588e7fd5ae88f4f2554b5a62cbf16fcd7bb870c7dd2b36",
+      "export": "./downloads/scenarios/2028-medium-expanded-normal.zip",
+      "flex": {
+        "F1": "./data/flex/2028-medium-expanded-normal-F1.json.gz",
+        "F2": "./data/flex/2028-medium-expanded-normal-F2.json.gz",
+        "F3": "./data/flex/2028-medium-expanded-normal-F3.json.gz"
+      }
+    },
+    "2028-medium-expanded-bunched": {
+      "result": "./data/scenarios/2028-medium-expanded-bunched.json.gz",
+      "input_hash": "bc531a9b85b2a9a0a1fae6de15d791be515c6bf04d846eb46819e3d75b5feb57",
+      "export": "./downloads/scenarios/2028-medium-expanded-bunched.zip",
+      "flex": {}
+    },
+    "2028-medium-expanded-early": {
+      "result": "./data/scenarios/2028-medium-expanded-early.json.gz",
+      "input_hash": "eab567d7aef42d48722ddde4e09714148d8da769e91a3b0afd6666d21854b833",
+      "export": "./downloads/scenarios/2028-medium-expanded-early.zip",
+      "flex": {
+        "F1": "./data/flex/2028-medium-expanded-early-F1.json.gz",
+        "F2": "./data/flex/2028-medium-expanded-early-F2.json.gz",
+        "F3": "./data/flex/2028-medium-expanded-early-F3.json.gz"
+      }
+    },
+    "2028-medium-expanded-derated": {
+      "result": "./data/scenarios/2028-medium-expanded-derated.json.gz",
+      "input_hash": "3b1199bcf882121aea239b488f3fc359db1b182487273f0ac37148b3e0b7dc52",
+      "export": "./downloads/scenarios/2028-medium-expanded-derated.zip",
+      "flex": {}
+    },
+    "2028-medium-expanded-control_loss": {
+      "result": "./data/scenarios/2028-medium-expanded-control_loss.json.gz",
+      "input_hash": "1c276c695a33f93c8c0e49bbf216c9ed627e5e70f226f3205e55617bdff78ece",
+      "export": "./downloads/scenarios/2028-medium-expanded-control_loss.zip",
+      "flex": {}
+    },
+    "2028-medium-alternate-normal": {
+      "result": "./data/scenarios/2028-medium-alternate-normal.json.gz",
+      "input_hash": "e64579d11d6ecdf486c99ba4675b1f1b12d14c31e1737bb1da1eead1f8dc32f5",
+      "export": "./downloads/scenarios/2028-medium-alternate-normal.zip",
+      "flex": {}
+    },
+    "2028-medium-alternate-bunched": {
+      "result": "./data/scenarios/2028-medium-alternate-bunched.json.gz",
+      "input_hash": "1b85ed414b18b412ac702cc4452f9b9163be10b98299fbe32c623098ce8e3afa",
+      "export": "./downloads/scenarios/2028-medium-alternate-bunched.zip",
+      "flex": {}
+    },
+    "2028-medium-alternate-early": {
+      "result": "./data/scenarios/2028-medium-alternate-early.json.gz",
+      "input_hash": "3060e558f42728f1fdf2e2f6586149e0e2e1d012cccbe83231c5d92d0935e63a",
+      "export": "./downloads/scenarios/2028-medium-alternate-early.zip",
+      "flex": {}
+    },
+    "2028-medium-alternate-derated": {
+      "result": "./data/scenarios/2028-medium-alternate-derated.json.gz",
+      "input_hash": "0825d2a389852b504dc12f7cb109f3d8a0a6356ecb449bdafde8e2eca00bcdc6",
+      "export": "./downloads/scenarios/2028-medium-alternate-derated.zip",
+      "flex": {}
+    },
+    "2028-medium-alternate-control_loss": {
+      "result": "./data/scenarios/2028-medium-alternate-control_loss.json.gz",
+      "input_hash": "09b2cdd69115656a96c70e0dbdac44704496ef836fcf1d699fb5ae62d66a5cff",
+      "export": "./downloads/scenarios/2028-medium-alternate-control_loss.zip",
+      "flex": {}
+    },
+    "2028-high-existing-normal": {
+      "result": "./data/scenarios/2028-high-existing-normal.json.gz",
+      "input_hash": "03b278f6f7df38a218020aa19db9d975a827d277721f4d5a2fdc8bbbb3bb02c4",
+      "export": "./downloads/scenarios/2028-high-existing-normal.zip",
+      "flex": {}
+    },
+    "2028-high-existing-bunched": {
+      "result": "./data/scenarios/2028-high-existing-bunched.json.gz",
+      "input_hash": "3b625ee0069029fca8a392d65d598c427b9a91afc9756c8a8ac5d711cde671c8",
+      "export": "./downloads/scenarios/2028-high-existing-bunched.zip",
+      "flex": {}
+    },
+    "2028-high-existing-early": {
+      "result": "./data/scenarios/2028-high-existing-early.json.gz",
+      "input_hash": "2ae82e3e7ee6f5694c222049637a6f232deee402d5d2de8d361389e742c9fcbd",
+      "export": "./downloads/scenarios/2028-high-existing-early.zip",
+      "flex": {}
+    },
+    "2028-high-existing-derated": {
+      "result": "./data/scenarios/2028-high-existing-derated.json.gz",
+      "input_hash": "cd60c63773c3da8660c77e1f216f0906c842942b9ff8e9c2812cf58068f2c1b3",
+      "export": "./downloads/scenarios/2028-high-existing-derated.zip",
+      "flex": {}
+    },
+    "2028-high-existing-control_loss": {
+      "result": "./data/scenarios/2028-high-existing-control_loss.json.gz",
+      "input_hash": "5e89008628b4eb18caaa9984f8c7d944360cabd246bf219264d1515cc4ba6dee",
+      "export": "./downloads/scenarios/2028-high-existing-control_loss.zip",
+      "flex": {}
+    },
+    "2028-high-ordered-normal": {
+      "result": "./data/scenarios/2028-high-ordered-normal.json.gz",
+      "input_hash": "1dd9caf408610c7dd482ef24c5322fac2a03fc0daa65b1fcf97ae53d1ba330f0",
+      "export": "./downloads/scenarios/2028-high-ordered-normal.zip",
+      "flex": {}
+    },
+    "2028-high-ordered-bunched": {
+      "result": "./data/scenarios/2028-high-ordered-bunched.json.gz",
+      "input_hash": "4bbf278ae9e43ddb2f773e769ed80dbabd743bcfc49caf56c56181b27860b1a3",
+      "export": "./downloads/scenarios/2028-high-ordered-bunched.zip",
+      "flex": {}
+    },
+    "2028-high-ordered-early": {
+      "result": "./data/scenarios/2028-high-ordered-early.json.gz",
+      "input_hash": "5cb71e4ddbf60456c523d3555d02784ba8745b07a68076cd273499ad360ad39f",
+      "export": "./downloads/scenarios/2028-high-ordered-early.zip",
+      "flex": {}
+    },
+    "2028-high-ordered-derated": {
+      "result": "./data/scenarios/2028-high-ordered-derated.json.gz",
+      "input_hash": "bc3580c65631da2c855f81e965db5ab337c50f02d45d111ec47c79f03d30017a",
+      "export": "./downloads/scenarios/2028-high-ordered-derated.zip",
+      "flex": {}
+    },
+    "2028-high-ordered-control_loss": {
+      "result": "./data/scenarios/2028-high-ordered-control_loss.json.gz",
+      "input_hash": "06c65d8c04a76650151c785cb4d24f133c250f7bfb5ad9ea7155e933da722ee5",
+      "export": "./downloads/scenarios/2028-high-ordered-control_loss.zip",
+      "flex": {}
+    },
+    "2028-high-phased-normal": {
+      "result": "./data/scenarios/2028-high-phased-normal.json.gz",
+      "input_hash": "2d57c58d85f580ecae410a4a4945bcc03062221a674f8a3450e6fa8104ef1c7b",
+      "export": "./downloads/scenarios/2028-high-phased-normal.zip",
+      "flex": {}
+    },
+    "2028-high-phased-bunched": {
+      "result": "./data/scenarios/2028-high-phased-bunched.json.gz",
+      "input_hash": "d88c6228af5191b8e9f6f7d9106f7d881aee854b92341a12889a0a95f6d04a5e",
+      "export": "./downloads/scenarios/2028-high-phased-bunched.zip",
+      "flex": {}
+    },
+    "2028-high-phased-early": {
+      "result": "./data/scenarios/2028-high-phased-early.json.gz",
+      "input_hash": "fbaaa0c846a971c433607fac437f4284a388cebf59b8f207a24378551e7dcc22",
+      "export": "./downloads/scenarios/2028-high-phased-early.zip",
+      "flex": {}
+    },
+    "2028-high-phased-derated": {
+      "result": "./data/scenarios/2028-high-phased-derated.json.gz",
+      "input_hash": "fc2e8363c4c13a2adba9898054dd6304a0242305ff25e1a357130328aa29ffc1",
+      "export": "./downloads/scenarios/2028-high-phased-derated.zip",
+      "flex": {}
+    },
+    "2028-high-phased-control_loss": {
+      "result": "./data/scenarios/2028-high-phased-control_loss.json.gz",
+      "input_hash": "48a38bc1472f9d68522ed670e6fd0aac5123f8f431c90007065db9fc266590fb",
+      "export": "./downloads/scenarios/2028-high-phased-control_loss.zip",
+      "flex": {}
+    },
+    "2028-high-expanded-normal": {
+      "result": "./data/scenarios/2028-high-expanded-normal.json.gz",
+      "input_hash": "d1d3468d040d3e546087f55ad5ea7f77b4e3438b0e4f4fdda8ea37189ccb64ec",
+      "export": "./downloads/scenarios/2028-high-expanded-normal.zip",
+      "flex": {
+        "F1": "./data/flex/2028-high-expanded-normal-F1.json.gz",
+        "F2": "./data/flex/2028-high-expanded-normal-F2.json.gz",
+        "F3": "./data/flex/2028-high-expanded-normal-F3.json.gz"
+      }
+    },
+    "2028-high-expanded-bunched": {
+      "result": "./data/scenarios/2028-high-expanded-bunched.json.gz",
+      "input_hash": "56d664a65583da750dac39c90df769ee7f7fa38652a0eeac3d91d5ccc8a63e6c",
+      "export": "./downloads/scenarios/2028-high-expanded-bunched.zip",
+      "flex": {}
+    },
+    "2028-high-expanded-early": {
+      "result": "./data/scenarios/2028-high-expanded-early.json.gz",
+      "input_hash": "2059a8d5f2556323155a7b43e62e5f5d8fd38428f94587bec1b835d1a180cff0",
+      "export": "./downloads/scenarios/2028-high-expanded-early.zip",
+      "flex": {
+        "F1": "./data/flex/2028-high-expanded-early-F1.json.gz",
+        "F2": "./data/flex/2028-high-expanded-early-F2.json.gz",
+        "F3": "./data/flex/2028-high-expanded-early-F3.json.gz"
+      }
+    },
+    "2028-high-expanded-derated": {
+      "result": "./data/scenarios/2028-high-expanded-derated.json.gz",
+      "input_hash": "c36cab07209d134a6c141fc061b5367c4ac362bcfb68bf9e8735c67feb9242f0",
+      "export": "./downloads/scenarios/2028-high-expanded-derated.zip",
+      "flex": {}
+    },
+    "2028-high-expanded-control_loss": {
+      "result": "./data/scenarios/2028-high-expanded-control_loss.json.gz",
+      "input_hash": "3ac6ebe4e03dbd7fe96de270aeffa64d2350c82967fe4eddad28af2f4fb07cde",
+      "export": "./downloads/scenarios/2028-high-expanded-control_loss.zip",
+      "flex": {}
+    },
+    "2028-high-alternate-normal": {
+      "result": "./data/scenarios/2028-high-alternate-normal.json.gz",
+      "input_hash": "719160f20e894616623652d42dfc30b4f00989da9943af0186073e6e51ca7ca7",
+      "export": "./downloads/scenarios/2028-high-alternate-normal.zip",
+      "flex": {}
+    },
+    "2028-high-alternate-bunched": {
+      "result": "./data/scenarios/2028-high-alternate-bunched.json.gz",
+      "input_hash": "4696e8add3d4458b7a82b415a506ef136e561ff60ad3ec416184ab5954398edc",
+      "export": "./downloads/scenarios/2028-high-alternate-bunched.zip",
+      "flex": {}
+    },
+    "2028-high-alternate-early": {
+      "result": "./data/scenarios/2028-high-alternate-early.json.gz",
+      "input_hash": "afc801bdb5c413847728ad9d5c947a3f31b4980e6f675e237370729b8ccd0131",
+      "export": "./downloads/scenarios/2028-high-alternate-early.zip",
+      "flex": {}
+    },
+    "2028-high-alternate-derated": {
+      "result": "./data/scenarios/2028-high-alternate-derated.json.gz",
+      "input_hash": "2fd884556b10463758f2a7e5b58b652c2ce59387e5540070ef200cc4c744e196",
+      "export": "./downloads/scenarios/2028-high-alternate-derated.zip",
+      "flex": {}
+    },
+    "2028-high-alternate-control_loss": {
+      "result": "./data/scenarios/2028-high-alternate-control_loss.json.gz",
+      "input_hash": "923fe2077afcb4cf8f4fa48551a2203434a165ae14454542a77a41b949de0a3a",
+      "export": "./downloads/scenarios/2028-high-alternate-control_loss.zip",
+      "flex": {}
+    },
+    "2029-low-existing-normal": {
+      "result": "./data/scenarios/2029-low-existing-normal.json.gz",
+      "input_hash": "c7d42e47e09c244403af03320b8684223e6899293072d6dc49d50d72cd7c13a9",
+      "export": "./downloads/scenarios/2029-low-existing-normal.zip",
+      "flex": {}
+    },
+    "2029-low-existing-bunched": {
+      "result": "./data/scenarios/2029-low-existing-bunched.json.gz",
+      "input_hash": "70a4da915a0de042ba4fde6b41b4fdf42a782a25961a162ac8c453b48d1a3883",
+      "export": "./downloads/scenarios/2029-low-existing-bunched.zip",
+      "flex": {}
+    },
+    "2029-low-existing-early": {
+      "result": "./data/scenarios/2029-low-existing-early.json.gz",
+      "input_hash": "28fef54716698f474a7edd7ea8b7eb9474288bd05d2c0108cef029d91dcbb3ee",
+      "export": "./downloads/scenarios/2029-low-existing-early.zip",
+      "flex": {}
+    },
+    "2029-low-existing-derated": {
+      "result": "./data/scenarios/2029-low-existing-derated.json.gz",
+      "input_hash": "44b9b4c317d886c28185e6cdb193f75f9c4fcd8a600c0a7a7614a1cddea1ec52",
+      "export": "./downloads/scenarios/2029-low-existing-derated.zip",
+      "flex": {}
+    },
+    "2029-low-existing-control_loss": {
+      "result": "./data/scenarios/2029-low-existing-control_loss.json.gz",
+      "input_hash": "ce9f6b29c03de7e4c067d30f1aa31ce0c91e1e8d2538e9f6507dd2f96303aab9",
+      "export": "./downloads/scenarios/2029-low-existing-control_loss.zip",
+      "flex": {}
+    },
+    "2029-low-ordered-normal": {
+      "result": "./data/scenarios/2029-low-ordered-normal.json.gz",
+      "input_hash": "66a24312d998186e4dabd0b8ef4fab1309d454f0020c6ebf4a071b8ebee7d152",
+      "export": "./downloads/scenarios/2029-low-ordered-normal.zip",
+      "flex": {}
+    },
+    "2029-low-ordered-bunched": {
+      "result": "./data/scenarios/2029-low-ordered-bunched.json.gz",
+      "input_hash": "75113b5b09974b45e89f4ddf673d73c799524c22ccabcd6683ebe62155865471",
+      "export": "./downloads/scenarios/2029-low-ordered-bunched.zip",
+      "flex": {}
+    },
+    "2029-low-ordered-early": {
+      "result": "./data/scenarios/2029-low-ordered-early.json.gz",
+      "input_hash": "0088d7560039da359ef4bb95e0449ee3edab6fab4ab9f38559c2b51c95c6d279",
+      "export": "./downloads/scenarios/2029-low-ordered-early.zip",
+      "flex": {}
+    },
+    "2029-low-ordered-derated": {
+      "result": "./data/scenarios/2029-low-ordered-derated.json.gz",
+      "input_hash": "b10e070674b9826d679da8419251960de0a07ece511343d423046ea5ad8ac1dc",
+      "export": "./downloads/scenarios/2029-low-ordered-derated.zip",
+      "flex": {}
+    },
+    "2029-low-ordered-control_loss": {
+      "result": "./data/scenarios/2029-low-ordered-control_loss.json.gz",
+      "input_hash": "a05f146c0bf689313bf7a87d9db87baad04db17f78a687a14f189635f9c0c74c",
+      "export": "./downloads/scenarios/2029-low-ordered-control_loss.zip",
+      "flex": {}
+    },
+    "2029-low-phased-normal": {
+      "result": "./data/scenarios/2029-low-phased-normal.json.gz",
+      "input_hash": "842c455fa7500e7e87d53aac4ac2a1e05ceb87b05919ee227cca527f8a8c1ee4",
+      "export": "./downloads/scenarios/2029-low-phased-normal.zip",
+      "flex": {
+        "F1": "./data/flex/2029-low-phased-normal-F1.json.gz",
+        "F2": "./data/flex/2029-low-phased-normal-F2.json.gz",
+        "F3": "./data/flex/2029-low-phased-normal-F3.json.gz"
+      }
+    },
+    "2029-low-phased-bunched": {
+      "result": "./data/scenarios/2029-low-phased-bunched.json.gz",
+      "input_hash": "67bb8f3718738404e08735a3e58ad6778e1d4ef11ec150d0220b749d2c9f3266",
+      "export": "./downloads/scenarios/2029-low-phased-bunched.zip",
+      "flex": {
+        "F1": "./data/flex/2029-low-phased-bunched-F1.json.gz",
+        "F2": "./data/flex/2029-low-phased-bunched-F2.json.gz",
+        "F3": "./data/flex/2029-low-phased-bunched-F3.json.gz"
+      }
+    },
+    "2029-low-phased-early": {
+      "result": "./data/scenarios/2029-low-phased-early.json.gz",
+      "input_hash": "7a4bb4676bdb3fd8035f1993097ea6cc2ee61570640bd00f05ff009021491fe5",
+      "export": "./downloads/scenarios/2029-low-phased-early.zip",
+      "flex": {
+        "F1": "./data/flex/2029-low-phased-early-F1.json.gz",
+        "F2": "./data/flex/2029-low-phased-early-F2.json.gz",
+        "F3": "./data/flex/2029-low-phased-early-F3.json.gz"
+      }
+    },
+    "2029-low-phased-derated": {
+      "result": "./data/scenarios/2029-low-phased-derated.json.gz",
+      "input_hash": "9bbac6bf310847e2f9c7010e636547e0343835652e2e49b85a63eb54b62bc95d",
+      "export": "./downloads/scenarios/2029-low-phased-derated.zip",
+      "flex": {}
+    },
+    "2029-low-phased-control_loss": {
+      "result": "./data/scenarios/2029-low-phased-control_loss.json.gz",
+      "input_hash": "84ca94d51b0e5a77c12d44952960465ebd0685fa117b88c9221f61f145bb5aca",
+      "export": "./downloads/scenarios/2029-low-phased-control_loss.zip",
+      "flex": {}
+    },
+    "2029-low-expanded-normal": {
+      "result": "./data/scenarios/2029-low-expanded-normal.json.gz",
+      "input_hash": "538362623f349d6e0b2a7b77ae23480f591827eb3ac8e8159f0256b48fe4f4e8",
+      "export": "./downloads/scenarios/2029-low-expanded-normal.zip",
+      "flex": {
+        "F1": "./data/flex/2029-low-expanded-normal-F1.json.gz",
+        "F2": "./data/flex/2029-low-expanded-normal-F2.json.gz",
+        "F3": "./data/flex/2029-low-expanded-normal-F3.json.gz"
+      }
+    },
+    "2029-low-expanded-bunched": {
+      "result": "./data/scenarios/2029-low-expanded-bunched.json.gz",
+      "input_hash": "f1bf08a51d6c42782f62ed154694a1906d10ee5aea7cd03b75eca8a564b63462",
+      "export": "./downloads/scenarios/2029-low-expanded-bunched.zip",
+      "flex": {
+        "F1": "./data/flex/2029-low-expanded-bunched-F1.json.gz",
+        "F2": "./data/flex/2029-low-expanded-bunched-F2.json.gz",
+        "F3": "./data/flex/2029-low-expanded-bunched-F3.json.gz"
+      }
+    },
+    "2029-low-expanded-early": {
+      "result": "./data/scenarios/2029-low-expanded-early.json.gz",
+      "input_hash": "de8fea5cbd15f1100f1f849e0d2c7d7d75da160469d3e50c064cdc806b651c6d",
+      "export": "./downloads/scenarios/2029-low-expanded-early.zip",
+      "flex": {
+        "F1": "./data/flex/2029-low-expanded-early-F1.json.gz",
+        "F2": "./data/flex/2029-low-expanded-early-F2.json.gz",
+        "F3": "./data/flex/2029-low-expanded-early-F3.json.gz"
+      }
+    },
+    "2029-low-expanded-derated": {
+      "result": "./data/scenarios/2029-low-expanded-derated.json.gz",
+      "input_hash": "bf12f97f81070f85804941eab6bd4f6df46cde88a174287c18144d0a30578473",
+      "export": "./downloads/scenarios/2029-low-expanded-derated.zip",
+      "flex": {}
+    },
+    "2029-low-expanded-control_loss": {
+      "result": "./data/scenarios/2029-low-expanded-control_loss.json.gz",
+      "input_hash": "947f4995d02f8dc4513d150ea203a87d452d77f0054fda8ee4079373807a88bb",
+      "export": "./downloads/scenarios/2029-low-expanded-control_loss.zip",
+      "flex": {}
+    },
+    "2029-low-alternate-normal": {
+      "result": "./data/scenarios/2029-low-alternate-normal.json.gz",
+      "input_hash": "45140bbcd63fc2bb8763acb09ff1641c84c1d2ea56c1c4436195ce44344e3220",
+      "export": "./downloads/scenarios/2029-low-alternate-normal.zip",
+      "flex": {}
+    },
+    "2029-low-alternate-bunched": {
+      "result": "./data/scenarios/2029-low-alternate-bunched.json.gz",
+      "input_hash": "20aba34bb6ab17201097d3ecc9515f770a4543313c8f2231d508afeb61c69c9d",
+      "export": "./downloads/scenarios/2029-low-alternate-bunched.zip",
+      "flex": {}
+    },
+    "2029-low-alternate-early": {
+      "result": "./data/scenarios/2029-low-alternate-early.json.gz",
+      "input_hash": "0228450ee862d09a29f4498550fa5d49f7df48a89dac375e6abda8da6fce3105",
+      "export": "./downloads/scenarios/2029-low-alternate-early.zip",
+      "flex": {}
+    },
+    "2029-low-alternate-derated": {
+      "result": "./data/scenarios/2029-low-alternate-derated.json.gz",
+      "input_hash": "5a4896e1d9294cfdf12968deb53f1c816b5a7bf76d64dcf5572517bbedbaab30",
+      "export": "./downloads/scenarios/2029-low-alternate-derated.zip",
+      "flex": {}
+    },
+    "2029-low-alternate-control_loss": {
+      "result": "./data/scenarios/2029-low-alternate-control_loss.json.gz",
+      "input_hash": "475e664c2d2aba0215f042fd99326640be5a61a42b057e47c7bd762949028466",
+      "export": "./downloads/scenarios/2029-low-alternate-control_loss.zip",
+      "flex": {}
+    },
+    "2029-medium-existing-normal": {
+      "result": "./data/scenarios/2029-medium-existing-normal.json.gz",
+      "input_hash": "b0e3ade6c98d38552a19b34286bf2182dfadd40c3c083812b891be169cf8801c",
+      "export": "./downloads/scenarios/2029-medium-existing-normal.zip",
+      "flex": {}
+    },
+    "2029-medium-existing-bunched": {
+      "result": "./data/scenarios/2029-medium-existing-bunched.json.gz",
+      "input_hash": "33a1f74f6ad570a705e410a5db2db9b6912daa75d66fddc511b01e3bd3b0a505",
+      "export": "./downloads/scenarios/2029-medium-existing-bunched.zip",
+      "flex": {}
+    },
+    "2029-medium-existing-early": {
+      "result": "./data/scenarios/2029-medium-existing-early.json.gz",
+      "input_hash": "6eaaf8b762876e2458556dd91f4ba388160b6dd79f8bd2c791deee52dc41ce86",
+      "export": "./downloads/scenarios/2029-medium-existing-early.zip",
+      "flex": {}
+    },
+    "2029-medium-existing-derated": {
+      "result": "./data/scenarios/2029-medium-existing-derated.json.gz",
+      "input_hash": "301238e793ea4a955e553249343fd46f787435e0cafc10a603544eb571a695dd",
+      "export": "./downloads/scenarios/2029-medium-existing-derated.zip",
+      "flex": {}
+    },
+    "2029-medium-existing-control_loss": {
+      "result": "./data/scenarios/2029-medium-existing-control_loss.json.gz",
+      "input_hash": "e688ebc404bee5412bddccd097a5bbb0369ac6c4fbf291f271b87ea469901f86",
+      "export": "./downloads/scenarios/2029-medium-existing-control_loss.zip",
+      "flex": {}
+    },
+    "2029-medium-ordered-normal": {
+      "result": "./data/scenarios/2029-medium-ordered-normal.json.gz",
+      "input_hash": "057ec73b3361c0f2be446587fc1af8d35cc348052b22097af4f0c742a8af7e33",
+      "export": "./downloads/scenarios/2029-medium-ordered-normal.zip",
+      "flex": {}
+    },
+    "2029-medium-ordered-bunched": {
+      "result": "./data/scenarios/2029-medium-ordered-bunched.json.gz",
+      "input_hash": "41ae76bc0751b2987b198a209956727629a2873f8d713c600cf3412655cf3b04",
+      "export": "./downloads/scenarios/2029-medium-ordered-bunched.zip",
+      "flex": {}
+    },
+    "2029-medium-ordered-early": {
+      "result": "./data/scenarios/2029-medium-ordered-early.json.gz",
+      "input_hash": "e149a6bc920d48f5f6c88276675d01f98b355c52de3236535f0c5fc77befb31f",
+      "export": "./downloads/scenarios/2029-medium-ordered-early.zip",
+      "flex": {}
+    },
+    "2029-medium-ordered-derated": {
+      "result": "./data/scenarios/2029-medium-ordered-derated.json.gz",
+      "input_hash": "e67ea3f718daff65fd19522724ea27aa74fbfe37f340f98dbf6f67b24de4cbec",
+      "export": "./downloads/scenarios/2029-medium-ordered-derated.zip",
+      "flex": {}
+    },
+    "2029-medium-ordered-control_loss": {
+      "result": "./data/scenarios/2029-medium-ordered-control_loss.json.gz",
+      "input_hash": "4ae5c89615d966eef9a9a299ef253813ca4a51da4ae10ab4fe2c4cdf1d13ed55",
+      "export": "./downloads/scenarios/2029-medium-ordered-control_loss.zip",
+      "flex": {}
+    },
+    "2029-medium-phased-normal": {
+      "result": "./data/scenarios/2029-medium-phased-normal.json.gz",
+      "input_hash": "096a11efd6dfdae27078f80a991d776cc6fc7de0b50a888282a526ad60169881",
+      "export": "./downloads/scenarios/2029-medium-phased-normal.zip",
+      "flex": {
+        "F1": "./data/flex/2029-medium-phased-normal-F1.json.gz",
+        "F2": "./data/flex/2029-medium-phased-normal-F2.json.gz",
+        "F3": "./data/flex/2029-medium-phased-normal-F3.json.gz"
+      }
+    },
+    "2029-medium-phased-bunched": {
+      "result": "./data/scenarios/2029-medium-phased-bunched.json.gz",
+      "input_hash": "f5c54fa8804dfdc19a83677037c654be21cd663fcf912d4c47b2cd5c46decae5",
+      "export": "./downloads/scenarios/2029-medium-phased-bunched.zip",
+      "flex": {}
+    },
+    "2029-medium-phased-early": {
+      "result": "./data/scenarios/2029-medium-phased-early.json.gz",
+      "input_hash": "57f3c8effd47f420720394cfdc5fa18fc0448f74d82e20c0de41ffa195bf8f20",
+      "export": "./downloads/scenarios/2029-medium-phased-early.zip",
+      "flex": {
+        "F1": "./data/flex/2029-medium-phased-early-F1.json.gz",
+        "F2": "./data/flex/2029-medium-phased-early-F2.json.gz",
+        "F3": "./data/flex/2029-medium-phased-early-F3.json.gz"
+      }
+    },
+    "2029-medium-phased-derated": {
+      "result": "./data/scenarios/2029-medium-phased-derated.json.gz",
+      "input_hash": "dc92f8ebad16b453140c17073284fa2b26060af1ba8aedce61c67b8f73f8b145",
+      "export": "./downloads/scenarios/2029-medium-phased-derated.zip",
+      "flex": {}
+    },
+    "2029-medium-phased-control_loss": {
+      "result": "./data/scenarios/2029-medium-phased-control_loss.json.gz",
+      "input_hash": "b1f7458fb125d221e802caf4ce0992f13b7d2dfc01703dffc200e07cb9b332db",
+      "export": "./downloads/scenarios/2029-medium-phased-control_loss.zip",
+      "flex": {}
+    },
+    "2029-medium-expanded-normal": {
+      "result": "./data/scenarios/2029-medium-expanded-normal.json.gz",
+      "input_hash": "0094448c83c6f5086409f1e3b476f026cc57f9801b034943938f6cd42acda339",
+      "export": "./downloads/scenarios/2029-medium-expanded-normal.zip",
+      "flex": {
+        "F1": "./data/flex/2029-medium-expanded-normal-F1.json.gz",
+        "F2": "./data/flex/2029-medium-expanded-normal-F2.json.gz",
+        "F3": "./data/flex/2029-medium-expanded-normal-F3.json.gz"
+      }
+    },
+    "2029-medium-expanded-bunched": {
+      "result": "./data/scenarios/2029-medium-expanded-bunched.json.gz",
+      "input_hash": "efaa442aa29e9f4d08c62061629d2ece6965c0eae421a5797c79664b3a16523d",
+      "export": "./downloads/scenarios/2029-medium-expanded-bunched.zip",
+      "flex": {}
+    },
+    "2029-medium-expanded-early": {
+      "result": "./data/scenarios/2029-medium-expanded-early.json.gz",
+      "input_hash": "cd22b07b50cbe7a030eace7db4b6e22f8ab1936afb036bea220970bab525d779",
+      "export": "./downloads/scenarios/2029-medium-expanded-early.zip",
+      "flex": {
+        "F1": "./data/flex/2029-medium-expanded-early-F1.json.gz",
+        "F2": "./data/flex/2029-medium-expanded-early-F2.json.gz",
+        "F3": "./data/flex/2029-medium-expanded-early-F3.json.gz"
+      }
+    },
+    "2029-medium-expanded-derated": {
+      "result": "./data/scenarios/2029-medium-expanded-derated.json.gz",
+      "input_hash": "d8b1f7176de09b00ba1b004cbe350eac42f114efef348c40814cc05c0a96918e",
+      "export": "./downloads/scenarios/2029-medium-expanded-derated.zip",
+      "flex": {}
+    },
+    "2029-medium-expanded-control_loss": {
+      "result": "./data/scenarios/2029-medium-expanded-control_loss.json.gz",
+      "input_hash": "e1838c2d66bc53653e4ec717564295f9c8991f49c90848fbd05a5d1c4942c404",
+      "export": "./downloads/scenarios/2029-medium-expanded-control_loss.zip",
+      "flex": {}
+    },
+    "2029-medium-alternate-normal": {
+      "result": "./data/scenarios/2029-medium-alternate-normal.json.gz",
+      "input_hash": "5966dedd4513ea802844922184a1b8e1677ba9c79c706d10d6d59b8ebb59d29f",
+      "export": "./downloads/scenarios/2029-medium-alternate-normal.zip",
+      "flex": {}
+    },
+    "2029-medium-alternate-bunched": {
+      "result": "./data/scenarios/2029-medium-alternate-bunched.json.gz",
+      "input_hash": "dca48d533dcf914239b4d4dc2f48c8872525dac8f16e9798af4fa0c9758d2e61",
+      "export": "./downloads/scenarios/2029-medium-alternate-bunched.zip",
+      "flex": {}
+    },
+    "2029-medium-alternate-early": {
+      "result": "./data/scenarios/2029-medium-alternate-early.json.gz",
+      "input_hash": "359aa3d4ee64079c50bf3a9e5ae0411e1a2bca1da2322924c5e09e9bd59b0718",
+      "export": "./downloads/scenarios/2029-medium-alternate-early.zip",
+      "flex": {}
+    },
+    "2029-medium-alternate-derated": {
+      "result": "./data/scenarios/2029-medium-alternate-derated.json.gz",
+      "input_hash": "1c6f30a04e9d47253f33738cc17229fd7a977cca87e867fc2ff4f63a90502e76",
+      "export": "./downloads/scenarios/2029-medium-alternate-derated.zip",
+      "flex": {}
+    },
+    "2029-medium-alternate-control_loss": {
+      "result": "./data/scenarios/2029-medium-alternate-control_loss.json.gz",
+      "input_hash": "d96c55805fa6a04138a460d26440e6bcc1ea1fbea38c564b2452162aa6892595",
+      "export": "./downloads/scenarios/2029-medium-alternate-control_loss.zip",
+      "flex": {}
+    },
+    "2029-high-existing-normal": {
+      "result": "./data/scenarios/2029-high-existing-normal.json.gz",
+      "input_hash": "749264ab4a2dfbdd8f6d8b42ff4439b28c45cd682c3418f24421e0c35f6103dc",
+      "export": "./downloads/scenarios/2029-high-existing-normal.zip",
+      "flex": {}
+    },
+    "2029-high-existing-bunched": {
+      "result": "./data/scenarios/2029-high-existing-bunched.json.gz",
+      "input_hash": "d90743eec7d108c9d520b6973e697ac78a42e46d1ca714c5bd9c8310cd2a1aa1",
+      "export": "./downloads/scenarios/2029-high-existing-bunched.zip",
+      "flex": {}
+    },
+    "2029-high-existing-early": {
+      "result": "./data/scenarios/2029-high-existing-early.json.gz",
+      "input_hash": "05f0eb2b8b6930f6c87d5355fb7bf61b1112bb9e28528dab7dffe658fa498f41",
+      "export": "./downloads/scenarios/2029-high-existing-early.zip",
+      "flex": {}
+    },
+    "2029-high-existing-derated": {
+      "result": "./data/scenarios/2029-high-existing-derated.json.gz",
+      "input_hash": "fbcc815a64e9467d02c0945ab999b60069376b2c7db12301c102fe828e39e22c",
+      "export": "./downloads/scenarios/2029-high-existing-derated.zip",
+      "flex": {}
+    },
+    "2029-high-existing-control_loss": {
+      "result": "./data/scenarios/2029-high-existing-control_loss.json.gz",
+      "input_hash": "d9562c4124a4dc259eb7cfd52dd2bd92fb6e0344ce15765212d47ae7b1966d8f",
+      "export": "./downloads/scenarios/2029-high-existing-control_loss.zip",
+      "flex": {}
+    },
+    "2029-high-ordered-normal": {
+      "result": "./data/scenarios/2029-high-ordered-normal.json.gz",
+      "input_hash": "a8b5fa0b6101e05cb4b7a888e62cca90ca25afb14a7015a886a782bfaba9e12a",
+      "export": "./downloads/scenarios/2029-high-ordered-normal.zip",
+      "flex": {}
+    },
+    "2029-high-ordered-bunched": {
+      "result": "./data/scenarios/2029-high-ordered-bunched.json.gz",
+      "input_hash": "4ab28c4acd66f673c954eb82f5f971c864d2051874ec90d2e7440d00731efb66",
+      "export": "./downloads/scenarios/2029-high-ordered-bunched.zip",
+      "flex": {}
+    },
+    "2029-high-ordered-early": {
+      "result": "./data/scenarios/2029-high-ordered-early.json.gz",
+      "input_hash": "99f0b3d49a8ed87cb87a3ea72396f23118590259afa906ab84490b68576ac3a6",
+      "export": "./downloads/scenarios/2029-high-ordered-early.zip",
+      "flex": {}
+    },
+    "2029-high-ordered-derated": {
+      "result": "./data/scenarios/2029-high-ordered-derated.json.gz",
+      "input_hash": "f2427556ddc57e485a4ab95d21c8884eee5fd872ea3520541d2fa39d68e3671e",
+      "export": "./downloads/scenarios/2029-high-ordered-derated.zip",
+      "flex": {}
+    },
+    "2029-high-ordered-control_loss": {
+      "result": "./data/scenarios/2029-high-ordered-control_loss.json.gz",
+      "input_hash": "cac22d1e2cdfc84960cc85f399cea334b65632a125eba5fbd812773257f3c0c8",
+      "export": "./downloads/scenarios/2029-high-ordered-control_loss.zip",
+      "flex": {}
+    },
+    "2029-high-phased-normal": {
+      "result": "./data/scenarios/2029-high-phased-normal.json.gz",
+      "input_hash": "daf82ea3099637062738515b6aba76601ba90425aeab43ff3a3650185797a102",
+      "export": "./downloads/scenarios/2029-high-phased-normal.zip",
+      "flex": {
+        "F1": "./data/flex/2029-high-phased-normal-F1.json.gz",
+        "F2": "./data/flex/2029-high-phased-normal-F2.json.gz",
+        "F3": "./data/flex/2029-high-phased-normal-F3.json.gz"
+      }
+    },
+    "2029-high-phased-bunched": {
+      "result": "./data/scenarios/2029-high-phased-bunched.json.gz",
+      "input_hash": "2eb2b89242df03cdc570029927de3c655eae1b60da190ef4a0ebc53074ed7c31",
+      "export": "./downloads/scenarios/2029-high-phased-bunched.zip",
+      "flex": {}
+    },
+    "2029-high-phased-early": {
+      "result": "./data/scenarios/2029-high-phased-early.json.gz",
+      "input_hash": "e5d7cee40dc5edb8a9fda33adb4c837e19f982305e2235532270b8cf0c0ac69b",
+      "export": "./downloads/scenarios/2029-high-phased-early.zip",
+      "flex": {}
+    },
+    "2029-high-phased-derated": {
+      "result": "./data/scenarios/2029-high-phased-derated.json.gz",
+      "input_hash": "59aa92e36e6095cbdaf96f217c12b9f2196fd9affaef716ba445c01777128f8d",
+      "export": "./downloads/scenarios/2029-high-phased-derated.zip",
+      "flex": {}
+    },
+    "2029-high-phased-control_loss": {
+      "result": "./data/scenarios/2029-high-phased-control_loss.json.gz",
+      "input_hash": "5caa97289b43ae592a0baf2bc1604008db1213dbfdff232786621aa5763a01fd",
+      "export": "./downloads/scenarios/2029-high-phased-control_loss.zip",
+      "flex": {}
+    },
+    "2029-high-expanded-normal": {
+      "result": "./data/scenarios/2029-high-expanded-normal.json.gz",
+      "input_hash": "a55643ce2ef21c84fc94c4e749f73b911f13588cb6e623744be0338c2e2615cb",
+      "export": "./downloads/scenarios/2029-high-expanded-normal.zip",
+      "flex": {
+        "F1": "./data/flex/2029-high-expanded-normal-F1.json.gz",
+        "F2": "./data/flex/2029-high-expanded-normal-F2.json.gz",
+        "F3": "./data/flex/2029-high-expanded-normal-F3.json.gz"
+      }
+    },
+    "2029-high-expanded-bunched": {
+      "result": "./data/scenarios/2029-high-expanded-bunched.json.gz",
+      "input_hash": "4f25e49d737d23a99dbeb53e37bd72090c0f8d2334f50821e172789375617c5d",
+      "export": "./downloads/scenarios/2029-high-expanded-bunched.zip",
+      "flex": {}
+    },
+    "2029-high-expanded-early": {
+      "result": "./data/scenarios/2029-high-expanded-early.json.gz",
+      "input_hash": "5e224bf58e294887f577ea3ecbd19b0ced7b2decb98b1a06a4f22fcf510be5ab",
+      "export": "./downloads/scenarios/2029-high-expanded-early.zip",
+      "flex": {}
+    },
+    "2029-high-expanded-derated": {
+      "result": "./data/scenarios/2029-high-expanded-derated.json.gz",
+      "input_hash": "88d1747185484f2367973c12920dd97ca08379adb3bf9999f06fcc9be6828e52",
+      "export": "./downloads/scenarios/2029-high-expanded-derated.zip",
+      "flex": {}
+    },
+    "2029-high-expanded-control_loss": {
+      "result": "./data/scenarios/2029-high-expanded-control_loss.json.gz",
+      "input_hash": "0dc91999582682759521f34910b482af7cb382db650abdb8daab2234c22dc1fd",
+      "export": "./downloads/scenarios/2029-high-expanded-control_loss.zip",
+      "flex": {}
+    },
+    "2029-high-alternate-normal": {
+      "result": "./data/scenarios/2029-high-alternate-normal.json.gz",
+      "input_hash": "e18f1abf44ff3084f2d5c89663bc98f534a222881ff27b9823de6dce372a046d",
+      "export": "./downloads/scenarios/2029-high-alternate-normal.zip",
+      "flex": {}
+    },
+    "2029-high-alternate-bunched": {
+      "result": "./data/scenarios/2029-high-alternate-bunched.json.gz",
+      "input_hash": "7554f47b99fc8aa5f7efec884a535801897db4e0b96028ee1e61f812a4e2883e",
+      "export": "./downloads/scenarios/2029-high-alternate-bunched.zip",
+      "flex": {}
+    },
+    "2029-high-alternate-early": {
+      "result": "./data/scenarios/2029-high-alternate-early.json.gz",
+      "input_hash": "51508eecb495812ed90f74ddbbe276191e89e9c07148daf13df3c6154836d346",
+      "export": "./downloads/scenarios/2029-high-alternate-early.zip",
+      "flex": {}
+    },
+    "2029-high-alternate-derated": {
+      "result": "./data/scenarios/2029-high-alternate-derated.json.gz",
+      "input_hash": "a5bda0239ee8dc6c2b5a8e2237707bfdeb89f7b40db007a50ccc19b5dfcdb749",
+      "export": "./downloads/scenarios/2029-high-alternate-derated.zip",
+      "flex": {}
+    },
+    "2029-high-alternate-control_loss": {
+      "result": "./data/scenarios/2029-high-alternate-control_loss.json.gz",
+      "input_hash": "a5c4a693efc498503adaba141393e64cb3448309b45e7b4d90e882d3e721706e",
+      "export": "./downloads/scenarios/2029-high-alternate-control_loss.zip",
+      "flex": {}
+    },
+    "2030-low-existing-normal": {
+      "result": "./data/scenarios/2030-low-existing-normal.json.gz",
+      "input_hash": "4eba8e1d1a7ae6b91f40fe00fd9ae1fb553dab3bffabed0bbb490e7363d35ec1",
+      "export": "./downloads/scenarios/2030-low-existing-normal.zip",
+      "flex": {}
+    },
+    "2030-low-existing-bunched": {
+      "result": "./data/scenarios/2030-low-existing-bunched.json.gz",
+      "input_hash": "32d7ae9e63653626d913c0a87733856bb1ea433b2af4e49d9978fbb874e66123",
+      "export": "./downloads/scenarios/2030-low-existing-bunched.zip",
+      "flex": {}
+    },
+    "2030-low-existing-early": {
+      "result": "./data/scenarios/2030-low-existing-early.json.gz",
+      "input_hash": "c75d20cb23bc6caa34c61e34cfba3e683b7c66bcd83cb3ee21c519e717f3ffca",
+      "export": "./downloads/scenarios/2030-low-existing-early.zip",
+      "flex": {}
+    },
+    "2030-low-existing-derated": {
+      "result": "./data/scenarios/2030-low-existing-derated.json.gz",
+      "input_hash": "9feecc571d4e24885632f2df965bd89af4adf8232cd216f0fa9a20acd18d48c6",
+      "export": "./downloads/scenarios/2030-low-existing-derated.zip",
+      "flex": {}
+    },
+    "2030-low-existing-control_loss": {
+      "result": "./data/scenarios/2030-low-existing-control_loss.json.gz",
+      "input_hash": "3cba022336d5256abeb6ce036d8eac1c865e5411d2d6585b48205e58e52cd787",
+      "export": "./downloads/scenarios/2030-low-existing-control_loss.zip",
+      "flex": {}
+    },
+    "2030-low-ordered-normal": {
+      "result": "./data/scenarios/2030-low-ordered-normal.json.gz",
+      "input_hash": "2dab3de5badd9a40c9b06e9b4cd8b07d39696b80850836b3f2f558b559bca47a",
+      "export": "./downloads/scenarios/2030-low-ordered-normal.zip",
+      "flex": {}
+    },
+    "2030-low-ordered-bunched": {
+      "result": "./data/scenarios/2030-low-ordered-bunched.json.gz",
+      "input_hash": "5d1d1d55a4ffd0474ef2bcdde0e9f09a72cab93f603729d97b9f43f05c6b49c9",
+      "export": "./downloads/scenarios/2030-low-ordered-bunched.zip",
+      "flex": {}
+    },
+    "2030-low-ordered-early": {
+      "result": "./data/scenarios/2030-low-ordered-early.json.gz",
+      "input_hash": "e7644435c72e784272ba6ed869f75404b2e497f5cf4aa1a73540ed46829dbed3",
+      "export": "./downloads/scenarios/2030-low-ordered-early.zip",
+      "flex": {}
+    },
+    "2030-low-ordered-derated": {
+      "result": "./data/scenarios/2030-low-ordered-derated.json.gz",
+      "input_hash": "c554d64fef9cbf16f613d5bb2ee1eb28ececac24bb4746e5234540d9c00c7911",
+      "export": "./downloads/scenarios/2030-low-ordered-derated.zip",
+      "flex": {}
+    },
+    "2030-low-ordered-control_loss": {
+      "result": "./data/scenarios/2030-low-ordered-control_loss.json.gz",
+      "input_hash": "5568055bf9d2da5542fb594a04ab2f8b7e7dc5463ab54220f7c903cee4c73d4f",
+      "export": "./downloads/scenarios/2030-low-ordered-control_loss.zip",
+      "flex": {}
+    },
+    "2030-low-phased-normal": {
+      "result": "./data/scenarios/2030-low-phased-normal.json.gz",
+      "input_hash": "990ad9e849c6254ca4866c29dc9439c1c038b6782069fe0b0b45ec98e709b78c",
+      "export": "./downloads/scenarios/2030-low-phased-normal.zip",
+      "flex": {
+        "F1": "./data/flex/2030-low-phased-normal-F1.json.gz",
+        "F2": "./data/flex/2030-low-phased-normal-F2.json.gz",
+        "F3": "./data/flex/2030-low-phased-normal-F3.json.gz"
+      }
+    },
+    "2030-low-phased-bunched": {
+      "result": "./data/scenarios/2030-low-phased-bunched.json.gz",
+      "input_hash": "e5c843f1263e549d2e2bd0da234ce199f36dc0dfc6d1a428d25fe82880d43745",
+      "export": "./downloads/scenarios/2030-low-phased-bunched.zip",
+      "flex": {}
+    },
+    "2030-low-phased-early": {
+      "result": "./data/scenarios/2030-low-phased-early.json.gz",
+      "input_hash": "67290b117e1172512b188c95541ed12e67a64a997a4bdff9eeee4cf5dd9b0ddb",
+      "export": "./downloads/scenarios/2030-low-phased-early.zip",
+      "flex": {
+        "F1": "./data/flex/2030-low-phased-early-F1.json.gz",
+        "F2": "./data/flex/2030-low-phased-early-F2.json.gz",
+        "F3": "./data/flex/2030-low-phased-early-F3.json.gz"
+      }
+    },
+    "2030-low-phased-derated": {
+      "result": "./data/scenarios/2030-low-phased-derated.json.gz",
+      "input_hash": "48acbe7f5f77e5f1db4918ecb2c85dad72adedd2b2e5021ff0ae815eb0f31ce1",
+      "export": "./downloads/scenarios/2030-low-phased-derated.zip",
+      "flex": {}
+    },
+    "2030-low-phased-control_loss": {
+      "result": "./data/scenarios/2030-low-phased-control_loss.json.gz",
+      "input_hash": "af1b8d0e349eb3e812ea1ef090f621293ebac27ee82866b5b6eed05271bfa72b",
+      "export": "./downloads/scenarios/2030-low-phased-control_loss.zip",
+      "flex": {}
+    },
+    "2030-low-expanded-normal": {
+      "result": "./data/scenarios/2030-low-expanded-normal.json.gz",
+      "input_hash": "88ff4f2a329ec803be45ab006171e6bbd8d540acbe24c0a29d30fb61de0f35f4",
+      "export": "./downloads/scenarios/2030-low-expanded-normal.zip",
+      "flex": {
+        "F1": "./data/flex/2030-low-expanded-normal-F1.json.gz",
+        "F2": "./data/flex/2030-low-expanded-normal-F2.json.gz",
+        "F3": "./data/flex/2030-low-expanded-normal-F3.json.gz"
+      }
+    },
+    "2030-low-expanded-bunched": {
+      "result": "./data/scenarios/2030-low-expanded-bunched.json.gz",
+      "input_hash": "50b4407dd516ddfd6fde830e16d8ab1998209424500dcb5731413e12dbd8e95f",
+      "export": "./downloads/scenarios/2030-low-expanded-bunched.zip",
+      "flex": {}
+    },
+    "2030-low-expanded-early": {
+      "result": "./data/scenarios/2030-low-expanded-early.json.gz",
+      "input_hash": "adacdc5c9211b75711c5059dbeb66419bea6ea05ccecc75f6c27da6965d12b34",
+      "export": "./downloads/scenarios/2030-low-expanded-early.zip",
+      "flex": {
+        "F1": "./data/flex/2030-low-expanded-early-F1.json.gz",
+        "F2": "./data/flex/2030-low-expanded-early-F2.json.gz",
+        "F3": "./data/flex/2030-low-expanded-early-F3.json.gz"
+      }
+    },
+    "2030-low-expanded-derated": {
+      "result": "./data/scenarios/2030-low-expanded-derated.json.gz",
+      "input_hash": "323de593e0db62f17160878906b3f97c47aa826718c5f9385622a46c5419a945",
+      "export": "./downloads/scenarios/2030-low-expanded-derated.zip",
+      "flex": {}
+    },
+    "2030-low-expanded-control_loss": {
+      "result": "./data/scenarios/2030-low-expanded-control_loss.json.gz",
+      "input_hash": "2931b195a8ce6ef087148c536d5dc3891176dc8dfc8d26cc644a0e319506b741",
+      "export": "./downloads/scenarios/2030-low-expanded-control_loss.zip",
+      "flex": {}
+    },
+    "2030-low-alternate-normal": {
+      "result": "./data/scenarios/2030-low-alternate-normal.json.gz",
+      "input_hash": "6c1082bb28900e7d4a64f103279309a582a2fb7c81cdffff7b1274effc81b003",
+      "export": "./downloads/scenarios/2030-low-alternate-normal.zip",
+      "flex": {}
+    },
+    "2030-low-alternate-bunched": {
+      "result": "./data/scenarios/2030-low-alternate-bunched.json.gz",
+      "input_hash": "8a5691f86c873ae39012028e06b7e8d0ab84d28b78862f450f2eb5f0f5c0b669",
+      "export": "./downloads/scenarios/2030-low-alternate-bunched.zip",
+      "flex": {}
+    },
+    "2030-low-alternate-early": {
+      "result": "./data/scenarios/2030-low-alternate-early.json.gz",
+      "input_hash": "b9a9f81078e8c5192e35460c5cbc29c3ebdea0fb0355e550603a26f7ff02fb79",
+      "export": "./downloads/scenarios/2030-low-alternate-early.zip",
+      "flex": {}
+    },
+    "2030-low-alternate-derated": {
+      "result": "./data/scenarios/2030-low-alternate-derated.json.gz",
+      "input_hash": "5abcc15851a3b6dd95a1fe9f9b4a71669f8f3dad4f0df22fc6a6ec2e811c8581",
+      "export": "./downloads/scenarios/2030-low-alternate-derated.zip",
+      "flex": {}
+    },
+    "2030-low-alternate-control_loss": {
+      "result": "./data/scenarios/2030-low-alternate-control_loss.json.gz",
+      "input_hash": "de91f810aa1f32cbeb1be05c4f9d8cc6daaad9f8c14246dcfdb07324b46badd6",
+      "export": "./downloads/scenarios/2030-low-alternate-control_loss.zip",
+      "flex": {}
+    },
+    "2030-medium-existing-normal": {
+      "result": "./data/scenarios/2030-medium-existing-normal.json.gz",
+      "input_hash": "e8bf6ec0c5d2186a59447a14fce9b4ee76e1d0ab003723d4ea5e8fd6ed06903a",
+      "export": "./downloads/scenarios/2030-medium-existing-normal.zip",
+      "flex": {}
+    },
+    "2030-medium-existing-bunched": {
+      "result": "./data/scenarios/2030-medium-existing-bunched.json.gz",
+      "input_hash": "8d7b8bbd93142c10e02bb4952c5caa28adb0c013e061907e50b3fbe10b952cf2",
+      "export": "./downloads/scenarios/2030-medium-existing-bunched.zip",
+      "flex": {}
+    },
+    "2030-medium-existing-early": {
+      "result": "./data/scenarios/2030-medium-existing-early.json.gz",
+      "input_hash": "9a562579a58097ec693379371bff78456487143b65e18f44cbc2331538ef139f",
+      "export": "./downloads/scenarios/2030-medium-existing-early.zip",
+      "flex": {}
+    },
+    "2030-medium-existing-derated": {
+      "result": "./data/scenarios/2030-medium-existing-derated.json.gz",
+      "input_hash": "94be304cefdfee96939d8a67d440f98dc8e5ee3aeb67ceb0970b0ac6d85d746f",
+      "export": "./downloads/scenarios/2030-medium-existing-derated.zip",
+      "flex": {}
+    },
+    "2030-medium-existing-control_loss": {
+      "result": "./data/scenarios/2030-medium-existing-control_loss.json.gz",
+      "input_hash": "a3fa28ac6ca180d7d093b67ab5c76d787d8026257499bcacb8e70784734a067e",
+      "export": "./downloads/scenarios/2030-medium-existing-control_loss.zip",
+      "flex": {}
+    },
+    "2030-medium-ordered-normal": {
+      "result": "./data/scenarios/2030-medium-ordered-normal.json.gz",
+      "input_hash": "c41c8af25307cc89883531290a3cd9166f6fdd0d26acf314b734f7a179df32d9",
+      "export": "./downloads/scenarios/2030-medium-ordered-normal.zip",
+      "flex": {}
+    },
+    "2030-medium-ordered-bunched": {
+      "result": "./data/scenarios/2030-medium-ordered-bunched.json.gz",
+      "input_hash": "c6318fea7a5d077abf7c246277d500bd9a9516aac26fe708d64f3086ff230d92",
+      "export": "./downloads/scenarios/2030-medium-ordered-bunched.zip",
+      "flex": {}
+    },
+    "2030-medium-ordered-early": {
+      "result": "./data/scenarios/2030-medium-ordered-early.json.gz",
+      "input_hash": "c0ef9c8c71a96580d63d2a320ec6b5cd340b2c4b2dc504abe4f9921dc4087ac0",
+      "export": "./downloads/scenarios/2030-medium-ordered-early.zip",
+      "flex": {}
+    },
+    "2030-medium-ordered-derated": {
+      "result": "./data/scenarios/2030-medium-ordered-derated.json.gz",
+      "input_hash": "e5eba7692d8610eb3092168752e7c04d276d68c3441e298b2d807ac86b9c1237",
+      "export": "./downloads/scenarios/2030-medium-ordered-derated.zip",
+      "flex": {}
+    },
+    "2030-medium-ordered-control_loss": {
+      "result": "./data/scenarios/2030-medium-ordered-control_loss.json.gz",
+      "input_hash": "0fd63575164589f5562431a7b07ea84c0a282212150a597aabfc807b0a8ef474",
+      "export": "./downloads/scenarios/2030-medium-ordered-control_loss.zip",
+      "flex": {}
+    },
+    "2030-medium-phased-normal": {
+      "result": "./data/scenarios/2030-medium-phased-normal.json.gz",
+      "input_hash": "715cac5b274f3f520cdd2de7862b80307787585b0ec8af19b361984a7c53e3ac",
+      "export": "./downloads/scenarios/2030-medium-phased-normal.zip",
+      "flex": {
+        "F1": "./data/flex/2030-medium-phased-normal-F1.json.gz",
+        "F2": "./data/flex/2030-medium-phased-normal-F2.json.gz",
+        "F3": "./data/flex/2030-medium-phased-normal-F3.json.gz"
+      }
+    },
+    "2030-medium-phased-bunched": {
+      "result": "./data/scenarios/2030-medium-phased-bunched.json.gz",
+      "input_hash": "33466a6a5e527c9e0fe3dd2a17a6e47c6a5b7c20ea58c43d7a9020341ba55b70",
+      "export": "./downloads/scenarios/2030-medium-phased-bunched.zip",
+      "flex": {}
+    },
+    "2030-medium-phased-early": {
+      "result": "./data/scenarios/2030-medium-phased-early.json.gz",
+      "input_hash": "484e21c19b52f2200e1d9947ffc1f89cd176da6f24e7286461508fcc27c56b15",
+      "export": "./downloads/scenarios/2030-medium-phased-early.zip",
+      "flex": {}
+    },
+    "2030-medium-phased-derated": {
+      "result": "./data/scenarios/2030-medium-phased-derated.json.gz",
+      "input_hash": "5cd172db991e98d2969fee1c9ba9f797890f008df530b432622f609a7b2bdd9a",
+      "export": "./downloads/scenarios/2030-medium-phased-derated.zip",
+      "flex": {}
+    },
+    "2030-medium-phased-control_loss": {
+      "result": "./data/scenarios/2030-medium-phased-control_loss.json.gz",
+      "input_hash": "4cf1a14b59ad5a5f7900562cf254da1e05646ab47e0becf1652fd5faef0520f0",
+      "export": "./downloads/scenarios/2030-medium-phased-control_loss.zip",
+      "flex": {}
+    },
+    "2030-medium-expanded-normal": {
+      "result": "./data/scenarios/2030-medium-expanded-normal.json.gz",
+      "input_hash": "73d26c2d3c84f23f8c31f568898e76b1e0492d4710afde2c8a56170ccef8f42d",
+      "export": "./downloads/scenarios/2030-medium-expanded-normal.zip",
+      "flex": {
+        "F1": "./data/flex/2030-medium-expanded-normal-F1.json.gz",
+        "F2": "./data/flex/2030-medium-expanded-normal-F2.json.gz",
+        "F3": "./data/flex/2030-medium-expanded-normal-F3.json.gz"
+      }
+    },
+    "2030-medium-expanded-bunched": {
+      "result": "./data/scenarios/2030-medium-expanded-bunched.json.gz",
+      "input_hash": "0b1dfdec8c55194ab52c21e365f0c3787f7210df7f42b5928fdf1e3d24b537bf",
+      "export": "./downloads/scenarios/2030-medium-expanded-bunched.zip",
+      "flex": {}
+    },
+    "2030-medium-expanded-early": {
+      "result": "./data/scenarios/2030-medium-expanded-early.json.gz",
+      "input_hash": "e871c78e2f927834b083afc20eb0f7c3fd7c63a30b3e4383d5e3c591ccc7febb",
+      "export": "./downloads/scenarios/2030-medium-expanded-early.zip",
+      "flex": {}
+    },
+    "2030-medium-expanded-derated": {
+      "result": "./data/scenarios/2030-medium-expanded-derated.json.gz",
+      "input_hash": "6c4a4e4895b8deb9fdb782e76b71a9f7316517c697363d33c459709fbae46380",
+      "export": "./downloads/scenarios/2030-medium-expanded-derated.zip",
+      "flex": {}
+    },
+    "2030-medium-expanded-control_loss": {
+      "result": "./data/scenarios/2030-medium-expanded-control_loss.json.gz",
+      "input_hash": "6f37e7f0a12480db9fb3fa2a0c12cd9bad647c5bc983d25d76fc3e1793878198",
+      "export": "./downloads/scenarios/2030-medium-expanded-control_loss.zip",
+      "flex": {}
+    },
+    "2030-medium-alternate-normal": {
+      "result": "./data/scenarios/2030-medium-alternate-normal.json.gz",
+      "input_hash": "675bb53b6a8bf3f1f5faa7581cac91ae5ec9b461759a6ceecfb7617744a0564a",
+      "export": "./downloads/scenarios/2030-medium-alternate-normal.zip",
+      "flex": {}
+    },
+    "2030-medium-alternate-bunched": {
+      "result": "./data/scenarios/2030-medium-alternate-bunched.json.gz",
+      "input_hash": "493caeb9cc2136cbd93e5f5337a0241fdb0b1e842be8079ef1d54bfc7351a966",
+      "export": "./downloads/scenarios/2030-medium-alternate-bunched.zip",
+      "flex": {}
+    },
+    "2030-medium-alternate-early": {
+      "result": "./data/scenarios/2030-medium-alternate-early.json.gz",
+      "input_hash": "5c07e17fdad3bae30d21fc6b7a8ad828d44baa6edf49ad75a3fe535ac78ab31c",
+      "export": "./downloads/scenarios/2030-medium-alternate-early.zip",
+      "flex": {}
+    },
+    "2030-medium-alternate-derated": {
+      "result": "./data/scenarios/2030-medium-alternate-derated.json.gz",
+      "input_hash": "d390a47d1c847b408cdc29a97ee4683e99b93c934a878d6dd7441d07e15ca87a",
+      "export": "./downloads/scenarios/2030-medium-alternate-derated.zip",
+      "flex": {}
+    },
+    "2030-medium-alternate-control_loss": {
+      "result": "./data/scenarios/2030-medium-alternate-control_loss.json.gz",
+      "input_hash": "b0d19f61e44a025e07e037821517df0fd170d6d01c78e9dff16b0cd8c39d87d1",
+      "export": "./downloads/scenarios/2030-medium-alternate-control_loss.zip",
+      "flex": {}
+    },
+    "2030-high-existing-normal": {
+      "result": "./data/scenarios/2030-high-existing-normal.json.gz",
+      "input_hash": "c2ba80176f6fbab9c026fcb90b31263c8c2217e1bf21a460f023b71c030e1fb8",
+      "export": "./downloads/scenarios/2030-high-existing-normal.zip",
+      "flex": {}
+    },
+    "2030-high-existing-bunched": {
+      "result": "./data/scenarios/2030-high-existing-bunched.json.gz",
+      "input_hash": "fd45ecb8c0c82175526905fd76aede88dc32a0db86cebb91b15c27c6eee50051",
+      "export": "./downloads/scenarios/2030-high-existing-bunched.zip",
+      "flex": {}
+    },
+    "2030-high-existing-early": {
+      "result": "./data/scenarios/2030-high-existing-early.json.gz",
+      "input_hash": "615868745a70ec71e414fd0f91b512bf71b82d2872970847c5ada557289b9acd",
+      "export": "./downloads/scenarios/2030-high-existing-early.zip",
+      "flex": {}
+    },
+    "2030-high-existing-derated": {
+      "result": "./data/scenarios/2030-high-existing-derated.json.gz",
+      "input_hash": "66c43355250b0213f5a5bd12f94820dff054495f5613cb4c7881611a74d5e281",
+      "export": "./downloads/scenarios/2030-high-existing-derated.zip",
+      "flex": {}
+    },
+    "2030-high-existing-control_loss": {
+      "result": "./data/scenarios/2030-high-existing-control_loss.json.gz",
+      "input_hash": "2fbfea888ffcc3dd90913c6ddec8c79760c1f81f1e60cec594c2d625e3a8a491",
+      "export": "./downloads/scenarios/2030-high-existing-control_loss.zip",
+      "flex": {}
+    },
+    "2030-high-ordered-normal": {
+      "result": "./data/scenarios/2030-high-ordered-normal.json.gz",
+      "input_hash": "504d1c89198ce72b5660361da5a3ac072d97064ab93710ba2db6426289066d1c",
+      "export": "./downloads/scenarios/2030-high-ordered-normal.zip",
+      "flex": {}
+    },
+    "2030-high-ordered-bunched": {
+      "result": "./data/scenarios/2030-high-ordered-bunched.json.gz",
+      "input_hash": "6afee6355f96f9ad6cab288ed389667c3e31d56b7457a2fa9de61b1138194740",
+      "export": "./downloads/scenarios/2030-high-ordered-bunched.zip",
+      "flex": {}
+    },
+    "2030-high-ordered-early": {
+      "result": "./data/scenarios/2030-high-ordered-early.json.gz",
+      "input_hash": "606d096db686a2597ea9217f3062e451039264ce39d519c1f87aa6d073fa0c63",
+      "export": "./downloads/scenarios/2030-high-ordered-early.zip",
+      "flex": {}
+    },
+    "2030-high-ordered-derated": {
+      "result": "./data/scenarios/2030-high-ordered-derated.json.gz",
+      "input_hash": "40292d97da95f8d7a8924213629ffe10dfdef8cb5cebb7c2a7c0d5c0863f0115",
+      "export": "./downloads/scenarios/2030-high-ordered-derated.zip",
+      "flex": {}
+    },
+    "2030-high-ordered-control_loss": {
+      "result": "./data/scenarios/2030-high-ordered-control_loss.json.gz",
+      "input_hash": "801adb58fac9fa79ce3f9459c513b1dd910539f897862f2fe2d2e61bdd115dfd",
+      "export": "./downloads/scenarios/2030-high-ordered-control_loss.zip",
+      "flex": {}
+    },
+    "2030-high-phased-normal": {
+      "result": "./data/scenarios/2030-high-phased-normal.json.gz",
+      "input_hash": "a1baff107436d3f8ff5f09221f9477efbc78a041069762f2cae11a5a8fdba9c8",
+      "export": "./downloads/scenarios/2030-high-phased-normal.zip",
+      "flex": {}
+    },
+    "2030-high-phased-bunched": {
+      "result": "./data/scenarios/2030-high-phased-bunched.json.gz",
+      "input_hash": "1064a4e77bb405373f2061991b93d4f58fb2398c76c1003f323860bd080ec1d8",
+      "export": "./downloads/scenarios/2030-high-phased-bunched.zip",
+      "flex": {}
+    },
+    "2030-high-phased-early": {
+      "result": "./data/scenarios/2030-high-phased-early.json.gz",
+      "input_hash": "47a0163dcdf4ec78ce0a1878a57dfff5662ba6e2373b0627656cc6d023144b05",
+      "export": "./downloads/scenarios/2030-high-phased-early.zip",
+      "flex": {}
+    },
+    "2030-high-phased-derated": {
+      "result": "./data/scenarios/2030-high-phased-derated.json.gz",
+      "input_hash": "74d63f9ccd5b964dc61d7473ea9facafbffdd25b783f429fa2d721d87d422a6e",
+      "export": "./downloads/scenarios/2030-high-phased-derated.zip",
+      "flex": {}
+    },
+    "2030-high-phased-control_loss": {
+      "result": "./data/scenarios/2030-high-phased-control_loss.json.gz",
+      "input_hash": "daa20cf403eac10accb9e3512d4e7cad858df7370b65c15edbb399dae434f82c",
+      "export": "./downloads/scenarios/2030-high-phased-control_loss.zip",
+      "flex": {}
+    },
+    "2030-high-expanded-normal": {
+      "result": "./data/scenarios/2030-high-expanded-normal.json.gz",
+      "input_hash": "3aa860959816dcd90e1ca3d7ba8e1916fc8019a86ec266e455d67df226124a7e",
+      "export": "./downloads/scenarios/2030-high-expanded-normal.zip",
+      "flex": {}
+    },
+    "2030-high-expanded-bunched": {
+      "result": "./data/scenarios/2030-high-expanded-bunched.json.gz",
+      "input_hash": "5104e37b4eed61a296ce658047fe1da8c330b3fc50defd4127c10d5cc2c327d5",
+      "export": "./downloads/scenarios/2030-high-expanded-bunched.zip",
+      "flex": {}
+    },
+    "2030-high-expanded-early": {
+      "result": "./data/scenarios/2030-high-expanded-early.json.gz",
+      "input_hash": "d590b89ec66bf08b0185f3056b85bd8660554b714eeb3b6c5c3c18e4cd387246",
+      "export": "./downloads/scenarios/2030-high-expanded-early.zip",
+      "flex": {}
+    },
+    "2030-high-expanded-derated": {
+      "result": "./data/scenarios/2030-high-expanded-derated.json.gz",
+      "input_hash": "7e02db701458bd2137d989de4e566c396b49022adcf0dac927ba55afd32e48e1",
+      "export": "./downloads/scenarios/2030-high-expanded-derated.zip",
+      "flex": {}
+    },
+    "2030-high-expanded-control_loss": {
+      "result": "./data/scenarios/2030-high-expanded-control_loss.json.gz",
+      "input_hash": "d3d780933dad17d49187219ffb4d9d8a5bfad0fd9689b0babe525d834278b091",
+      "export": "./downloads/scenarios/2030-high-expanded-control_loss.zip",
+      "flex": {}
+    },
+    "2030-high-alternate-normal": {
+      "result": "./data/scenarios/2030-high-alternate-normal.json.gz",
+      "input_hash": "764d03650b2fcf1bc46134de641c784d32dad4c1ff34d646f76e3ec538ab50cb",
+      "export": "./downloads/scenarios/2030-high-alternate-normal.zip",
+      "flex": {}
+    },
+    "2030-high-alternate-bunched": {
+      "result": "./data/scenarios/2030-high-alternate-bunched.json.gz",
+      "input_hash": "b1d96f864c5abfa284b1c2d623f3a74c5bb7518f9a4e06ded370dbe322bb1384",
+      "export": "./downloads/scenarios/2030-high-alternate-bunched.zip",
+      "flex": {}
+    },
+    "2030-high-alternate-early": {
+      "result": "./data/scenarios/2030-high-alternate-early.json.gz",
+      "input_hash": "943f5a67465e6ef028541645d5dc3745c33f6b076ee9bba3dcac9a3175b23ca6",
+      "export": "./downloads/scenarios/2030-high-alternate-early.zip",
+      "flex": {}
+    },
+    "2030-high-alternate-derated": {
+      "result": "./data/scenarios/2030-high-alternate-derated.json.gz",
+      "input_hash": "d98be14c0b2f8f92ae7939be9bb612ae1e8b1488ff70cf079eeffad98895520e",
+      "export": "./downloads/scenarios/2030-high-alternate-derated.zip",
+      "flex": {}
+    },
+    "2030-high-alternate-control_loss": {
+      "result": "./data/scenarios/2030-high-alternate-control_loss.json.gz",
+      "input_hash": "0e0eee7b3ec94f8cc32ed9b9573ffa9a06159172ac46f1e8681661cd0435da8d",
+      "export": "./downloads/scenarios/2030-high-alternate-control_loss.zip",
+      "flex": {}
+    }
+  },
+  "planning": {
+    "low-normal": {
+      "result": "./data/planning/low-normal.json.gz",
+      "export": "./downloads/planning-low-normal.zip"
+    },
+    "low-bunched": {
+      "result": "./data/planning/low-bunched.json.gz",
+      "export": "./downloads/planning-low-bunched.zip"
+    },
+    "low-early": {
+      "result": "./data/planning/low-early.json.gz",
+      "export": "./downloads/planning-low-early.zip"
+    },
+    "low-derated": {
+      "result": "./data/planning/low-derated.json.gz",
+      "export": "./downloads/planning-low-derated.zip"
+    },
+    "low-control_loss": {
+      "result": "./data/planning/low-control_loss.json.gz",
+      "export": "./downloads/planning-low-control_loss.zip"
+    },
+    "medium-normal": {
+      "result": "./data/planning/medium-normal.json.gz",
+      "export": "./downloads/planning-medium-normal.zip"
+    },
+    "medium-bunched": {
+      "result": "./data/planning/medium-bunched.json.gz",
+      "export": "./downloads/planning-medium-bunched.zip"
+    },
+    "medium-early": {
+      "result": "./data/planning/medium-early.json.gz",
+      "export": "./downloads/planning-medium-early.zip"
+    },
+    "medium-derated": {
+      "result": "./data/planning/medium-derated.json.gz",
+      "export": "./downloads/planning-medium-derated.zip"
+    },
+    "medium-control_loss": {
+      "result": "./data/planning/medium-control_loss.json.gz",
+      "export": "./downloads/planning-medium-control_loss.zip"
+    },
+    "high-normal": {
+      "result": "./data/planning/high-normal.json.gz",
+      "export": "./downloads/planning-high-normal.zip"
+    },
+    "high-bunched": {
+      "result": "./data/planning/high-bunched.json.gz",
+      "export": "./downloads/planning-high-bunched.zip"
+    },
+    "high-early": {
+      "result": "./data/planning/high-early.json.gz",
+      "export": "./downloads/planning-high-early.zip"
+    },
+    "high-derated": {
+      "result": "./data/planning/high-derated.json.gz",
+      "export": "./downloads/planning-high-derated.zip"
+    },
+    "high-control_loss": {
+      "result": "./data/planning/high-control_loss.json.gz",
+      "export": "./downloads/planning-high-control_loss.zip"
+    }
+  },
+  "engine_sources_sha256": {
+    "__init__.py": "04fe6d010ed8f7c66bddd575332540361460655af03d740575a52aa9df98bbeb",
+    "analysis.py": "cb1ea8d91ee1c7d5e5fb173439f230d0b3c9045daa2dc14ef13ef2bd57babbdd",
+    "audit.py": "67973cd8456fc22e2a7cc26482889a6e54719e3df75be18be98c9485eea7fd5b",
+    "cli.py": "fb11c202cd54f56fec4f61f47317f19342f88abd6479f0f0decafb5119ccfce5",
+    "demo.py": "3cac27c74a4fa1b8eff74e057555bb1a1ff5d8e486a03297ec6a625f5537c88b",
+    "dispatch.py": "49a4685bd3ddb7549a8116accfa10a60d462745ff805cf934d8556c02c978b64",
+    "env.py": "3c2f11c8249db5123c12b31fc707058d2fdd46aa118d8fe32fc66b2059cdf53b",
+    "io.py": "5608eb12ac5b9974fb008d33ea0afc65c18bb2223d241c4e91b26221628715fd",
+    "model.py": "d5cb6b9c79b5db38fccc0ae0ea00486c498500cbbfb578505863b63c3d47b4b3",
+    "network.py": "0e809c0b2babc7fa53348acdf284c50306d6f0fe4e42bbe1b09447b648c107ac",
+    "research.py": "6ca40a4522e63b4b25a93d92212402b6980c3e4f467ac00f51826828fa1320f8",
+    "server.py": "65f7b7a91955098fc40e50d5cdfe56b01393cec2d7df136fd375dc844b5a7a51",
+    "verification.py": "c0658d2309154dba1f0f5e6cbb21f9a82c3c7ed63d4fdadf71d16358bb811aa9"
+  },
+  "research": {
+    "result": "./data/research.json.gz",
+    "export": "./downloads/research.zip"
+  },
+  "counts": {
+    "scenarios": 375,
+    "flexibility_records": 114,
+    "full_ac_records": 3,
+    "annual_comparisons": 15
+  }
+}

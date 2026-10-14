@@ -1,0 +1,11 @@
+# 上海重卡接入与配套电网规划 · 在线示范
+
+地址：https://jinyh.github.io/shanghai-truck-sim/
+
+在线版为GitHub Pages静态应用，加载同一Python工程模型生成的375个登记合成场景。支持场景切换、逐站评估、馈线/主变共享容量与负荷回放、15组年度比较、合格工况可调记录、工程准入报告和复算包下载。
+
+三个2027年中增长正常工况（现状常规、现状有序、提前扩建）提供完整288时段交流校核记录；其他组合可在本地版校核。客户数据导入、新增工况求解和真实网络适配使用本地版。
+
+仅发布合成输入与结果，无客户数据、材料原件或上传接口。代码和评分器哈希见 site/data/index.json；静态文件哈希见 site/manifest.json。
+
+部署沿用GitHub Actions Pages。发布前运行 python scripts/verify_site.py 。
