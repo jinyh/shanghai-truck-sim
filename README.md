@@ -9,3 +9,7 @@
 仅发布合成输入与结果，无客户数据、材料原件或上传接口。代码和评分器哈希见 site/data/index.json；静态文件哈希见 site/manifest.json。
 
 部署沿用GitHub Actions Pages。发布前运行 python scripts/verify_site.py 。
+
+新增 quality.html：冻结的公开OSM道路/用地 + 合成电气、运输与负荷参数。夏冬各5种工况、每种5类方案，共50个连续代表周案例；提供节点电压、2—25次谐波、共享供电影响、扫频和完整复算包。
+
+数据按ODbL署名 © OpenStreetMap contributors。数据源与原始PBF摘要在本地源码包 data/public/source-manifest.json。地理图层真实公开，站位和供电关系仅为等值演示。
