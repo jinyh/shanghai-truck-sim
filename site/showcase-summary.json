@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "evidence": "public_geography_synthetic_engineering",
+  "quality": {
+    "case_id": "summer-normal",
+    "record_sha256": "d1854c092da86e0164906bb50d1dd34645659caf8ddb1e5b13991c0fddffa9be",
+    "start": "2026-07-06T00:00:00+08:00",
+    "end": "2026-07-12T23:45:00+08:00",
+    "export": "quality-data/summer-normal.zip",
+    "cases": {
+      "baseline": {
+        "input_hash": "4e398ae8066565fd0683c53d61bfe574d0bf3192a43e30e364f5ab96d13c001d",
+        "voltage_min_pu": 0.9688340095150895,
+        "thdu_pct": 0.9199981481965807,
+        "charging_peak_kw": 0.0,
+        "energy_cost_cny": 0.0,
+        "user_nodes": 4,
+        "worst_asset": {
+          "id": "F1",
+          "name": "等值馈线1",
+          "loading_pct": 41.238535461099765
+        }
+      },
+      "unmanaged": {
+        "input_hash": "2cb0ef8351c327d89a8a0b749c1adfc9a18dba29a1c358528822b929dd5078d1",
+        "voltage_min_pu": 0.965096698254384,
+        "thdu_pct": 0.9199981481965807,
+        "charging_peak_kw": 1211.9318918272024,
+        "energy_cost_cny": 11402.096069125239,
+        "user_nodes": 4,
+        "worst_asset": {
+          "id": "F1",
+          "name": "等值馈线1",
+          "loading_pct": 48.71148186963173
+        }
+      },
+      "ordered": {
+        "input_hash": "29f37086c50f7c3989847866c68d3daacfef67b4d2c2287c8f98f45f9f38e34d",
+        "voltage_min_pu": 0.9688340095150895,
+        "thdu_pct": 1.4729321303389766,
+        "charging_peak_kw": 3840.0,
+        "energy_cost_cny": 6371.759568000148,
+        "user_nodes": 4,
+        "worst_asset": {
+          "id": "F1",
+          "name": "等值馈线1",
+          "loading_pct": 64.65945551973887
+        }
+      },
+      "capacitor": {
+        "input_hash": "f43ead26d89f002b7784bfbd3b4d9a0e817fec52eadb78d94854711170da628b",
+        "voltage_min_pu": 0.9761585494585493,
+        "thdu_pct": 2.342245581722479,
+        "charging_peak_kw": 3840.0,
+        "energy_cost_cny": 6371.759568000148,
+        "user_nodes": 4,
+        "worst_asset": {
+          "id": "F1",
+          "name": "等值馈线1",
+          "loading_pct": 64.65945551973887
+        }
+      },
+      "filter": {
+        "input_hash": "fe14580fc2c04224773ebdc1d2a9d31e0440dd1aaf57b4b6b051e18021eddac9",
+        "voltage_min_pu": 0.9688340095150895,
+        "thdu_pct": 0.9199981481965807,
+        "charging_peak_kw": 3840.0,
+        "energy_cost_cny": 6371.759568000148,
+        "user_nodes": 4,
+        "worst_asset": {
+          "id": "F1",
+          "name": "等值馈线1",
+          "loading_pct": 64.65945551973887
+        }
+      }
+    }
+  }
+}

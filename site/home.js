@@ -1,0 +1,9 @@
+import './site.js';
+import {number as n,escape as e} from './assessment.js';
+try{
+ const response=await fetch('./showcase-summary.json');if(!response.ok)throw Error('案例摘要尚未生成');const summary=await response.json(),s=summary.quality,c=s.cases;
+ const link=(label,plan)=>`<a href="./quality.html?season=summer&stress=normal&view=report&plan=${plan}">${label} ↗</a>`;
+ document.querySelector('#home-findings').innerHTML=`<article class="finding-card"><div class="eyebrow">治理需要同时复核多个指标</div><h3>补偿改善电压，也改变谐波表现</h3><p>同一夏季案例中，补偿方案最低基波电压从 ${n(c.ordered.voltage_min_pu,4)} 升至 ${n(c.capacitor.voltage_min_pu,4)} pu；全观测点最高电压谐波畸变率也随之上升。</p><div class="finding-values">${[['有序充电',c.ordered.thdu_pct],['加无功补偿',c.capacitor.thdu_pct],['加谐波滤波',c.filter.thdu_pct]].map(([label,v])=>`<div><span>${label}</span><b>${n(v,2)}%</b></div>`).join('')}</div><p class="study-note">2—25次 THDu · 各方案全时窗、全观测点最大值；不是同一节点的配对增量。</p>${link('查看措施与复核依据','capacitor')}</article>
+ <article class="finding-card"><div class="eyebrow">运营目标与电网影响分别评估</div><h3>费用下降后，仍要看充电集中程度</h3><p>代表周电能费由 ${n(c.unmanaged.energy_cost_cny,0)} 元降至 ${n(c.ordered.energy_cost_cny,0)} 元；全站充电总峰值由 ${n(c.unmanaged.charging_peak_kw,0)} kW 升至 ${n(c.ordered.charging_peak_kw,0)} kW。</p><div class="finding-values"><div><span>最紧上级设备</span><b style="font-size:19px">${e(c.ordered.worst_asset.name)}</b></div><div><span>有功限额利用率</span><b>${n(c.ordered.worst_asset.loading_pct,1)}%</b></div><div><span>用户观测点</span><b>${n(c.ordered.user_nodes,0)} 个</b></div></div><p class="study-note">观测点不等于实际用户户数。运营商电费与电网建设效益分别评价。</p>${link('查看接入点与用户结果','ordered')}</article>
+ <p class="evidence-link" style="grid-column:1/-1">来源：${e(s.case_id)} · ${e(s.start)} 至 ${e(s.end)} · 摘要与完整输入版本绑定。<a href="./${e(s.export)}">下载对应复算包 ↓</a></p>`;
+}catch(error){document.querySelector('#home-findings').innerHTML=`<p class="summary-error">${e(error.message)}。请进入分析工作台查看案例记录。</p>`;}

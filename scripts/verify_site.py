@@ -42,10 +42,11 @@ def main():
         result=read(entry['result']);assert len(result['rows'])==20
         assert not result['annualized'] and result['suggested_plan'] is None
     research=read(catalog['research']['result']);assert research['model_calls']==0 and not research['rsi_benefit_proven']
-    script=(SITE/'app.js').read_text();html=(SITE/'index.html').read_text()
+    script=(SITE/'app.js').read_text();html=(SITE/'planning.html').read_text()
     assert "fetch('/api/" not in script and 'id="import-file"' not in html
     assert 'window.truckStatic' in script and 'src="./static-api.js"' in html
     quality_cases=check_quality()
+    check_showcase()
     print(json.dumps({'passed':True,'files':len(manifest),'quality_weekly_cases':quality_cases,**catalog['counts']},ensure_ascii=False))
 
 
@@ -95,6 +96,28 @@ def check_quality():
         assert 'dss-python==0.15.7' in z.read('shanghai-truck-sim/requirements-locked.txt').decode()
     assert 'quality.html' in (SITE/'index.html').read_text()
     return count
+
+
+def check_showcase():
+    summary=json.loads((SITE/'showcase-summary.json').read_text())['quality']
+    catalog=json.loads((SITE/'quality-data/index.json').read_text())
+    entry=catalog['records'][summary['case_id']]
+    shown=read('quality-data/'+entry['result'])
+    assert summary['record_sha256']==entry['sha256']
+    for plan,s in summary['cases'].items():
+        c=shown['cases'][plan];q=c['power_quality']
+        assert s['input_hash']==c['input_hash']
+        assert s['voltage_min_pu']==min(n['voltage_min_pu'] for n in q['nodes'])
+        assert s['thdu_pct']==max(n['max_thdu_pct'] for n in q['nodes'])
+        assert s['charging_peak_kw']==c['metrics']['charging_peak_kw']
+        assert s['energy_cost_cny']==c['metrics']['operator_energy_cost_cny']
+        assert s['user_nodes']==sum(n['kind'] in ('industrial','residential','commercial','mixed') for n in q['nodes'])
+        a=max((a for a in c['metrics']['assets'] if a['type']!='station'),key=lambda a:a['max_loading_pct'])
+        assert s['worst_asset']=={'id':a['id'],'name':a['name'],'loading_pct':a['max_loading_pct']}
+    for name in ('index.html','planning.html','quality.html','delivery.html'):
+        content=(SITE/name).read_text();assert 'site.css' in content and 'site-header' in content
+    assert '/api/' not in (SITE/'delivery.html').read_text()
+    assert 'data-print' in (SITE/'quality.html').read_text() and 'data-print' in (SITE/'planning.html').read_text()
 
 
 if __name__=='__main__':main()
