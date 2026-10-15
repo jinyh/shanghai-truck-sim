@@ -47,6 +47,7 @@ def main():
     assert 'window.truckStatic' in script and 'src="./static-api.js"' in html
     quality_cases=check_quality()
     check_showcase()
+    check_scene()
     print(json.dumps({'passed':True,'files':len(manifest),'quality_weekly_cases':quality_cases,**catalog['counts']},ensure_ascii=False))
 
 
@@ -118,6 +119,59 @@ def check_showcase():
         content=(SITE/name).read_text();assert 'site.css' in content and 'site-header' in content
     assert '/api/' not in (SITE/'delivery.html').read_text()
     assert 'data-print' in (SITE/'quality.html').read_text() and 'data-print' in (SITE/'planning.html').read_text()
+
+
+def check_scene():
+    pointer=json.loads((SITE/'scene-data/index.json').read_text())
+    catalog=json.loads((SITE/'scene-data'/pointer['file']).read_text())
+    assert len(catalog['records'])==10
+    candidates=json.loads((SITE/f'candidates-{catalog["candidate_version"]}.json').read_text())
+    assert candidates['public'] and len(candidates['records'])==32
+    assert {r['decision']['color'] for r in candidates['records']}=={'green','yellow','red','gray'}
+    quality=json.loads((SITE/'quality-data/index.json').read_text())
+    for key,entry in catalog['records'].items():
+        file=SITE/'scene-data'/entry['file'];assert hashlib.sha256(file.read_bytes()).hexdigest()==entry['sha256']
+        shown=read('scene-data/'+entry['file']);case=shown['case_id'];plan=shown['plan']
+        assert shown['public'] and shown['input_hash']==entry['input_hash']
+        with zipfile.ZipFile(SITE/'quality-data'/quality['records'][case]['export']) as z:
+            raw=json.loads(z.read(f'cases/{plan}/result.json'));task=json.loads(z.read(f'cases/{plan}/task.json'))
+            base=json.loads(z.read('cases/baseline/result.json'))
+        q=raw['power_quality']
+        assert shown['trace']==q['trace'] and shown['nodes']==q['nodes'] and shown['operating_states']==q['operating_states']
+        assert shown['station_power_kw']==raw['metrics']['station_power_kw'] and shown['timestamps']==raw['timestamps']
+        assert shown['stations']==task['stations'] and shown['input_hash']==raw['input_hash']
+        for v in shown['vehicles']:
+            for t in v['trips']:
+                assert t['power_kw']==raw['solution']['power_by_session'][t['session_id']]
+                assert t['ledger']==next(x for x in raw['transport']['ledger'] if x['trip_id']==t['id'])
+        for aid,e in shown['equipment'].items():assert e['loading_pct']==[next(a['loading_pct'] for a in row['assets'] if a['id']==aid) for row in q['equipment']]
+        for r in candidates['records']:
+            if r['case_id']!=case or r['proposal']['id']!=plan:continue
+            assert r['source_input_hash']==raw['input_hash'] and r['public'] and 'source_register' not in r
+            assert not r['decision']['capacity_reserved'] and not r['decision']['engineering_approved']
+            for check in r['checks']:
+                for e in check.get('evidence',[]):
+                    if 'actual' not in e:continue
+                    assert e['station_id']==r['station']['id'] and e['proposal_id']==plan
+                    if check['id']=='capacity':
+                        aid=e['object'].split('（')[0]
+                        if '（有功限额）' in e['object']:expected=next(a['max_loading_pct'] for a in raw['metrics']['assets'] if a['id']==aid)
+                        else:
+                            expected=next(a['loading_pct'] for a in q['equipment'][e['step']]['assets'] if a['id']==aid)
+                            before=next(a['loading_pct'] for a in base['power_quality']['equipment'][e['step']]['assets'] if a['id']==aid)
+                            assert e['baseline']==before and abs(e['delta']-(expected-before))<1e-12
+                        assert e['actual']==expected
+                    elif check['id'] in ('voltage','harmonics'):
+                        node=e['object'].split(' · ')[0];row=q['trace'][node][e['step']];metric=e['metric']
+                        expected=row[metric] if metric in row else row['harmonic_voltage_pct'][int(metric.removesuffix('次谐波'))-2]
+                        assert e['actual']==expected
+    for name in ('scene.html','candidates.html'):
+        html=(SITE/name).read_text();assert 'site-header' in html and 'site.css' in html
+    for name in ('s1-yard','electric-truck'):
+        assert (SITE/f'assets/scene/{name}.glb').read_bytes()[:4]==b'glTF'
+    with zipfile.ZipFile(SITE/'downloads/local-workbench-source.zip') as z:
+        assert 'shanghai-truck-sim/assets/scene/s1-yard.blend' in z.namelist()
+        assert not any('/private/' in p or p.endswith('.xlsx') for p in z.namelist())
 
 
 if __name__=='__main__':main()

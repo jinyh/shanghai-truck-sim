@@ -1,0 +1,84 @@
+{
+  "schema_version": "scene-replay-1.0",
+  "candidate_version": "29dfe170ac761682",
+  "records": {
+    "summer-normal-unmanaged": {
+      "file": "summer-normal-unmanaged-913d60a69caf1a5f.json.gz",
+      "sha256": "913d60a69caf1a5fe05a645eecf92f5976de802faa2cc4b1fc8e3251f88573b7",
+      "bytes": 685222,
+      "input_hash": "2cb0ef8351c327d89a8a0b749c1adfc9a18dba29a1c358528822b929dd5078d1"
+    },
+    "summer-normal-ordered": {
+      "file": "summer-normal-ordered-caf46410b322b264.json.gz",
+      "sha256": "caf46410b322b264e15c751c1594ea0e3a7cc2e83619eb95cd1aa069c4736003",
+      "bytes": 671308,
+      "input_hash": "29f37086c50f7c3989847866c68d3daacfef67b4d2c2287c8f98f45f9f38e34d"
+    },
+    "summer-normal-capacitor": {
+      "file": "summer-normal-capacitor-04ae3358f12eb2e1.json.gz",
+      "sha256": "04ae3358f12eb2e17a60c4da59e1e4252e4dac8676ca619e60af1d987c6f0444",
+      "bytes": 669801,
+      "input_hash": "f43ead26d89f002b7784bfbd3b4d9a0e817fec52eadb78d94854711170da628b"
+    },
+    "summer-normal-filter": {
+      "file": "summer-normal-filter-2eec54def71422c5.json.gz",
+      "sha256": "2eec54def71422c580705660beb6e850cb83cea897080c218599bf22d7acc75d",
+      "bytes": 671118,
+      "input_hash": "fe14580fc2c04224773ebdc1d2a9d31e0440dd1aaf57b4b6b051e18021eddac9"
+    },
+    "summer-normal-baseline": {
+      "file": "summer-normal-baseline-edd880f3729508ee.json.gz",
+      "sha256": "edd880f3729508ee78e2109aee8c0f5b349f07728cbe3a452887d4fbef013e5e",
+      "bytes": 642915,
+      "input_hash": "4e398ae8066565fd0683c53d61bfe574d0bf3192a43e30e364f5ab96d13c001d"
+    },
+    "winter-background-unmanaged": {
+      "file": "winter-background-unmanaged-200250804d0a1abc.json.gz",
+      "sha256": "200250804d0a1abc6d5f4e2a642492a1b4b4fc51a75866ad05198d4a40ee2ead",
+      "bytes": 696258,
+      "input_hash": "352c61c3ebba8d91a41add5898aff61f36cb74388fea74f3ef26b436eed12b1a"
+    },
+    "winter-background-ordered": {
+      "file": "winter-background-ordered-3a7e969395b1850b.json.gz",
+      "sha256": "3a7e969395b1850b879526ad830cfa8c9173225eb0a687ed7bcccd6880cd488f",
+      "bytes": 678951,
+      "input_hash": "0d566e81ec7e44853e2a03f3194fd73ebfce9a3124c2a20f973dceb7723033f0"
+    },
+    "winter-background-capacitor": {
+      "file": "winter-background-capacitor-89d9b72616b61a79.json.gz",
+      "sha256": "89d9b72616b61a794c48a4ca50658e3a4df760dd57f1a22942a189a6c2cd59de",
+      "bytes": 677596,
+      "input_hash": "ed72f4ddf02b1ceb0cca24402ab3d488f323236862c7b382bd3c0a16efbcd6ec"
+    },
+    "winter-background-filter": {
+      "file": "winter-background-filter-5a885ca046992390.json.gz",
+      "sha256": "5a885ca046992390fe77b69b77afef6a0685036d0f2cef5b906f346d50144b21",
+      "bytes": 678501,
+      "input_hash": "48e460ddb47fee2449d83e86d505c65624e32e2f4d76fa8f92caf1537cf9090e"
+    },
+    "winter-background-baseline": {
+      "file": "winter-background-baseline-1514cb68b0804e16.json.gz",
+      "sha256": "1514cb68b0804e16382a0d55e8b6898ba5244c65064014366913294301ae12d3",
+      "bytes": 649245,
+      "input_hash": "97b1e5dc5c5225e0b2297d2bcb4fd8f6ddcc54b3505d248b70012f2a4a507bbe"
+    }
+  },
+  "public": true,
+  "cases": {
+    "summer-normal": "夏季 · 正常代表周",
+    "winter-background": "冬季 · 背景偏高代表周"
+  },
+  "plans": {
+    "unmanaged": "常规充电",
+    "ordered": "有序充电",
+    "capacitor": "有序＋补偿",
+    "filter": "有序＋滤波",
+    "baseline": "无新增重卡"
+  },
+  "geometry": {
+    "file": "geography-4af622765c15158c.json.gz",
+    "sha256": "4af622765c15158c35aeeca91a7ae0e06a41818ad856981c8bedb2c32d71f624",
+    "bytes": 275814
+  },
+  "version": "2d512bea14e37913"
+}

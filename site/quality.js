@@ -1,4 +1,5 @@
 import './site.js';
+import {mapControls} from './map-controls.js';
 import {qualitySummary,nodeImpact,coverageHTML,readState,saveState,stamp} from './assessment.js';
 const $=s=>document.querySelector(s), esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=(v,d=1)=>v==null||!Number.isFinite(v)?'—':v.toLocaleString('zh-CN',{minimumFractionDigits:d,maximumFractionDigits:d});
@@ -9,6 +10,7 @@ let loadedCase={season:'summer',stress:'normal'};
 const seasons={summer:'夏季',winter:'冬季'}, stresses={normal:'正常代表周',bunched:'集中到站',light:'低功率充电',weak:'较弱电源',background:'背景负荷偏高'};
 const colors={industrial:'#e4cfb4',residential:'#d3dfb8',commercial:'#dbcfdf',port_logistics:'#b6d4d3',mixed:'#d6d5bb',unknown:'#e1e6da'};
 const current=()=>data.cases[selectedPlan];
+mapControls($('#map'),$('#quality-map-controls'));
 function status(text,error=false){$('#status').textContent=text;$('#status').classList.toggle('error',error);}
 function updatePlaybackButton(){const playing=timer!==null,ended=data&&step>=current().timestamps.length-1;$('#play').textContent=playing?'Ⅱ 暂停':ended?'↺ 重放':'▶ 播放';$('#play').setAttribute('aria-label',playing?'暂停运行回放':ended?'重新播放运行回放':'播放运行回放');$('#play').setAttribute('aria-pressed',String(playing));}
 function stopPlayback(){if(timer!==null)clearInterval(timer);timer=null;updatePlaybackButton();}
@@ -40,7 +42,7 @@ function mapOverlay(){const c=current(),r=c.routes.find(x=>x.station_id===statio
  $('#route-layer').innerHTML=data.spatial.roads.features.filter(f=>ways.has(f.properties.osm_id)).map(f=>`<path d="${linePath(f.geometry.coordinates)}" fill="none" stroke="#138b76" stroke-width="3" opacity=".85"/>`).join('');
  $('#station-layer').innerHTML=c.stations.map(s=>{const [x,y]=project([s.longitude,s.latitude]),p=c.metrics.station_power_kw[s.id][step];return `<g data-station="${esc(s.id)}" tabindex="0" role="button" aria-label="选择${esc(s.name)}"><circle cx="${x}" cy="${y}" r="${s.id===station?13:10}" fill="#174b3b" stroke="white" stroke-width="3"/><text x="${x}" y="${y+3}" text-anchor="middle" fill="white" font-size="11">${esc(s.id)}</text><rect x="${x+17}" y="${y-12}" width="94" height="25" rx="4" fill="white" opacity=".95"/><text x="${x+24}" y="${y+4}" fill="#345e44" font-size="11">${fmt(p,0)} kW</text></g>`;}).join('');
 }
-function renderStation(){const c=current(),s=c.stations.find(x=>x.id===station),r=c.routes.find(x=>x.station_id===station),q=c.power_quality.station_q_kvar[station]?.[step],p=c.metrics.station_power_kw[station][step];
+function renderStation(){const sceneLink=$('#quality-scene-link');const supported=(loadedCase.season==='summer'&&loadedCase.stress==='normal')||(loadedCase.season==='winter'&&loadedCase.stress==='background');sceneLink.hidden=!supported;sceneLink.href='./scene.html?'+new URLSearchParams({case:loadedCase.season+'-'+loadedCase.stress,plan:selectedPlan,station,step});const c=current(),s=c.stations.find(x=>x.id===station),r=c.routes.find(x=>x.station_id===station),q=c.power_quality.station_q_kvar[station]?.[step],p=c.metrics.station_power_kw[station][step];
  $('#station-info').innerHTML=`<h3>${esc(s.name)}</h3>${row('位置证据','公开道路上的合成站位')}${row('供电映射',`${esc(s.feeder_id)} · ${esc(c.network.station_buses[s.id])}`)}${row('每天固定往返',`${r.round_trips} 次 · ${fmt(r.distance_km,1)} km`)}${row('路由与作业时间',`${fmt(r.minutes,0)} 分钟`)}${row('当前充电设备有功 / 无功',`${fmt(p)} kW / ${fmt(q)} kvar`)}${row('充电设备基波功率因数',p>1e-6?fmt(p/Math.hypot(p,q),3):'停充')}<p class="footnote" style="margin:14px 0 0">${esc(r.outward.status==='routed'&&r.inward.status==='routed'?'按登记方向与限制可达；缺失的重卡政策、时段限制仍需核实。':'存在不可达任务，已保留为失败结果。')}</p>`;
  const n=c.timestamps.length,background=Array.from({length:n},(_,t)=>c.background.reduce((s,z)=>s+z.p_kw[t],0)),charging=Array.from({length:n},(_,t)=>Object.values(c.metrics.station_power_kw).reduce((s,a)=>s+a[t],0));
  chart($('#load-chart'),[{values:background,color:'#a6b2a0'},{values:charging,color:'#168575'}],{zero:true,digits:0});
