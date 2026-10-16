@@ -43,8 +43,8 @@ def main():
         assert not result['annualized'] and result['suggested_plan'] is None
     research=read(catalog['research']['result']);assert research['model_calls']==0 and not research['rsi_benefit_proven']
     script=(SITE/'app.js').read_text();html=(SITE/'planning.html').read_text()
-    assert "fetch('/api/" not in script and 'id="import-file"' not in html
-    assert 'window.truckStatic' in script and 'src="./static-api.js"' in html
+    assert 'data-local-only' in html and 'runtime.js' in script
+    assert json.loads((SITE/'runtime-config.json').read_text())['mode']=='static'
     quality_cases=check_quality()
     check_showcase()
     check_scene()
@@ -183,4 +183,8 @@ def check_scene():
         assert not any('/private/' in p or p.endswith('.xlsx') for p in z.namelist())
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    import argparse
+    parser=argparse.ArgumentParser();parser.add_argument('--site');args=parser.parse_args()
+    if args.site:SITE=Path(args.site)
+    main()
