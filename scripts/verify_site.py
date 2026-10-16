@@ -168,7 +168,7 @@ def check_scene():
     city_pointer=json.loads((SITE/'city-data/index.json').read_text())
     city=json.loads((SITE/'city-data'/city_pointer['file']).read_text())
     assert city['district_count']==16
-    for layer in ('base','regional'):
+    for layer in ('base','regional','context'):
         entry=city[layer];assert hashlib.sha256((SITE/'city-data'/entry['file']).read_bytes()).hexdigest()==entry['sha256']
     presentation_pointer=json.loads((SITE/'presentation/index.json').read_text())
     presentation=json.loads((SITE/'presentation'/presentation_pointer['file']).read_text())
