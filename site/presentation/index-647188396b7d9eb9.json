@@ -1,0 +1,23 @@
+{
+  "assessments": {
+    "file": "assessments-1ce1dd47733de970.json.gz",
+    "sha256": "1ce1dd47733de97064cf5ddb5b35c772a1e718a77228a5f88d0d69687c6a900f",
+    "version": "29dfe170ac761682"
+  },
+  "schema_version": "presentation-1.0",
+  "assets": {
+    "s1-yard": "./presentation/s1-yard-b6837226eeb43173.glb",
+    "electric-truck": "./presentation/electric-truck-e307c1d2ca13c81c.glb"
+  },
+  "poster": "./presentation/s1-poster-3337d7d55ca77e32.webp",
+  "sha256": {
+    "s1-yard-b6837226eeb43173.glb": "b6837226eeb43173f3263251cdd6c9e668e1c282cb595fdfa4aef4536a8879f2",
+    "electric-truck-e307c1d2ca13c81c.glb": "e307c1d2ca13c81c6259b865644143ab2a5ad02277b96a903afe6fdf328e9a9b",
+    "s1-poster-3337d7d55ca77e32.webp": "3337d7d55ca77e32d87dc3a020c90f4beb9691aff5fef7c02dff0ee21badbe9d",
+    "model-spec-0c918080b8e8c2b5.json": "0c918080b8e8c2b5e26efaf6ba53aa88547abe670a19d1a5ca8227f3e5506980",
+    "assessments-1ce1dd47733de970.json.gz": "1ce1dd47733de97064cf5ddb5b35c772a1e718a77228a5f88d0d69687c6a900f"
+  },
+  "city_version": "d1d0dcbb920af6c2",
+  "scope": "原始Blender资产；场内尺寸、布局与设备外观为示意；不改变工程计算与分级版本。",
+  "version": "647188396b7d9eb9"
+}

@@ -1,0 +1,23 @@
+{
+  "version": "floating-yard-2",
+  "evidence": "illustrative",
+  "units": "m",
+  "yard_size": [
+    74,
+    57
+  ],
+  "vehicle_length": 15.6,
+  "mirror_width": 3.36,
+  "cable_length_assumption_m": 9,
+  "vehicle_width": 2.52,
+  "bay_centres": [
+    -13.5,
+    -4.5,
+    4.5,
+    13.5
+  ],
+  "bay_length": 22,
+  "canopy_clearance": 6.1,
+  "surface_height": 0.175,
+  "variable_ratings_baked": false
+}

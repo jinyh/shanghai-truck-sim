@@ -1,0 +1,61 @@
+{
+  "schema_version": "city-map-1.0",
+  "public": true,
+  "base": {
+    "file": "city-4e10840a9d0241ce.json.gz",
+    "sha256": "4e10840a9d0241cec324300502a36e52159fba907291801d64940a5e20bf49fb",
+    "bytes": 820809
+  },
+  "regional": {
+    "file": "roads-5532df8785eacfbb.json.gz",
+    "sha256": "5532df8785eacfbb5bcd9b626089794724548682a8c130cadd97b7caa9c4de2b",
+    "bytes": 930559
+  },
+  "district_count": 16,
+  "land_bounds": [
+    120.85410347941736,
+    30.682029,
+    122.1133864,
+    31.8720185
+  ],
+  "source": {
+    "url": "https://download.geofabrik.de/asia/china/shanghai-261013.osm.pbf",
+    "snapshot": "2026-10-13",
+    "sha256": "5f0965165e8640ca1a4f1b4ddef33eb5804a80726f758bc1fe39336d8b603070",
+    "license": "ODbL 1.0",
+    "attribution": "© OpenStreetMap contributors"
+  },
+  "audit": {
+    "boundary_repairs": {
+      "静安区": {
+        "method": "union of all 14 registered subareas",
+        "relations": [
+          14186018,
+          14186017,
+          14186016,
+          14186014,
+          14186015,
+          14186013,
+          14186012,
+          14186011,
+          14186010,
+          14186009,
+          14186008,
+          14186007,
+          14186006,
+          14186005
+        ]
+      },
+      "宝山区": {
+        "method": "municipality minus 15 complete districts; checked against available subareas",
+        "available_subareas": 13,
+        "known_area_outside_reconstruction": 0.0
+      }
+    },
+    "coast_segments": 107,
+    "coast_polygons": 23,
+    "land_anchors": 4,
+    "water_polygons": 281
+  },
+  "version": "d1d0dcbb920af6c2"
+}

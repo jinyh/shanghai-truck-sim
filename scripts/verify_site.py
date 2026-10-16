@@ -165,6 +165,15 @@ def check_scene():
                         node=e['object'].split(' · ')[0];row=q['trace'][node][e['step']];metric=e['metric']
                         expected=row[metric] if metric in row else row['harmonic_voltage_pct'][int(metric.removesuffix('次谐波'))-2]
                         assert e['actual']==expected
+    city_pointer=json.loads((SITE/'city-data/index.json').read_text())
+    city=json.loads((SITE/'city-data'/city_pointer['file']).read_text())
+    assert city['district_count']==16
+    for layer in ('base','regional'):
+        entry=city[layer];assert hashlib.sha256((SITE/'city-data'/entry['file']).read_bytes()).hexdigest()==entry['sha256']
+    presentation_pointer=json.loads((SITE/'presentation/index.json').read_text())
+    presentation=json.loads((SITE/'presentation'/presentation_pointer['file']).read_text())
+    assert presentation['city_version']==city['version'] and presentation['version']!=catalog['version']
+    for name,digest in presentation['sha256'].items():assert hashlib.sha256((SITE/'presentation'/name).read_bytes()).hexdigest()==digest
     for name in ('scene.html','candidates.html'):
         html=(SITE/name).read_text();assert 'site-header' in html and 'site.css' in html
     for name in ('s1-yard','electric-truck'):
