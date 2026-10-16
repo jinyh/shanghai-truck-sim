@@ -50,7 +50,7 @@ function renderStation(){const sceneLink=$('#quality-scene-link');const supporte
  $('#ledger').innerHTML=table(['任务','行程 km','出发电量 kWh','行驶后 kWh','补电 kWh','补电后 kWh','最低离站 kWh'],ledger.map(r=>[esc(r.trip_id),fmt(r.distance_km),fmt(r.before_kwh),fmt(r.after_trip_kwh),fmt(r.charged_kwh),fmt(r.after_charge_kwh),fmt(r.minimum_departure_kwh)]));
 }
 function renderKpis(){const c=current(),s=qualitySummary(c,data.cases.baseline),a=s.worstAsset;
- const cards=[['全时窗 · 最紧上级设备',a?.name||'未评估',a?`有功限额利用率 ${fmt(a.max_loading_pct)}%`:'无有效设备记录',a?.max_loading_pct>100.0001],['全时窗 · 电压参考',s.voltageStatus,`背景 ${fmt(s.backgroundVoltageNodes,0)} / 新增 ${fmt(s.addedVoltageNodes,0)} 个越限观测点`,s.voltageStatus==='超出参考范围'],['全时窗 · 谐波参考',s.harmonicStatus,`背景 ${fmt(s.backgroundHarmonicNodes,0)} / 新增 ${fmt(s.addedHarmonicNodes,0)} 个越限观测点`,s.harmonicStatus==='超出参考范围'],['全时窗 · 运输履约',selectedPlan==='baseline'?'不适用':c.transport.passed?'运输电量满足':'存在未完成任务',selectedPlan==='baseline'?'仅参与电气对照':`欠充 ${fmt(c.metrics.shortfall_kwh)} kWh`,selectedPlan!=='baseline'&&!c.transport.passed]];
+ const cards=[['全时窗 · 最高负载上级设备',a?.name||'未评估',a?`有功限额利用率 ${fmt(a.max_loading_pct)}%`:'无有效设备记录',a?.max_loading_pct>100.0001],['全时窗 · 电压参考',s.voltageStatus,`背景 ${fmt(s.backgroundVoltageNodes,0)} / 新增 ${fmt(s.addedVoltageNodes,0)} 个越限观测点`,s.voltageStatus==='超出参考范围'],['全时窗 · 谐波参考',s.harmonicStatus,`背景 ${fmt(s.backgroundHarmonicNodes,0)} / 新增 ${fmt(s.addedHarmonicNodes,0)} 个越限观测点`,s.harmonicStatus==='超出参考范围'],['全时窗 · 运输履约',selectedPlan==='baseline'?'不适用':c.transport.passed?'运输电量满足':'存在未完成任务',selectedPlan==='baseline'?'仅参与电气对照':`欠充 ${fmt(c.metrics.shortfall_kwh)} kWh`,selectedPlan!=='baseline'&&!c.transport.passed]];
  $('#kpis').innerHTML=cards.map(([label,value,note,bad])=>`<div class="kpi"><span>${label}</span><strong class="${bad?'bad':''}" style="font-size:20px">${esc(value)}</strong><small>${esc(note)}</small></div>`).join('');
 }
 function renderNetwork(){const c=current(),positions={source:[350,32],MV1:[230,100],MV2:[610,100],F1:[160,168],F2:[420,168],F3:[610,168]};[90,265,440,615].forEach((x,i)=>{positions['PCC'+(i+1)]=[x,245];positions['ZLV'+(i+1)]=[x,332];});let svg='';
@@ -99,18 +99,18 @@ function renderReport(){
  ${coverageHTML({capacity:c.metrics.assets?.length?c.metrics.assets.some(a=>a.violation_hours>0)?'存在有功越限':'登记有功限额内':'未评估',voltage:s.voltageStatus,harmonics:s.harmonicStatus,service:base?'电气基线不适用':c.transport.passed?'运输电量满足':'存在任务失败'})}
  ${!s.complete?'<p class="report-callout bad">存在求解失败或缺失时段，本表数值仅为已计算部分，不能汇总为完整时窗通过。</p>':''}
  <h3>02 / 可选措施与代价</h3><div class="table-wrap"><table>${table(['方案','运输','设备基波负载 %','最低电压 pu','最高THDu %','电压 / 谐波参考','代表周电能费 元'],planComparisonRows())}</table></div><p>表中最低、最高值分别为各方案全时窗极值；增量影响使用上方配对记录。运营商电费与电网收益分别评价。无新增重卡仅为电气基线；有失败或越限的方案保留费用供复核，不作有效节省排名。</p>
- <h3>03 / 实施条件</h3><ul><li>有序充电：需核实车队离站电量、控制权限、执行响应与集中到站压力工况。</li><li>无功补偿：需复核补偿投切、网络阻抗和谐振；改善电压时仍独立检查谐波。</li><li>谐波滤波：需核实充电设备运行谱、背景谐波及实际滤波能力。本模型滤波方案不等同于现场设备选型。</li></ul>
- <h3>04 / 下一步与业务协同</h3><p>补充真实站网映射、同期P/Q及电能质量监测、设备状态与认可判据。建议由接入/规划确认网络与限额，运检/调控复核用户影响，运营商/车队确认运行约束；角色安排待双方确认。</p><p>短路、保护、转供与可靠性、谐波电流分配及动态电能质量专项按实际项目补齐。当前代表周不推算全年结果，不形成正式接入结论。</p>
+ <h3>03 / 实施条件</h3><ul><li>有序充电实施条件：车队离站电量、控制权限、执行响应及集中到站工况验证。</li><li>无功补偿复核范围：补偿投切、网络阻抗、谐振及谐波影响。</li><li>谐波滤波实施条件：设备运行谱、背景谐波及滤波能力核实；现场设备选型另行开展。</li></ul>
+ <h3>04 / 后续验证与业务协同</h3><p>待补资料：真实站网映射、同期P/Q及电能质量监测、设备状态与认可判据。拟由接入/规划确认网络与限额，运检/调控复核用户影响，运营商/车队确认运行约束；角色安排待双方确认。</p><p>短路、保护、转供与可靠性、谐波电流分配及动态电能质量专项按实际项目补齐。当前代表周不推算全年结果，不形成正式接入结论。</p>
  <p class="report-hash">案例 ${esc(data.id)} / ${esc(data.season+'-'+data.stress+'-'+selectedPlan)}<br>输入 SHA-256 ${esc(c.input_hash)}<br>公开地理 SHA-256 ${esc(data.spatial.source.sha256)}</p>`;
  const ordered=data.cases.ordered,cap=data.cases.capacitor,filtered=data.cases.filter,u=data.cases.unmanaged,os=qualitySummary(ordered,data.cases.baseline),cs=qualitySummary(cap,data.cases.baseline),fs=qualitySummary(filtered,data.cases.baseline);
- $('#comparison-insight').innerHTML=`<p><strong>同一需求与背景，分别检查改善和代价。</strong>有序充电最高THDu ${fmt(os.thdmax?.max_thdu_pct,3)}%，加补偿 ${fmt(cs.thdmax?.max_thdu_pct,3)}%，加滤波 ${fmt(fs.thdmax?.max_thdu_pct,3)}%。最低电压依次为 ${fmt(os.vmin?.voltage_min_pu,4)} / ${fmt(cs.vmin?.voltage_min_pu,4)} / ${fmt(fs.vmin?.voltage_min_pu,4)} pu。</p><p>常规与有序的充电总峰值 ${fmt(u.metrics.charging_peak_kw,0)} / ${fmt(ordered.metrics.charging_peak_kw,0)} kW；运营商代表周电能费 ${fmt(u.metrics.operator_energy_cost_cny,0)} / ${fmt(ordered.metrics.operator_energy_cost_cny,0)} 元。</p><div class="user-actions" style="margin:12px 0 0">${['unmanaged','ordered','capacitor','filter'].map(p=>`<button data-plan="${p}" class="${selectedPlan===p?'active':''}">${esc(data.plan_labels[p])}</button>`).join('')}</div>`;
+ $('#comparison-insight').innerHTML=`<p><strong>同一需求与背景下的治理效果对照。</strong>有序充电最高THDu ${fmt(os.thdmax?.max_thdu_pct,3)}%，加补偿 ${fmt(cs.thdmax?.max_thdu_pct,3)}%，加滤波 ${fmt(fs.thdmax?.max_thdu_pct,3)}%。最低电压依次为 ${fmt(os.vmin?.voltage_min_pu,4)} / ${fmt(cs.vmin?.voltage_min_pu,4)} / ${fmt(fs.vmin?.voltage_min_pu,4)} pu。</p><p>常规与有序的充电总峰值 ${fmt(u.metrics.charging_peak_kw,0)} / ${fmt(ordered.metrics.charging_peak_kw,0)} kW；运营商代表周电能费 ${fmt(u.metrics.operator_energy_cost_cny,0)} / ${fmt(ordered.metrics.operator_energy_cost_cny,0)} 元。</p><div class="user-actions" style="margin:12px 0 0">${['unmanaged','ordered','capacitor','filter'].map(p=>`<button data-plan="${p}" class="${selectedPlan===p?'active':''}">${esc(data.plan_labels[p])}</button>`).join('')}</div>`;
 }
 const scenes=[
- ['两站共用馈线，影响如何传递？','观察F1上的S1、S2及工业、居民用户。图中为等值供电关系，当前回放读取已计算记录。','electrical'],
- ['需求从哪里来，接到哪里？','查看公开道路上的运输路径与四类合成站位；地理邻近与电气连接分别记录。','geography'],
- ['定位用户、时段和增量','选择工业、居民或商业观测点；定位最低电压或最高谐波，比较同时刻电气基线。','electrical'],
- ['措施改善了什么，又改变了什么？','同一代表周比较常规、有序、补偿、滤波；运营费用、供电电压与谐波分别核查。','comparison'],
- ['把发现交付给业务复核','查看对象、证据、措施、实施条件与后续工作，打印结论单或进入完整分析。','report']
+ ['共享馈线与用户供电关联','S1、S2与工业、居民用户共享F1馈线。图中采用登记等值供电关系，回放对应已计算运行记录。','electrical'],
+ ['运输需求与场站接入关系','公开路网承载运输路径，四类合成站位对应不同补能场景；空间位置与供电映射分别登记。','geography'],
+ ['用户影响、关键时段与配对增量','工业、居民及商业节点分别记录电压与谐波极值、发生时刻及相对电气基线的配对增量。','electrical'],
+ ['治理效果与运行代价','同一代表周比较常规、有序、补偿、滤波；运营费用、供电电压与谐波分别核查。','comparison'],
+ ['案例结论与后续验证','业务结论单归集评估对象、主要发现、证据记录、可选措施及实施条件，形成后续复核依据。','report']
 ];
 function showView(next){view=next;document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));document.querySelectorAll('.view').forEach(el=>el.classList.toggle('active',el.id==='view-'+view));}
 function renderDemo(){document.body.classList.toggle('demo-mode',demo);$('#demo-panel').hidden=!demo;if(!demo)return;scene=Math.max(1,Math.min(5,scene));const item=scenes[scene-1];$('#demo-title').textContent=`${scene} / 5 · ${item[0]}`;$('#demo-description').textContent=item[1];$('#demo-dots').innerHTML=scenes.map((s,i)=>`<button data-scene="${i+1}" class="${scene===i+1?'active':''}">${['共享供电','道路需求','定位影响','措施对照','业务交付'][i]}</button>`).join('');$('#demo-prev').disabled=scene===1;$('#demo-next').textContent=scene===5?'结束演示':'下一步 →';showView(item[2]);}

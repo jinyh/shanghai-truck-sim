@@ -1,7 +1,7 @@
 const header=document.querySelector('#site-header');
 if(header){
  const active=document.body.dataset.page;
- header.innerHTML=`<header class="site-header"><a class="site-brand" href="./index.html"><span class="site-mark">↯</span><span>重卡接入与电网协同评估<small>面向上海电力的研究能力演示</small></span></a><nav class="site-nav" aria-label="全站导航">${[['home','决策总览','index.html'],['quality','电网影响与治理','quality.html'],['planning','接入与建设','planning.html'],['delivery','试点与交付','delivery.html']].map(([id,label,url])=>`<a href="./${url}" ${id===active?'aria-current="page"':''}>${label}</a>`).join('')}</nav><span class="site-badge">研究示范</span></header>`;
+ header.innerHTML=`<header class="site-header"><a class="site-brand" href="./index.html"><span class="site-mark">↯</span><span>重卡接入与电网协同评估<small>面向上海电力的研究成果展示</small></span></a><nav class="site-nav" aria-label="全站导航">${[['home','决策总览','index.html'],['quality','电网影响与治理','quality.html'],['planning','接入与建设','planning.html'],['delivery','试点与交付','delivery.html']].map(([id,label,url])=>`<a href="./${url}" ${id===active?'aria-current="page"':''}>${label}</a>`).join('')}</nav><span class="site-badge">研究示范</span></header>`;
 }
 let previewScroll=0;
 function closePrintPreview(){document.body.classList.remove('report-preview','printing-report');document.querySelector('#print-toolbar')?.remove();window.scrollTo(0,previewScroll);}
