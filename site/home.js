@@ -8,3 +8,11 @@ try{
  <p class="evidence-link" style="grid-column:1/-1">来源：${e(s.case_id)} · ${e(s.start)} 至 ${e(s.end)} · 摘要与完整输入版本绑定。<a href="./${e(s.export)}">下载对应复算包 ↓</a></p>`;
  const cards=document.querySelectorAll('#home-findings article');if(cards.length===2)cards[0].before(cards[1]);
 }catch(error){document.querySelector('#home-findings').innerHTML=`<p class="summary-error">${e(error.message)}。请进入分析工作台查看案例记录。</p>`;}
+
+const annual=document.querySelector('#home-annual');
+if(annual)try{
+ const response=await fetch('./four-summary.json');if(!response.ok)throw Error('年度结果尚未登记');const d=await response.json(),base=d.rows.find(r=>r.engineering==='existing'),expanded=d.rows.find(r=>r.engineering==='station');
+ const first=d.first_constraints.find(r=>r.metric==='transport');
+ const href='./planning.html?'+new URLSearchParams({case_family:'four',v:d.version,year:base.year,growth:'medium',season:'summer',engineering:'station',stress:'normal',plan:'unmanaged'});
+ annual.innerHTML=`<article class="finding-card" style="grid-column:1/-1"><div class="eyebrow">同一四站 · 2027—2030年度延伸</div><h3>${first?.year?`${first.year}年出现运输履约约束`:'年度运输履约状态：'+e(first?.status||'待评估')}</h3><p>中增长情景下，${base.year}年各站${base.vehicles_per_station}辆车；夏季代表周现状配置欠充 ${n(base.shortfall_kwh,2)} kWh，S1/S2站内扩容后四站合计欠充 ${n(expanded.shortfall_kwh,2)} kWh。设备容量、履约和用户指标分别形成建设依据。</p><p>车辆年增长13%、背景P/Q年增长3.5%为合成情景假设；年度结果与2026基准沿用同一组站点及路线。</p><a href="${href}">四站年度约束与候选工程 ↗</a><p class="study-note">版本 ${e(d.version)} · 数值来自对应代表周记录。</p></article>`;
+}catch(error){annual.textContent=error.message;}

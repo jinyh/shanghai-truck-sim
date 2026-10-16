@@ -1,0 +1,371 @@
+{
+  "version": "437e0b025fae400f",
+  "assumption_hash": "b5049d78672f64976c1d2818b2088b175afb41e61ba31fbfef1da7e506c348a9",
+  "rows": [
+    {
+      "year": 2027,
+      "growth": "medium",
+      "season": "summer",
+      "engineering": "existing",
+      "stress": "normal",
+      "vehicles_per_station": 5,
+      "assumption_hash": "b5049d78672f64976c1d2818b2088b175afb41e61ba31fbfef1da7e506c348a9",
+      "background_repair": false,
+      "plan": "unmanaged",
+      "input_hash": "207d8cbc9f97b6608916cc1555b8548c65479032735b3d49686d27aaee34b463",
+      "states": {
+        "capacity": true,
+        "transport": false,
+        "voltage": true,
+        "harmonics": true
+      },
+      "maximum_equipment_loading_pct": 67.05100339658804,
+      "worst_asset": "UZT1",
+      "worst_step": 420,
+      "shortfall_kwh": 562.9186084547123,
+      "failed_trips": 4,
+      "minimum_voltage_pu": 0.9563608258444057,
+      "maximum_thdu_pct": 1.0302153773400633,
+      "energy_cost_cny": 12767.473119419647,
+      "charging_peak_kw": 2423.863783654405,
+      "investment": {
+        "utility_cny": 0,
+        "user_cny": 0,
+        "other_user_cny": 0,
+        "basis": "显式合成工程量与单价；非市场询价、预算或实际工程设计"
+      },
+      "projects": [],
+      "period_hours": 168.0,
+      "annualized": false,
+      "record": "2027-medium-summer-existing-normal",
+      "failure_points": {
+        "transport": {
+          "object": "CS1V3D6",
+          "time": "2027-07-11T23:45:00+08:00",
+          "actual": 139.05730693765986,
+          "baseline": null
+        }
+      }
+    },
+    {
+      "year": 2027,
+      "growth": "medium",
+      "season": "summer",
+      "engineering": "station",
+      "stress": "normal",
+      "vehicles_per_station": 5,
+      "assumption_hash": "b5049d78672f64976c1d2818b2088b175afb41e61ba31fbfef1da7e506c348a9",
+      "background_repair": false,
+      "plan": "unmanaged",
+      "input_hash": "4548012622409a217163ed99e4ecc59c8f2f02e59e640a59aa6af0f41329a08b",
+      "states": {
+        "capacity": true,
+        "transport": false,
+        "voltage": true,
+        "harmonics": true
+      },
+      "maximum_equipment_loading_pct": 67.03941450042458,
+      "worst_asset": "UZT1",
+      "worst_step": 420,
+      "shortfall_kwh": 281.45930422735614,
+      "failed_trips": 2,
+      "minimum_voltage_pu": 0.9565262356957516,
+      "maximum_thdu_pct": 0.97219947705737,
+      "energy_cost_cny": 13510.046602913097,
+      "charging_peak_kw": 2423.863783654405,
+      "investment": {
+        "utility_cny": 0,
+        "user_cny": 1300000,
+        "other_user_cny": 0,
+        "basis": "显式合成工程量与单价；非市场询价、预算或实际工程设计"
+      },
+      "projects": [
+        {
+          "id": "S1-UP",
+          "object": "S1",
+          "group": "station",
+          "owner": "station",
+          "quantity": 1,
+          "unit": "站内扩容包",
+          "unit_cost_cny": 650000,
+          "lead_months": 6,
+          "ports": 8,
+          "shared_power_kw": 2560,
+          "connection_limit_kw": 2500,
+          "transformer": "UST1",
+          "kva": 3200,
+          "r_pct": 1,
+          "xhl_pct": 6
+        },
+        {
+          "id": "S2-UP",
+          "object": "S2",
+          "group": "station",
+          "owner": "station",
+          "quantity": 1,
+          "unit": "站内扩容包",
+          "unit_cost_cny": 650000,
+          "lead_months": 6,
+          "ports": 8,
+          "shared_power_kw": 2560,
+          "connection_limit_kw": 2500,
+          "transformer": "UST2",
+          "kva": 3200,
+          "r_pct": 1,
+          "xhl_pct": 6
+        }
+      ],
+      "period_hours": 168.0,
+      "annualized": false,
+      "record": "2027-medium-summer-station-normal",
+      "failure_points": {
+        "transport": {
+          "object": "CS3V3D6",
+          "time": "2027-07-11T23:45:00+08:00",
+          "actual": 139.05730693765986,
+          "baseline": null
+        }
+      }
+    },
+    {
+      "year": 2027,
+      "growth": "medium",
+      "season": "summer",
+      "engineering": "shared",
+      "stress": "normal",
+      "vehicles_per_station": 5,
+      "assumption_hash": "b5049d78672f64976c1d2818b2088b175afb41e61ba31fbfef1da7e506c348a9",
+      "background_repair": false,
+      "plan": "unmanaged",
+      "input_hash": "1b510babd96c1751b36ddb399a06194e79924d44f343fcfe1f65b8a2dc57748c",
+      "states": {
+        "capacity": true,
+        "transport": false,
+        "voltage": true,
+        "harmonics": true
+      },
+      "maximum_equipment_loading_pct": 65.76935802306807,
+      "worst_asset": "UZT1",
+      "worst_step": 420,
+      "shortfall_kwh": 562.9186084547123,
+      "failed_trips": 4,
+      "minimum_voltage_pu": 0.974996999082719,
+      "maximum_thdu_pct": 0.9311138941731381,
+      "energy_cost_cny": 12767.473119419647,
+      "charging_peak_kw": 2423.863783654405,
+      "investment": {
+        "utility_cny": 5000000,
+        "user_cny": 0,
+        "other_user_cny": 0,
+        "basis": "显式合成工程量与单价；非市场询价、预算或实际工程设计"
+      },
+      "projects": [
+        {
+          "id": "F1-UP",
+          "object": "LF1",
+          "group": "shared",
+          "owner": "utility",
+          "quantity": 4,
+          "unit": "km",
+          "unit_cost_cny": 450000,
+          "lead_months": 18,
+          "ampacity_a": 600,
+          "r1": 0.1,
+          "x1": 0.06,
+          "r0": 0.3,
+          "x0": 0.18,
+          "c1_nf": 300,
+          "c0_nf": 150,
+          "limit_kw": 10000
+        },
+        {
+          "id": "T1-UP",
+          "object": "T1",
+          "group": "shared",
+          "owner": "utility",
+          "quantity": 1,
+          "unit": "主变增容包",
+          "unit_cost_cny": 3200000,
+          "lead_months": 24,
+          "kva": 50000,
+          "r_pct": 0.5,
+          "xhl_pct": 8,
+          "limit_kw": 36000
+        }
+      ],
+      "period_hours": 168.0,
+      "annualized": false,
+      "record": "2027-medium-summer-shared-normal",
+      "failure_points": {
+        "transport": {
+          "object": "CS1V3D6",
+          "time": "2027-07-11T23:45:00+08:00",
+          "actual": 139.05730693765986,
+          "baseline": null
+        }
+      }
+    },
+    {
+      "year": 2027,
+      "growth": "medium",
+      "season": "summer",
+      "engineering": "combined",
+      "stress": "normal",
+      "vehicles_per_station": 5,
+      "assumption_hash": "b5049d78672f64976c1d2818b2088b175afb41e61ba31fbfef1da7e506c348a9",
+      "background_repair": false,
+      "plan": "unmanaged",
+      "input_hash": "3bc00372fa2ca0ed97422120f8ae6e2c8cb2ace592dab53813362d9196cfb256",
+      "states": {
+        "capacity": true,
+        "transport": false,
+        "voltage": true,
+        "harmonics": true
+      },
+      "maximum_equipment_loading_pct": 65.76365871686721,
+      "worst_asset": "UZT1",
+      "worst_step": 420,
+      "shortfall_kwh": 281.45930422735614,
+      "failed_trips": 2,
+      "minimum_voltage_pu": 0.9750815769001694,
+      "maximum_thdu_pct": 0.9318125974580155,
+      "energy_cost_cny": 13510.046602913097,
+      "charging_peak_kw": 2423.863783654405,
+      "investment": {
+        "utility_cny": 5000000,
+        "user_cny": 1300000,
+        "other_user_cny": 0,
+        "basis": "显式合成工程量与单价；非市场询价、预算或实际工程设计"
+      },
+      "projects": [
+        {
+          "id": "S1-UP",
+          "object": "S1",
+          "group": "station",
+          "owner": "station",
+          "quantity": 1,
+          "unit": "站内扩容包",
+          "unit_cost_cny": 650000,
+          "lead_months": 6,
+          "ports": 8,
+          "shared_power_kw": 2560,
+          "connection_limit_kw": 2500,
+          "transformer": "UST1",
+          "kva": 3200,
+          "r_pct": 1,
+          "xhl_pct": 6
+        },
+        {
+          "id": "S2-UP",
+          "object": "S2",
+          "group": "station",
+          "owner": "station",
+          "quantity": 1,
+          "unit": "站内扩容包",
+          "unit_cost_cny": 650000,
+          "lead_months": 6,
+          "ports": 8,
+          "shared_power_kw": 2560,
+          "connection_limit_kw": 2500,
+          "transformer": "UST2",
+          "kva": 3200,
+          "r_pct": 1,
+          "xhl_pct": 6
+        },
+        {
+          "id": "F1-UP",
+          "object": "LF1",
+          "group": "shared",
+          "owner": "utility",
+          "quantity": 4,
+          "unit": "km",
+          "unit_cost_cny": 450000,
+          "lead_months": 18,
+          "ampacity_a": 600,
+          "r1": 0.1,
+          "x1": 0.06,
+          "r0": 0.3,
+          "x0": 0.18,
+          "c1_nf": 300,
+          "c0_nf": 150,
+          "limit_kw": 10000
+        },
+        {
+          "id": "T1-UP",
+          "object": "T1",
+          "group": "shared",
+          "owner": "utility",
+          "quantity": 1,
+          "unit": "主变增容包",
+          "unit_cost_cny": 3200000,
+          "lead_months": 24,
+          "kva": 50000,
+          "r_pct": 0.5,
+          "xhl_pct": 8,
+          "limit_kw": 36000
+        }
+      ],
+      "period_hours": 168.0,
+      "annualized": false,
+      "record": "2027-medium-summer-combined-normal",
+      "failure_points": {
+        "transport": {
+          "object": "CS3V3D6",
+          "time": "2027-07-11T23:45:00+08:00",
+          "actual": 139.05730693765986,
+          "baseline": null
+        }
+      }
+    }
+  ],
+  "first_constraints": [
+    {
+      "growth": "medium",
+      "engineering": "existing",
+      "plan": "unmanaged",
+      "metric": "capacity",
+      "status": "评价期内未触发",
+      "year": null,
+      "record": null,
+      "object": null,
+      "time": null,
+      "baseline": null
+    },
+    {
+      "growth": "medium",
+      "engineering": "existing",
+      "plan": "unmanaged",
+      "metric": "transport",
+      "status": "首次受限",
+      "year": 2027,
+      "record": "2027-medium-summer-existing-normal",
+      "object": "CS1V3D6",
+      "time": "2027-07-11T23:45:00+08:00",
+      "baseline": null
+    },
+    {
+      "growth": "medium",
+      "engineering": "existing",
+      "plan": "unmanaged",
+      "metric": "voltage",
+      "status": "评价期内未触发",
+      "year": null,
+      "record": null,
+      "object": null,
+      "time": null,
+      "baseline": null
+    },
+    {
+      "growth": "medium",
+      "engineering": "existing",
+      "plan": "unmanaged",
+      "metric": "harmonics",
+      "status": "评价期内未触发",
+      "year": null,
+      "record": null,
+      "object": null,
+      "time": null,
+      "baseline": null
+    }
+  ]
+}

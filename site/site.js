@@ -4,9 +4,10 @@ const chapter=chapters.find(c=>c.id===active),chapterIndex=chapters.indexOf(chap
 const header=document.querySelector('#site-header');
 if(header)header.innerHTML=`<header class="site-header"><a class="site-brand" href="./index.html"><span class="site-mark">↯</span><span>重卡接入与电网协同评估<small>面向上海电力的联合试点研究</small></span></a><nav class="site-nav" aria-label="六个汇报环节">${chapters.map((c,i)=>`<a href="./${c.url}" aria-label="${c.title}" ${c.id===active?'aria-current="page"':''}><small>${i+1}</small> ${c.short}</a>`).join('')}</nav></header>`;
 const main=document.querySelector('main');
+const legacyPlanning=active==='planning'&&!new URLSearchParams(location.search).has('case_family')||active==='planning'&&new URLSearchParams(location.search).get('case_family')==='six';
 if(main&&chapter){
  const route=document.createElement('section');route.className='report-route print-hide';route.setAttribute('aria-label','汇报衔接');
- route.innerHTML=`<div><span class="eyebrow">${String(chapterIndex+1).padStart(2,'0')} / 06 · ${chapter.minutes}</span><b>${chapter.message}</b><p data-route-note></p></div><a class="button primary" data-report-next></a>`;
+ route.innerHTML=`<div><span class="eyebrow">${String(chapterIndex+1).padStart(2,'0')} / 06 · ${chapter.minutes}</span><b>${legacyPlanning?'历史附录 · 六站独立建设案例，保留原计算口径与下载。':chapter.message}</b><p data-route-note></p></div><a class="button primary" data-report-next></a>`;
  if(active==='scene')main.after(route);else main.append(route);
 }
 export function setReportContext(context={}){
