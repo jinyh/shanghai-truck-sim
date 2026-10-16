@@ -1,4 +1,4 @@
-import './site.js';
+import './site.js?v=report-20261016';
 import {mapControls} from './map-controls.js';
 import {qualitySummary,nodeImpact,coverageHTML,readState,saveState,stamp} from './assessment.js';
 const $=s=>document.querySelector(s), esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

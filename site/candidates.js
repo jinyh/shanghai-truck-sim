@@ -1,4 +1,4 @@
-import './site.js';
+import './site.js?v=report-20261016';
 import {CityMap} from './city-map.js';
 const $=s=>document.querySelector(s), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const symbols={green:'●',yellow:'▲',red:'■',gray:'◆'};

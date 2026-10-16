@@ -1,4 +1,4 @@
-import './site.js';
+import './site.js?v=report-20261016';
 import {CityMap} from './city-map.js';
 import {NetworkView,networkGraph} from './scene-topology.js';
 import {vehicleState,routePosition,assessmentFor} from './scene-state.js';

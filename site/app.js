@@ -1,4 +1,4 @@
-import './site.js';
+import './site.js?v=report-20261016';
 import {capacitySummary,coverageHTML,readState,saveState,stamp} from './assessment.js';
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

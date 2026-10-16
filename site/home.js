@@ -1,4 +1,4 @@
-import './site.js';
+import './site.js?v=report-20261016';
 import {number as n,escape as e} from './assessment.js';
 try{
  const response=await fetch('./showcase-summary.json');if(!response.ok)throw Error('案例摘要尚未生成');const summary=await response.json(),s=summary.quality,c=s.cases;
