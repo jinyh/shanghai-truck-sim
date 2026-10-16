@@ -1,11 +1,11 @@
-import './site.js?v=report-20261016';
+import {setReportContext} from './site.js?v=pilot-flow-1';
 import {mapControls} from './map-controls.js';
 import {qualitySummary,nodeImpact,coverageHTML,readState,saveState,stamp} from './assessment.js';
 const $=s=>document.querySelector(s), esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=(v,d=1)=>v==null||!Number.isFinite(v)?'—':v.toLocaleString('zh-CN',{minimumFractionDigits:d,maximumFractionDigits:d});
 const table=(head,rows)=>`<thead><tr>${head.map(x=>`<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(v=>`<td>${v}</td>`).join('')}</tr>`).join('')}</tbody>`;
 const row=(label,value)=>`<div class="stat-row"><span>${esc(label)}</span><b>${value}</b></div>`;
-let data=null,step=88,station='S1',node='ZLV2',revision=0,selectedPlan='ordered',timer=null,view='electrical',demo=false,scene=1;
+let data=null,step=88,station='S1',node='ZLV2',revision=0,selectedPlan='unmanaged',timer=null,view='electrical',demo=false,scene=1;
 let loadedCase={season:'summer',stress:'normal'};
 const seasons={summer:'夏季',winter:'冬季'}, stresses={normal:'正常代表周',bunched:'集中到站',light:'低功率充电',weak:'较弱电源',background:'背景负荷偏高'};
 const colors={industrial:'#e4cfb4',residential:'#d3dfb8',commercial:'#dbcfdf',port_logistics:'#b6d4d3',mixed:'#d6d5bb',unknown:'#e1e6da'};
@@ -51,6 +51,7 @@ function renderStation(){const sceneLink=$('#quality-scene-link');const supporte
 }
 function renderKpis(){const c=current(),s=qualitySummary(c,data.cases.baseline),a=s.worstAsset;
  const cards=[['全时窗 · 最高负载上级设备',a?.name||'未评估',a?`有功限额利用率 ${fmt(a.max_loading_pct)}%`:'无有效设备记录',a?.max_loading_pct>100.0001],['全时窗 · 电压参考',s.voltageStatus,`背景 ${fmt(s.backgroundVoltageNodes,0)} / 新增 ${fmt(s.addedVoltageNodes,0)} 个越限观测点`,s.voltageStatus==='超出参考范围'],['全时窗 · 谐波参考',s.harmonicStatus,`背景 ${fmt(s.backgroundHarmonicNodes,0)} / 新增 ${fmt(s.addedHarmonicNodes,0)} 个越限观测点`,s.harmonicStatus==='超出参考范围'],['全时窗 · 运输履约',selectedPlan==='baseline'?'不适用':c.transport.passed?'运输电量满足':'存在未完成任务',selectedPlan==='baseline'?'仅参与电气对照':`欠充 ${fmt(c.metrics.shortfall_kwh)} kWh`,selectedPlan!=='baseline'&&!c.transport.passed]];
+ $('#quality-conclusion').innerHTML=`<h2>${esc(data.plan_labels[selectedPlan])}：电压${esc(s.voltageStatus)}；谐波${esc(s.harmonicStatus)}</h2><p>电压与谐波分别评价；设备最高基波电流负载率 ${fmt(c.power_quality.maximum_equipment_loading_pct,1)}%。${selectedPlan==='baseline'?'当前为无新增重卡基线，用于识别背景问题。':`运输履约${c.transport.passed?'满足':'存在失败'}；新增电压越限 ${fmt(s.addedVoltageNodes,0)} 个观测点，新增谐波越限 ${fmt(s.addedHarmonicNodes,0)} 个观测点。`}</p><small>${seasons[data.season]} · ${stresses[data.stress]} · 全代表周统计；下方曲线为所选节点配对结果。${!s.complete?' 存在缺失或失败时段，结果未完整评估。':''}</small>`;
  $('#kpis').innerHTML=cards.map(([label,value,note,bad])=>`<div class="kpi"><span>${label}</span><strong class="${bad?'bad':''}" style="font-size:20px">${esc(value)}</strong><small>${esc(note)}</small></div>`).join('');
 }
 function renderNetwork(){const c=current(),positions={source:[350,32],MV1:[230,100],MV2:[610,100],F1:[160,168],F2:[420,168],F3:[610,168]};[90,265,440,615].forEach((x,i)=>{positions['PCC'+(i+1)]=[x,245];positions['ZLV'+(i+1)]=[x,332];});let svg='';
@@ -84,7 +85,7 @@ function renderEvidence(){const g=data.spatial,c=g.coverage,cross=data.fundament
 }
 function renderDynamic(){if(!data)return;step=Math.min(step,current().timestamps.length-1);$('#time').value=step;$('#clock').textContent=current().timestamps[step].slice(5,16).replace('T',' ')+' +08';renderKpis();mapOverlay();renderStation();renderElectrical();renderImpact();updatePlaybackButton();}
 function renderImpact(){
- if(!data)return;const c=current(),x=nodeImpact(c,data.cases.baseline,node,step),a=c.metrics.assets.filter(a=>a.type!=='station').sort((a,b)=>b.max_loading_pct-a.max_loading_pct)[0];
+ if(!data)return;setReportContext({caseId:loadedCase.season+'-'+loadedCase.stress,plan:selectedPlan,station,node,step});const c=current(),x=nodeImpact(c,data.cases.baseline,node,step),a=c.metrics.assets.filter(a=>a.type!=='station').sort((a,b)=>b.max_loading_pct-a.max_loading_pct)[0];
  $('#node-impact').innerHTML=[['当前观察点',esc(x.info?.name||node),'同节点、同时刻配对'],['当前最低相电压',fmt(x.now?.voltage_min_pu,4)+' pu',`基线 ${fmt(x.before?.voltage_min_pu,4)} · Δ ${fmt(x.voltageDelta,5)} pu`],['当前电压 THDu',fmt(x.now?.thdu_pct,3)+'%',`基线 ${fmt(x.before?.thdu_pct,3)} · Δ ${fmt(x.thdDelta,3)} 百分点`],['当前上级总负荷',a?fmt(a.curve_kw[step],0)+' kW':'未评估',a?`${a.name} · 含背景与下级负荷`:'未评估']].map(([label,val,note])=>`<div><span>${label}</span><b>${val}</b><small>${esc(note)}</small></div>`).join('');
  $('#user-shortcuts').innerHTML=qualitySummary(c,data.cases.baseline).users.map(n=>`<button data-user="${esc(n.id)}" class="${n.id===node?'active':''}">${esc(n.name)}</button>`).join('');
  $('#jump-voltage').disabled=!x.minimum;$('#jump-harmonic').disabled=!x.maximum;
@@ -106,16 +107,18 @@ function renderReport(){
  $('#comparison-insight').innerHTML=`<p><strong>同一需求与背景下的治理效果对照。</strong>有序充电最高THDu ${fmt(os.thdmax?.max_thdu_pct,3)}%，加补偿 ${fmt(cs.thdmax?.max_thdu_pct,3)}%，加滤波 ${fmt(fs.thdmax?.max_thdu_pct,3)}%。最低电压依次为 ${fmt(os.vmin?.voltage_min_pu,4)} / ${fmt(cs.vmin?.voltage_min_pu,4)} / ${fmt(fs.vmin?.voltage_min_pu,4)} pu。</p><p>常规与有序的充电总峰值 ${fmt(u.metrics.charging_peak_kw,0)} / ${fmt(ordered.metrics.charging_peak_kw,0)} kW；运营商代表周电能费 ${fmt(u.metrics.operator_energy_cost_cny,0)} / ${fmt(ordered.metrics.operator_energy_cost_cny,0)} 元。</p><div class="user-actions" style="margin:12px 0 0">${['unmanaged','ordered','capacitor','filter'].map(p=>`<button data-plan="${p}" class="${selectedPlan===p?'active':''}">${esc(data.plan_labels[p])}</button>`).join('')}</div>`;
 }
 const scenes=[
- ['共享馈线与用户供电关联','S1、S2与工业、居民用户共享F1馈线。图中采用登记等值供电关系，回放对应已计算运行记录。','electrical'],
- ['运输需求与场站接入关系','公开路网承载运输路径，四类合成站位对应不同补能场景；空间位置与供电映射分别登记。','geography'],
- ['用户影响、关键时段与配对增量','工业、居民及商业节点分别记录电压与谐波极值、发生时刻及相对电气基线的配对增量。','electrical'],
- ['治理效果与运行代价','同一代表周比较常规、有序、补偿、滤波；运营费用、供电电压与谐波分别核查。','comparison'],
- ['案例结论与后续验证','业务结论单归集评估对象、主要发现、证据记录、可选措施及实施条件，形成后续复核依据。','report']
+ ['接入前基线与背景约束','无新增重卡基线呈现原有负载、电压与谐波；后续增量均按同节点、同时刻配对。','electrical'],
+ ['常规充电与新增用户影响','常规方案承接同一运输任务；观测点、关键时刻与配对增量共同定位新增影响。','electrical'],
+ ['有序充电与共享设备负载','有序方案按既定排程目标优化；费用、充电集中程度、共享设备负载及用户指标分别评价。','electrical'],
+ ['无功补偿与治理对照','补偿、滤波与有序方案使用同一需求和背景，电压改善、谐波变化及剩余过载分别报告。','comparison'],
+ ['评估结论与推进条件','本页汇总电气与履约结果；下一环节归集外线、运行保障和证据缺项，形成接入方案分级。','report']
 ];
+const scenePlans=['baseline','unmanaged','ordered','capacitor',null];
+
 function showView(next){view=next;document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));document.querySelectorAll('.view').forEach(el=>el.classList.toggle('active',el.id==='view-'+view));}
-function renderDemo(){document.body.classList.toggle('demo-mode',demo);$('#demo-panel').hidden=!demo;if(!demo)return;scene=Math.max(1,Math.min(5,scene));const item=scenes[scene-1];$('#demo-title').textContent=`${scene} / 5 · ${item[0]}`;$('#demo-description').textContent=item[1];$('#demo-dots').innerHTML=scenes.map((s,i)=>`<button data-scene="${i+1}" class="${scene===i+1?'active':''}">${['共享供电','道路需求','定位影响','措施对照','业务交付'][i]}</button>`).join('');$('#demo-prev').disabled=scene===1;$('#demo-next').textContent=scene===5?'结束演示':'下一步 →';showView(item[2]);}
+function renderDemo(){document.body.classList.toggle('demo-mode',demo);$('#demo-panel').hidden=!demo;if(!demo)return;scene=Math.max(1,Math.min(5,scene));if(scene<=3)scene=({baseline:1,unmanaged:2,ordered:3,capacitor:4,filter:4})[selectedPlan];const item=scenes[scene-1];$('#demo-title').textContent=`${scene} / 5 · ${item[0]}`;$('#demo-description').textContent=item[1];$('#demo-dots').innerHTML=scenes.map((s,i)=>`<button data-scene="${i+1}" class="${scene===i+1?'active':''}">${['接入前基线','常规充电','有序充电','治理对照','推进条件'][i]}</button>`).join('');$('#demo-route').hidden=scene!==5;$('#demo-next').hidden=scene===5;$('#demo-prev').disabled=scene===1;$('#demo-next').textContent=scene===5?'结束演示':'下一步 →';showView(item[2]);}
 function remember(replace=false){saveState({season:loadedCase.season,stress:loadedCase.stress,plan:selectedPlan,view,station,node,step,demo:demo?1:0,scene},replace);}
-function restore(){const state=readState({season:'summer',stress:'normal',plan:'ordered',view:'electrical',station:'S1',node:'ZLV2',step:88,demo:0,scene:1},{season:Object.keys(seasons),stress:Object.keys(stresses),plan:['baseline','unmanaged','ordered','capacitor','filter'],view:['geography','electrical','comparison','evidence','report'],station:['S1','S2','S3','S4'],node:['PCC1','SLV1','ZLV1','PCC2','SLV2','ZLV2','PCC3','SLV3','ZLV3','PCC4','SLV4','ZLV4']});
+function restore(){const state=readState({season:'summer',stress:'normal',plan:'unmanaged',view:'electrical',station:'S1',node:'ZLV2',step:88,demo:0,scene:1},{season:Object.keys(seasons),stress:Object.keys(stresses),plan:['baseline','unmanaged','ordered','capacitor','filter'],view:['geography','electrical','comparison','evidence','report'],station:['S1','S2','S3','S4'],node:['PCC1','SLV1','ZLV1','PCC2','SLV2','ZLV2','PCC3','SLV3','ZLV3','PCC4','SLV4','ZLV4']});
  $('#season').value=state.season;$('#stress').value=state.stress;$('#plan').value=state.plan;selectedPlan=state.plan;station=state.station;node=state.node;step=Math.min(state.step,671);demo=state.demo===1;scene=Math.min(5,Math.max(1,state.scene));showView(state.view);renderDemo();return state;
 }
 function setData(value){stopPlayback();data=value;loadedCase={season:value.season,stress:value.stress};selectedPlan=$('#plan').value;
@@ -123,14 +126,14 @@ function setData(value){stopPlayback();data=value;loadedCase={season:value.seaso
  $('#case-label').textContent=`${seasons[data.season]} · ${stresses[data.stress]} · 公开地理 + 合成工程`;mapBase();renderDynamic();renderComparison();renderEvidence();renderReport();renderDemo();enablePlayback(true);status('记录已载入 · 专项分别报告 · 可查看结论单与完整复算包');remember(true);
 }
 async function readRecord(path,hash){const r=await fetch(path);if(!r.ok)throw Error('该工况尚未生成，请在本机重新计算或检查数据包。');const buf=await r.arrayBuffer();if(hash&&crypto.subtle){const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',buf))).map(x=>x.toString(16).padStart(2,'0')).join('');if(digest!==hash)throw Error('记录校验失败，请重新加载完整数据包。');}return new Response(new Blob([buf]).stream().pipeThrough(new DecompressionStream('gzip'))).json();}
-function unavailable(message){data=null;$('#kpis').innerHTML='';document.querySelectorAll('.view').forEach(v=>v.hidden=true);$('#download').removeAttribute('href');$('#download').setAttribute('aria-disabled','true');$('#clock').textContent='未载入';$('#case-label').textContent='案例未载入';enablePlayback(false);status(message,true);}
+function unavailable(message){setReportContext({unavailable:true});$('#quality-conclusion').textContent='当前案例未完成载入：'+message;data=null;$('#kpis').innerHTML='';document.querySelectorAll('.view').forEach(v=>v.hidden=true);$('#download').removeAttribute('href');$('#download').setAttribute('aria-disabled','true');$('#clock').textContent='未载入';$('#case-label').textContent='案例未载入';enablePlayback(false);status(message,true);}
 function loadingControls(busy){$('#kpis').hidden=busy;for(const id of ['load','season','stress','plan','recompute','enter-demo'])$('#'+id).disabled=busy;}
 async function load({push=false}={}){const turn=++revision;stopPlayback();enablePlayback(false);loadingControls(true);$('#download').setAttribute('aria-disabled','true');document.querySelectorAll('.view').forEach(v=>v.hidden=true);status('正在读取并校验案例记录…');const requested={season:$('#season').value,stress:$('#stress').value};if(push)saveState({...requested,plan:selectedPlan,view,station,node,step,demo:demo?1:0,scene});
  try{const response=await fetch('./quality-data/index.json');if(!response.ok)throw Error('尚未生成电能质量记录，可使用本机重新计算。');const index=await response.json(),entry=index.records[requested.season+'-'+requested.stress];if(!entry)throw Error('该工况尚未生成，请在本机重新计算。');const value=await readRecord('./quality-data/'+entry.result,entry.sha256);if(turn!==revision)return;setData(value);$('#download').href='./quality-data/'+entry.export;$('#download').setAttribute('aria-disabled','false');}catch(e){if(turn===revision)unavailable(e.message);}finally{if(turn===revision){loadingControls(false);enablePlayback(Boolean(data));}}
 }
 function selectNode(id){if(!data)return;stopPlayback();node=id;$('#node').value=node;renderElectrical();renderImpact();renderReport();remember();}
-function selectPlan(id){if(!data)return;stopPlayback();selectedPlan=id;$('#plan').value=id;renderDynamic();renderEvidence();renderReport();remember();}
-function selectScene(n){stopPlayback();scene=n;renderDemo();remember();}
+function selectPlan(id){if(!data)return;stopPlayback();selectedPlan=id;$('#plan').value=id;renderDynamic();renderEvidence();renderReport();if(demo)renderDemo();remember();}
+function selectScene(n){stopPlayback();scene=n;if(data&&scenePlans[n-1])selectPlan(scenePlans[n-1]);renderDemo();remember();}
 document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{stopPlayback();showView(b.dataset.view);remember();}));
 $('#load').addEventListener('click',()=>load({push:true}));$('#plan').addEventListener('change',()=>selectPlan($('#plan').value));$('#time').addEventListener('input',()=>{stopPlayback();step=Number($('#time').value);renderDynamic();remember(true);});
 $('#station').addEventListener('change',()=>{station=$('#station').value;renderDynamic();remember();});$('#node').addEventListener('change',()=>selectNode($('#node').value));
@@ -142,7 +145,7 @@ $('#network').addEventListener('click',e=>{const g=e.target.closest('[data-node]
 $('#user-shortcuts').addEventListener('click',e=>{const b=e.target.closest('[data-user]');if(b)selectNode(b.dataset.user);});
 $('#comparison-insight').addEventListener('click',e=>{const b=e.target.closest('[data-plan]');if(b)selectPlan(b.dataset.plan);});
 for(const [id,key] of [['jump-voltage','minimum'],['jump-harmonic','maximum']])$('#'+id).addEventListener('click',()=>{if(!data)return;const row=nodeImpact(current(),data.cases.baseline,node,step)[key];if(row){stopPlayback();step=row.step;renderDynamic();remember();}});
-$('#enter-demo').addEventListener('click',()=>{stopPlayback();demo=true;scene=1;step=88;node='ZLV2';station='S1';$('#season').value='summer';$('#stress').value='normal';$('#plan').value='ordered';selectedPlan='ordered';renderDemo();load({push:true});});
+$('#enter-demo').addEventListener('click',()=>{if(!data)return;stopPlayback();demo=true;scene=1;selectPlan('baseline');renderDemo();remember();});
 $('#demo-prev').addEventListener('click',()=>selectScene(Math.max(1,scene-1)));$('#demo-next').addEventListener('click',()=>{if(scene<5)selectScene(scene+1);else{demo=false;renderDemo();showView('report');remember();}});$('#demo-exit').addEventListener('click',()=>{demo=false;renderDemo();remember();});$('#demo-dots').addEventListener('click',e=>{const b=e.target.closest('[data-scene]');if(b)selectScene(Number(b.dataset.scene));});
 window.addEventListener('popstate',()=>{stopPlayback();const state=restore();if(!data||loadedCase.season!==state.season||loadedCase.stress!==state.stress)load();else{renderDynamic();renderEvidence();renderReport();$('#node').value=node;$('#station').value=station;}});
 if(false){$('#recompute').hidden=false;$('#recompute').addEventListener('click',async()=>{stopPlayback();enablePlayback(false);loadingControls(true);try{status('正在本机计算五类方案与谐波扫描…');const r=await fetch('/api/quality',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({season:$('#season').value,stress:$('#stress').value})});const j=await r.json();if(!r.ok)throw Error(j.error);let job;do{await new Promise(resolve=>setTimeout(resolve,1500));job=await fetch('/api/jobs/'+j.id).then(r=>r.json());if(job.status==='failed')throw Error(job.error);}while(job.status!=='completed');setData(job.result);$('#download').href='/api/export/'+j.id;$('#download').setAttribute('aria-disabled','false');}catch(e){unavailable(e.message);}finally{loadingControls(false);enablePlayback(Boolean(data));}});}

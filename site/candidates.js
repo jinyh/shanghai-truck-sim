@@ -1,4 +1,4 @@
-import './site.js?v=report-20261016';
+import {setReportContext} from './site.js?v=pilot-flow-1';
 import {CityMap} from './city-map.js';
 const $=s=>document.querySelector(s), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const symbols={green:'●',yellow:'▲',red:'■',gray:'◆'};
@@ -31,7 +31,7 @@ function detailsHTML(r,print=false){const d=r.decision,checks=d.checks;return `<
 <section class="evidence-section"><h3>03 / 整改路径与条件闭环</h3>${d.conditions.length?`<ul>${d.conditions.map(c=>`<li><b>${esc(c.text)}</b> · ${c.evidence_valid?'已验证路径，待闭环':'已知条件，相关证据仍待核实'}<br>验证：${esc(c.verification)}<br>需补：${esc(c.closure_evidence)}<br>协同：${esc(c.owner)}</li>`).join('')}</ul>`:'<p>当前没有登记为“已验证且待闭环”的前置条件。</p>'}${d.pending.length?`<p>需补证专项：${esc(checks.filter(c=>d.pending.includes(c.id)).map(c=>c.name).join('、'))}。补齐资料或计算后生成新的评估记录。</p>`:''}${d.blockers.length?'<p>已证明不满足的原方案仍保留红色。改变容量、供电点、运行方式或建设时序后，新增方案重新评估；未验证措施列为待论证。</p>':''}<ul>${(r.next_steps||['由场站方提供运输与设备资料，供电方核实供电映射和同期负荷，建设与运行方补充实施及保障依据；业务角色待双方确认。']).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section>
 <section class="evidence-section"><h3>04 / 评估范围与有效条件</h3><dl class="scope-dl"><dt>阶段 / 范围</dt><dd>${esc(r.stage)} · ${esc(r.scope)}</dd><dt>本次规模</dt><dd>${r.proposal.scale_kw==null?'待核实':fmt(r.proposal.scale_kw)+' kW'}；绿色不代表已预留容量</dd><dt>接入组合</dt><dd>${esc(JSON.stringify(r.context.combination??'待核实'))}</dd><dt>背景 / 运行方式</dt><dd>${esc(r.context.background||'待核实')} / ${esc(r.context.control||'待核实')}</dd><dt>评估时间 / 时窗</dt><dd>${esc(r.evaluated_at)}<br>${esc(r.period?.join(' 至 ')||'待登记')}</dd><dt>规则 / 评估编号</dt><dd>${esc(d.rule_version)} / ${esc(r.assessment_id)}</dd><dt>未覆盖专项</dt><dd>${esc(r.not_evaluated?.join('、')||'见必需缺项')}</dd></dl><p>规模、接入组合、背景负荷、供电方式、控制条件或规则改变后须重评；仍有效的独立阻断证据继续保留。供电关系不按地理距离推定。</p>${r.source_register?`<details><summary>原始台账字段与公式（不参与判色）</summary><pre>${esc(JSON.stringify(r.source_register,null,2))}</pre></details>`:''}</section>`;}
 function render(){
- options();const r=record,d=r.decision;
+ options();const r=record,d=r.decision;setReportContext();
  $('#candidate-scene-link').hidden=local;$('#candidate-scene-link').href='./scene.html?'+new URLSearchParams({case:caseId,plan:proposalId,station:stationId,assessment:r.assessment_id,level:'station'});
  $('#dataset-note').textContent=local?'本地真实候选台账 · 资料尚待核实 · 不进入公开构建':'公开合成示例 · 电气数值来自既有计算，外线与手续另作合成登记 · 绿色仅限本阶段';
  $('#selected-summary').innerHTML=`${badge(d)}<h2>${esc(r.station.id+' · '+r.station.name)} / ${esc(r.proposal.name)}</h2><p>${esc(d.primary_reason)}</p><div class="progress-row"><span>必需项有据 ${d.evidenced_count}/${d.required_count}</span><span>阻断 ${d.blockers.length} 项</span><span>待核 ${d.pending.length} 项</span><span>已知待闭环条件 ${d.conditions.length} 项</span><span>评估于 ${esc(r.evaluated_at.slice(0,10))}</span></div>`;
@@ -49,7 +49,7 @@ async function load(useLocal=false){
  caseId=params.get('case')||(local?'local':catalog.default_case);proposalId=params.get('proposal')||(local?catalog.records[0].proposal.id:catalog.default_proposal);stationId=params.get('station')||catalog.records[0].station.id;
  choose(stationId,proposalId,params.get('assessment'));$('#candidate-status').textContent='';
 }
-function error(e){$('#candidate-status').className='candidate-error';$('#candidate-status').textContent=e.message;}
+function error(e){setReportContext({unavailable:true});$('#candidate-status').className='candidate-error';$('#candidate-status').textContent=e.message;}
 $('#station-search').oninput=renderList;
 $('#case-select').onchange=()=>{caseId=$('#case-select').value;choose(stationId,proposalId);};
 $('#proposal-select').onchange=()=>{const pid=$('#proposal-select').value;const sid=inCase().some(r=>r.station.id===stationId&&r.proposal.id===pid)?stationId:inCase().find(r=>r.proposal.id===pid).station.id;choose(sid,pid);};
